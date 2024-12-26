@@ -11,7 +11,7 @@ export default function AboutUs() {
           src={osijekImage}
           alt="Osijek"
           layout="fill"
-          objectFit="cover"
+          style={{ objectFit: "cover" }}
           className="absolute inset-0"
         />
         <div className="absolute inset-0 bg-black opacity-40"></div>
@@ -43,7 +43,6 @@ export default function AboutUs() {
               <Image
                 src={osijekImage}
                 alt="Osijek"
-                layout="intrinsic"
                 width={800}
                 height={600}
                 className="rounded-lg w-[80%]"
@@ -65,7 +64,6 @@ export default function AboutUs() {
               <Image
                 src={osijekImage}
                 alt="Osijek"
-                layout="intrinsic"
                 width={800}
                 height={600}
                 className="rounded-lg w-[80%]"
@@ -87,7 +85,6 @@ export default function AboutUs() {
               <Image
                 src={osijekImage}
                 alt="Osijek"
-                layout="intrinsic"
                 width={800}
                 height={600}
                 className="rounded-lg w-[80%]"
