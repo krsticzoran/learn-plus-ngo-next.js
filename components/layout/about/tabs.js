@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 
-import studentsImage from "@/public/images/students.png";
+import studentsImage from "../../../public/images/students.png";
 
 export default function Tabs() {
   const [activeTab, setActiveTab] = useState("whatWeDo");
