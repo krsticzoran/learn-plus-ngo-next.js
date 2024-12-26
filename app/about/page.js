@@ -1,12 +1,14 @@
 import Image from "next/image";
 import Tabs from "@/components/layout/about/tabs";
 
+import osijekImage from "@/public/images/osijek.jpg";
+
 export default function AboutUs() {
   return (
-    <div>
+    <main>
       <section className="relative w-full h-screen">
         <Image
-          src="/images/osijek.jpg"
+          src={osijekImage}
           alt="Osijek"
           layout="fill"
           objectFit="cover"
@@ -39,7 +41,7 @@ export default function AboutUs() {
             </div>
             <div className="sm:w-1/2 h-80 relative flex justify-end">
               <Image
-                src="/images/osijek.jpg"
+                src={osijekImage}
                 alt="Osijek"
                 layout="intrinsic"
                 width={800}
@@ -61,7 +63,7 @@ export default function AboutUs() {
             </div>
             <div className="sm:w-1/2 h-80 relative">
               <Image
-                src="/images/osijek.jpg"
+                src={osijekImage}
                 alt="Osijek"
                 layout="intrinsic"
                 width={800}
@@ -83,7 +85,7 @@ export default function AboutUs() {
             </div>
             <div className="sm:w-1/2 h-80 relative flex justify-end">
               <Image
-                src="/images/osijek.jpg"
+                src={osijekImage}
                 alt="Osijek"
                 layout="intrinsic"
                 width={800}
@@ -95,6 +97,6 @@ export default function AboutUs() {
         </div>
       </section>
       <Tabs />
-    </div>
+    </main>
   );
 }
