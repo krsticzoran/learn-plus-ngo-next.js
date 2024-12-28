@@ -13,6 +13,8 @@ export default function AboutUs() {
           layout="fill"
           style={{ objectFit: "cover" }}
           className="absolute inset-0"
+          sizes="(min-width: 250px) 100vw"
+          priority
         />
         <div className="absolute inset-0 bg-black opacity-40"></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-white">
