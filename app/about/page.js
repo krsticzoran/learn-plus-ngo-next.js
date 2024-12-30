@@ -27,74 +27,80 @@ export default function AboutUs() {
         </div>
       </section>
 
-      <section className="max-w-screen-xl mx-auto px-8 py-20 bg-white">
-        <div className="space-y-16">
-          <div className="flex flex-col-reverse sm:flex-row items-center">
-            <div className="sm:w-1/2 p-8">
-              <h2 className="text-3xl font-semibold">We Are LEARN PLUS</h2>
-              <p className="mt-4 text-lg">
-                We are a non-governmental organization with a main goal:
-                promoting lifelong learning and education. Through our seminars,
-                lessons, tailor-made courses, and different types of non-formal
-                education, we provide our members and participants career
-                guidance and better chances in their private and professional
-                lives.
-              </p>
-            </div>
-            <div className="sm:w-1/2 h-80 relative flex justify-end">
-              <Image
-                src={osijekImage}
-                alt="Osijek"
-                width={800}
-                height={600}
-                className="rounded-lg w-[80%]"
-              />
-            </div>
+      <section className=" bg-white bg-[url('/images/shape-15.png')] bg-cover bg-center bg-no-repeat ">
+        <div className="max-w-screen-xl mx-auto px-8 py-32 flex flex-col-reverse sm:flex-row items-center">
+          <div className="sm:w-1/2 p-8">
+            <p className="text-lg font-medium uppercase text-[#EC4E4F]">
+              Who We Are?
+            </p>
+            <h2 className="text-4xl font-extrabold leading-[60px] mt-2 text-[#222222]">
+              Empowering Lives Through Learn Plus
+            </h2>
+            <p className="mt-6 text-lg leading-7">
+              Learn Plus is a non-governmental organization dedicated to
+              promoting lifelong learning and education. We believe that
+              continuous education empowers individuals and fosters personal and
+              professional growth.
+            </p>
+            <p className="mt-4 text-lg leading-relaxed">
+              Our mission is to deliver high-quality educational opportunities
+              tailored to the needs of our participants. Through engaging
+              seminars, personalized courses, and innovative non-formal learning
+              experiences, we aim to provide tools for career advancement and
+              self-development.
+            </p>
+            <p className="mt-4 text-lg leading-relaxed">
+              Located in the heart of Osijek, Croatia, we serve as a hub for
+              learning and collaboration, connecting diverse communities across
+              the region. Whether you're seeking guidance for your career or
+              striving for personal improvement, Learn Plus is here to support
+              your journey.
+            </p>
           </div>
-
-          <div className="flex sm:flex-row-reverse items-center">
-            <div className="sm:w-1/2 p-8">
-              <h2 className="text-3xl font-semibold">Our Expertise</h2>
-              <p className="mt-4 text-lg">
-                Although we are a new NGO, our team brings extensive experience
-                working with national and international stakeholders, including
-                organizations like the UN and IOM. We offer expertise in various
-                fields of education and professional development.
-              </p>
-            </div>
-            <div className="sm:w-1/2 h-80 relative">
-              <Image
-                src={osijekImage}
-                alt="Osijek"
-                width={800}
-                height={600}
-                className="rounded-lg w-[80%]"
-              />
-            </div>
-          </div>
-
-          <div className="flex flex-col-reverse sm:flex-row items-center">
-            <div className="sm:w-1/2 p-8">
-              <h2 className="text-3xl font-semibold">Our Location</h2>
-              <p className="mt-4 text-lg">
-                Our main office is located in Osijek, the center of
-                Osijek-Baranya County, in the easternmost part of Croatia, very
-                close to three countries: Serbia, Bosnia and Herzegovina, and
-                Hungary.
-              </p>
-            </div>
-            <div className="sm:w-1/2 h-80 relative flex justify-end">
-              <Image
-                src={osijekImage}
-                alt="Osijek"
-                width={800}
-                height={600}
-                className="rounded-lg w-[80%]"
-              />
+          <div className="sm:w-1/2 h-auto flex justify-end  ">
+            <div className="relative h-[513px]  w-[423px]">
+              <div className="absolute top-0 right-0 z-20 w-[423] h-[513px]">
+                <Image
+                  src="/images/about-2.jpg"
+                  alt="Osijek"
+                  width={423}
+                  height={513}
+                  className="rounded-lg z-10 "
+                />
+              </div>
+              <div className="absolute top-[403px] left-[-160px] z-20">
+                <Image
+                  src="/images/about-3.jpg"
+                  alt="Small Osijek"
+                  width={320}
+                  height={220}
+                  style={{ boxShadow: "0px 20px 60px 10px rgba(0, 0, 0, 0.2)" }}
+                  className="rounded-lg shadow-md"
+                />
+              </div>
+              <div className="absolute top-[40px] right-[-60px] w-[180px] h-[180px] z-0 ">
+                <Image
+                  src="/images/shape-16.png"
+                  alt="shape"
+                  width={180}
+                  height={180}
+                  className=""
+                />
+              </div>
+              <div className="absolute bottom-[20px] left-[-250px] w-[180px] h-[180px] z-0 ">
+                <Image
+                  src="/images/shape-16.png"
+                  alt="shape"
+                  width={180}
+                  height={180}
+                  className=""
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
+
       <Tabs />
     </main>
   );
