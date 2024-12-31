@@ -1,14 +1,12 @@
 import Image from "next/image";
 import Tabs from "@/components/layout/about/tabs";
 
-import osijekImage from "../../public/images/osijek.jpg";
-
 export default function AboutUs() {
   return (
     <main>
       <section className="relative w-full h-screen">
         <Image
-          src={osijekImage}
+          src="/images/osijek.jpg"
           alt="Osijek"
           layout="fill"
           style={{ objectFit: "cover" }}
@@ -36,33 +34,67 @@ export default function AboutUs() {
             <h2 className="text-4xl font-extrabold leading-[60px] mt-2 text-[#222222]">
               Empowering Lives Through Learn Plus
             </h2>
-            <p className="mt-6 text-lg leading-7">
+            <p className="mt-6 text-lg leading-7 text-[#676767]">
               Learn Plus is a non-governmental organization dedicated to
               promoting lifelong learning and education. We believe that
               continuous education empowers individuals and fosters personal and
               professional growth.
             </p>
-            <p className="mt-4 text-lg leading-relaxed">
-              Our mission is to deliver high-quality educational opportunities
-              tailored to the needs of our participants. Through engaging
-              seminars, personalized courses, and innovative non-formal learning
-              experiences, we aim to provide tools for career advancement and
-              self-development.
-            </p>
-            <p className="mt-4 text-lg leading-relaxed">
-              Located in the heart of Osijek, Croatia, we serve as a hub for
-              learning and collaboration, connecting diverse communities across
-              the region. Whether you're seeking guidance for your career or
-              striving for personal improvement, Learn Plus is here to support
-              your journey.
-            </p>
+            <div className="flex mt-4">
+              <div className="w-[120px] h-auto flex items-center justify-center ">
+                <div className="flex items-center justify-center w-[90px] h-[90px] bg-[#F5F5F5] rounded-full hover:bg-[#EC4E4F] transition-colors duration-300">
+                  <Image
+                    src="/mission.png"
+                    width={40}
+                    height={40}
+                    alt="mission"
+                  />
+                </div>
+              </div>
+              <div className="w-[100%] ml-5">
+                <p className="text-[#222222] text-lg font-extrabold leading-6 mb-2">
+                  Empowering Growth Through Education
+                </p>
+                <p className=" text-lg leading-7 text-[#676767]">
+                  Our mission is to deliver high-quality educational
+                  opportunities tailored to the needs of our participants.
+                  Through engaging seminars, personalized courses, and
+                  innovative non-formal learning experiences, we aim to provide
+                  tools for career advancement and self-development.
+                </p>
+              </div>
+            </div>
+            <div className="flex mt-4">
+              <div className="w-[120px] h-auto flex items-center justify-center ">
+                <div className="flex items-center justify-center w-[90px] h-[90px] bg-[#F5F5F5] rounded-full hover:bg-[#EC4E4F] transition-colors duration-300">
+                  <Image
+                    src="/location.png"
+                    width={40}
+                    height={40}
+                    alt="mission"
+                  />
+                </div>
+              </div>
+              <div className="w-[100%] ml-5">
+                <p className="text-[#222222] text-lg font-extrabold leading-6 mb-2">
+                  Learning Hub in Osijek
+                </p>
+                <p className=" text-lg leading-7 text-[#676767]">
+                  Located in the heart of Osijek, Croatia, we serve as a hub for
+                  learning and collaboration, connecting diverse communities
+                  across the region. Whether you're seeking guidance for your
+                  career or striving for personal improvement, Learn Plus is
+                  here to support your journey.
+                </p>
+              </div>
+            </div>
           </div>
           <div className="sm:w-1/2 h-auto flex justify-end  ">
             <div className="relative h-[513px]  w-[423px]">
               <div className="absolute top-0 right-0 z-20 w-[423] h-[513px]">
                 <Image
                   src="/images/about-2.jpg"
-                  alt="Osijek"
+                  alt="about us"
                   width={423}
                   height={513}
                   className="rounded-lg z-10 "
@@ -71,7 +103,7 @@ export default function AboutUs() {
               <div className="absolute top-[403px] left-[-160px] z-20">
                 <Image
                   src="/images/about-3.jpg"
-                  alt="Small Osijek"
+                  alt="Sabout us"
                   width={320}
                   height={220}
                   style={{ boxShadow: "0px 20px 60px 10px rgba(0, 0, 0, 0.2)" }}
@@ -84,7 +116,6 @@ export default function AboutUs() {
                   alt="shape"
                   width={180}
                   height={180}
-                  className=""
                 />
               </div>
               <div className="absolute bottom-[20px] left-[-250px] w-[180px] h-[180px] z-0 ">
@@ -93,7 +124,6 @@ export default function AboutUs() {
                   alt="shape"
                   width={180}
                   height={180}
-                  className=""
                 />
               </div>
             </div>
