@@ -2,76 +2,82 @@
 import { useState } from "react";
 import Image from "next/image";
 
-import studentsImage from "../../../public/images/students.png";
-
 export default function Tabs() {
   const [activeTab, setActiveTab] = useState("whatWeDo");
 
   return (
     <section className="bg-gray-100 py-20">
-      <div className="max-w-screen-xl mx-auto px-8">
-        <div className="flex justify-center space-x-8">
-          <button
-            onClick={() => setActiveTab("whatWeDo")}
-            className={`px-6 py-2 text-xl font-semibold ${
-              activeTab === "whatWeDo" ? "text-blue-600" : "text-gray-600"
-            }`}
-          >
-            What We Do
-          </button>
-          <button
-            onClick={() => setActiveTab("whatWeOffer")}
-            className={`px-6 py-2 text-xl font-semibold ${
-              activeTab === "whatWeOffer" ? "text-blue-600" : "text-gray-600"
-            }`}
-          >
-            What We Offer
-          </button>
+      <div className="max-w-screen-xl mx-auto px-8 flex">
+        <div className="flex">
+          <Image
+            src="/images/country-1.jpg"
+            alt="Map 1"
+            className="rounded-lg mr-4"
+            width={350}
+            height={500}
+          />
+          <Image
+            src="/images/country-2.jpg"
+            alt="Map 2"
+            className="rounded-lg"
+            width={350}
+            height={400}
+          />
         </div>
 
-        <div className="mt-12 flex flex-col sm:flex-row items-center justify-center">
-          {activeTab === "whatWeDo" ? (
-            <div className="sm:w-1/2 p-8">
-              <h3 className="text-3xl font-semibold mb-4">What We Do</h3>
-              <p className="text-lg">
-                At LEARN PLUS, we focus on a variety of educational activities,
-                including tailored courses, career guidance, and non-formal
-                learning experiences. Our goal is to provide individuals with
-                the necessary tools to thrive both personally and
-                professionally.
-              </p>
+        <div className=" w-[50%] px-10 ">
+          <p className="text-lg font-medium  text-[#EC4E4F] pb-[15px]">
+            Unlock Your Potential
+          </p>
+          <h2 className="text-3xl font-extrabold  text-[#222222] mb-[25px]">
+            Learning designed around you
+          </h2>
+          <div className="flex space-x-8 mb-6">
+            <button
+              onClick={() => setActiveTab("whatWeDo")}
+              className={`px-6 py-2 text-xl font-semibold transition-colors duration-300 ${
+                activeTab === "whatWeDo"
+                  ? "text-blue-600 underline"
+                  : "text-gray-600"
+              }`}
+            >
+              What We Do
+            </button>
+            <button
+              onClick={() => setActiveTab("whatWeOffer")}
+              className={`px-6 py-2 text-xl font-semibold transition-colors duration-300 ${
+                activeTab === "whatWeOffer"
+                  ? "text-blue-600 underline"
+                  : "text-gray-600"
+              }`}
+            >
+              What We Offer
+            </button>
+          </div>
 
-              <div className="relative mt-8 w-[80%] h-[400px]">
-                <Image
-                  src={studentsImage}
-                  alt="Students"
-                  layout="fill"
-                  objectFit="contain"
-                  className="rounded-lg"
-                />
-              </div>
-            </div>
-          ) : (
-            <div className="sm:w-1/2 p-8">
-              <h3 className="text-3xl font-semibold mb-4">What We Offer</h3>
-              <p className="text-lg">
-                We offer a diverse range of educational services such as
-                personalized coaching, workshops, and seminars. Our goal is to
-                help participants improve their skills, gain new knowledge, and
-                enhance their overall career prospects.
-              </p>
-
-              <div className="relative mt-8 w-[80%] h-[400px]">
-                <Image
-                  src={studentsImage}
-                  alt="Students"
-                  layout="fill"
-                  objectFit="contain"
-                  className="rounded-lg"
-                />
-              </div>
-            </div>
-          )}
+          {/* Content Based on Active Tab */}
+          <div>
+            {activeTab === "whatWeDo" ? (
+              <>
+                <p className="text-lg leading-relaxed">
+                  At LEARN PLUS, we focus on various educational activities,
+                  including tailored courses, career guidance, and non-formal
+                  learning experiences. Our mission is to empower individuals
+                  with the tools they need to succeed both personally and
+                  professionally.
+                </p>
+              </>
+            ) : (
+              <>
+                <p className="text-lg leading-relaxed">
+                  We provide a diverse array of educational services, including
+                  personalized coaching, workshops, and seminars. Our goal is to
+                  help participants develop new skills, expand their knowledge,
+                  and enhance their career opportunities.
+                </p>
+              </>
+            )}
+          </div>
         </div>
       </div>
     </section>
