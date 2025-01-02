@@ -28,13 +28,13 @@ export default function AboutUs() {
       <section className=" bg-white bg-[url('/images/shape-15.png')] bg-cover bg-center bg-no-repeat ">
         <div className="max-w-screen-xl mx-auto px-8 py-32 flex flex-col-reverse sm:flex-row items-center">
           <div className="sm:w-1/2 p-8">
-            <p className="text-lg font-medium uppercase text-[#EC4E4F]">
+            <p className="text-lg font-medium uppercase text-secondary">
               Who We Are?
             </p>
-            <h2 className="text-4xl font-extrabold leading-[60px] mt-2 text-[#222222]">
+            <h2 className="text-4xl font-extrabold leading-[60px] mt-2 text-dark">
               Empowering Lives Through Learn Plus
             </h2>
-            <p className="mt-6 text-lg leading-7 text-[#676767]">
+            <p className="mt-6 text-lg leading-7 text-grey-one">
               Learn Plus is a non-governmental organization dedicated to
               promoting lifelong learning and education. We believe that
               continuous education empowers individuals and fosters personal and
@@ -42,7 +42,7 @@ export default function AboutUs() {
             </p>
             <div className="flex mt-4">
               <div className="w-[120px] h-auto flex items-center justify-center ">
-                <div className="flex items-center justify-center w-[90px] h-[90px] bg-[#F5F5F5] rounded-full hover:bg-[#EC4E4F] transition-colors duration-300">
+                <div className="flex items-center justify-center w-[90px] h-[90px] bg-white-one rounded-full hover:bg-secondary transition-colors duration-300">
                   <Image
                     src="/mission.png"
                     width={40}
@@ -52,10 +52,10 @@ export default function AboutUs() {
                 </div>
               </div>
               <div className="w-[100%] ml-5">
-                <p className="text-[#222222] text-lg font-extrabold leading-6 mb-2">
+                <p className="text-dark text-lg font-extrabold leading-6 mb-2">
                   Empowering Growth Through Education
                 </p>
-                <p className=" text-lg leading-7 text-[#676767]">
+                <p className=" text-lg leading-7 text-grey-one">
                   Our mission is to deliver high-quality educational
                   opportunities tailored to the needs of our participants.
                   Through engaging seminars, personalized courses, and
@@ -66,7 +66,7 @@ export default function AboutUs() {
             </div>
             <div className="flex mt-4">
               <div className="w-[120px] h-auto flex items-center justify-center ">
-                <div className="flex items-center justify-center w-[90px] h-[90px] bg-[#F5F5F5] rounded-full hover:bg-[#EC4E4F] transition-colors duration-300">
+                <div className="flex items-center justify-center w-[90px] h-[90px] bg-white-one rounded-full hover:bg-secondary transition-colors duration-300">
                   <Image
                     src="/location.png"
                     width={40}
@@ -76,10 +76,10 @@ export default function AboutUs() {
                 </div>
               </div>
               <div className="w-[100%] ml-5">
-                <p className="text-[#222222] text-lg font-extrabold leading-6 mb-2">
+                <p className="text-dark text-lg font-extrabold leading-6 mb-2">
                   Learning Hub in Osijek
                 </p>
-                <p className=" text-lg leading-7 text-[#676767]">
+                <p className=" text-lg leading-7 text-grey-one">
                   Located in the heart of Osijek, Croatia, we serve as a hub for
                   learning and collaboration, connecting diverse communities
                   across the region. Whether you're seeking guidance for your

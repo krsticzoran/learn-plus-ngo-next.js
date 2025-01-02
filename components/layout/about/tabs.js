@@ -26,10 +26,10 @@ export default function Tabs() {
         </div>
 
         <div className=" w-[50%] px-10 ">
-          <p className="text-lg font-medium  text-[#EC4E4F] pb-[15px]">
+          <p className="text-lg font-medium  text-secondary pb-[15px]">
             Unlock Your Potential
           </p>
-          <h2 className="text-3xl font-extrabold  text-[#222222] mb-[25px]">
+          <h2 className="text-3xl font-extrabold  text-dark mb-[25px]">
             Learning designed around you
           </h2>
           <div className="flex space-x-8 mb-6">
@@ -55,7 +55,6 @@ export default function Tabs() {
             </button>
           </div>
 
-          {/* Content Based on Active Tab */}
           <div>
             {activeTab === "whatWeDo" ? (
               <>
