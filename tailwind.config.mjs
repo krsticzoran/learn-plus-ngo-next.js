@@ -12,7 +12,7 @@ const tailwindConfig = {
         foreground: "var(--foreground)",
         secondary: "#EC4E4F",
         dark: "#222222",
-        "grey-one": "#676767",
+        "gray-one": "#676767",
         "white-one": "#F5F5F5",
       },
     },

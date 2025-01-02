@@ -37,8 +37,8 @@ export default function Tabs() {
               onClick={() => setActiveTab("whatWeDo")}
               className={`px-6 py-2 text-xl font-semibold transition-colors duration-300 ${
                 activeTab === "whatWeDo"
-                  ? "text-blue-600 underline"
-                  : "text-gray-600"
+                  ? "text-white bg-secondary"
+                  : "text-dark bg-white"
               }`}
             >
               What We Do
@@ -47,8 +47,8 @@ export default function Tabs() {
               onClick={() => setActiveTab("whatWeOffer")}
               className={`px-6 py-2 text-xl font-semibold transition-colors duration-300 ${
                 activeTab === "whatWeOffer"
-                  ? "text-blue-600 underline"
-                  : "text-gray-600"
+                  ? "text-white bg-secondary"
+                  : "text-dark bg-white"
               }`}
             >
               What We Offer
@@ -57,24 +57,20 @@ export default function Tabs() {
 
           <div>
             {activeTab === "whatWeDo" ? (
-              <>
-                <p className="text-lg leading-relaxed">
-                  At LEARN PLUS, we focus on various educational activities,
-                  including tailored courses, career guidance, and non-formal
-                  learning experiences. Our mission is to empower individuals
-                  with the tools they need to succeed both personally and
-                  professionally.
-                </p>
-              </>
+              <p className="text-lg leading-relaxed text-gray-one">
+                At LEARN PLUS, we focus on various educational activities,
+                including tailored courses, career guidance, and non-formal
+                learning experiences. Our mission is to empower individuals with
+                the tools they need to succeed both personally and
+                professionally.
+              </p>
             ) : (
-              <>
-                <p className="text-lg leading-relaxed">
-                  We provide a diverse array of educational services, including
-                  personalized coaching, workshops, and seminars. Our goal is to
-                  help participants develop new skills, expand their knowledge,
-                  and enhance their career opportunities.
-                </p>
-              </>
+              <p className="text-lg leading-relaxed text-gray-one">
+                We provide a diverse array of educational services, including
+                personalized coaching, workshops, and seminars. Our goal is to
+                help participants develop new skills, expand their knowledge,
+                and enhance their career opportunities.
+              </p>
             )}
           </div>
         </div>

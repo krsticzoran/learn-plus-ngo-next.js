@@ -34,7 +34,7 @@ export default function AboutUs() {
             <h2 className="text-4xl font-extrabold leading-[60px] mt-2 text-dark">
               Empowering Lives Through Learn Plus
             </h2>
-            <p className="mt-6 text-lg leading-7 text-grey-one">
+            <p className="mt-6 text-lg leading-7 text-gray-one">
               Learn Plus is a non-governmental organization dedicated to
               promoting lifelong learning and education. We believe that
               continuous education empowers individuals and fosters personal and
@@ -55,7 +55,7 @@ export default function AboutUs() {
                 <p className="text-dark text-lg font-extrabold leading-6 mb-2">
                   Empowering Growth Through Education
                 </p>
-                <p className=" text-lg leading-7 text-grey-one">
+                <p className=" text-lg leading-7 text-gray-one">
                   Our mission is to deliver high-quality educational
                   opportunities tailored to the needs of our participants.
                   Through engaging seminars, personalized courses, and
