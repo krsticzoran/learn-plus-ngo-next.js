@@ -79,7 +79,7 @@ export default function AboutUs() {
                 <p className="text-dark text-lg font-extrabold leading-6 mb-2">
                   Learning Hub in Osijek
                 </p>
-                <p className=" text-lg leading-7 text-grey-one">
+                <p className=" text-lg leading-7 text-gray-one">
                   Located in the heart of Osijek, Croatia, we serve as a hub for
                   learning and collaboration, connecting diverse communities
                   across the region. Whether you're seeking guidance for your

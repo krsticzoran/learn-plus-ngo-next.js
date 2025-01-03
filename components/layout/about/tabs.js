@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import Button from "@/components/ui/button";
 
 export default function Tabs() {
   const [activeTab, setActiveTab] = useState("whatWeDo");
@@ -25,19 +26,23 @@ export default function Tabs() {
           />
         </div>
 
-        <div className=" w-[50%] px-10 ">
-          <p className="text-lg font-medium  text-secondary pb-[15px]">
+        <div className=" w-[50%] px-10 pt-10 ">
+          <p className="text-lg font-medium  text-secondary pb-4">
             Unlock Your Potential
           </p>
-          <h2 className="text-3xl font-extrabold  text-dark mb-[25px]">
+          <h2 className="text-3xl font-semibold  text-dark mb-6">
             Learning designed around you
           </h2>
-          <div className="flex space-x-8 mb-6">
+          <p className="mb-12 text-lg leading-relaxed text-gray-one">
+            Our approach combines innovation and expertise, ensuring every step
+            of your journey is tailored to your unique aspirations.
+          </p>
+          <div className="flex space-x-8 mb-10">
             <button
               onClick={() => setActiveTab("whatWeDo")}
-              className={`px-6 py-2 text-xl font-semibold transition-colors duration-300 ${
+              className={`px-12 py-3 text-lg rounded-md font-bold transition-colors leading-6 duration-300  ${
                 activeTab === "whatWeDo"
-                  ? "text-white bg-secondary"
+                  ? "text-white bg-[#1D2133]"
                   : "text-dark bg-white"
               }`}
             >
@@ -45,9 +50,9 @@ export default function Tabs() {
             </button>
             <button
               onClick={() => setActiveTab("whatWeOffer")}
-              className={`px-6 py-2 text-xl font-semibold transition-colors duration-300 ${
+              className={`px-12 py-3  text-lg rounded-md font-bold leading-6 transition-colors duration-300  ${
                 activeTab === "whatWeOffer"
-                  ? "text-white bg-secondary"
+                  ? "text-white bg-[#1D2133]"
                   : "text-dark bg-white"
               }`}
             >
@@ -55,7 +60,7 @@ export default function Tabs() {
             </button>
           </div>
 
-          <div>
+          <div className="h-[150px]">
             {activeTab === "whatWeDo" ? (
               <p className="text-lg leading-relaxed text-gray-one">
                 At LEARN PLUS, we focus on various educational activities,
@@ -72,6 +77,9 @@ export default function Tabs() {
                 and enhance their career opportunities.
               </p>
             )}
+          </div>
+          <div className="flex justify-center">
+            <Button />
           </div>
         </div>
       </div>
