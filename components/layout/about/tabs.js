@@ -42,7 +42,7 @@ export default function Tabs() {
               onClick={() => setActiveTab("whatWeDo")}
               className={`px-12 py-3 text-lg rounded-md font-bold transition-colors leading-6 duration-300  ${
                 activeTab === "whatWeDo"
-                  ? "text-white bg-[#1D2133]"
+                  ? "text-white bg-primary"
                   : "text-dark bg-white"
               }`}
             >
@@ -52,7 +52,7 @@ export default function Tabs() {
               onClick={() => setActiveTab("whatWeOffer")}
               className={`px-12 py-3  text-lg rounded-md font-bold leading-6 transition-colors duration-300  ${
                 activeTab === "whatWeOffer"
-                  ? "text-white bg-[#1D2133]"
+                  ? "text-white bg-primary"
                   : "text-dark bg-white"
               }`}
             >

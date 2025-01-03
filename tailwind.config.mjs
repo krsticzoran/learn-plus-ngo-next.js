@@ -10,6 +10,7 @@ const tailwindConfig = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "#1D2133",
         secondary: "#EC4E4F",
         dark: "#222222",
         "gray-one": "#676767",

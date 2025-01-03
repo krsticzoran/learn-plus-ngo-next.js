@@ -17,7 +17,7 @@ export default function Footer() {
   );
 
   return (
-    <footer className="bg-[#edf3f5] py-8">
+    <footer className="bg-[#1D2133] py-8">
       <div className="max-w-screen-xl mx-auto px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20">
           {/* Contact Section */}
