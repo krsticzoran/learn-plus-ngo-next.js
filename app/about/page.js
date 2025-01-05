@@ -25,7 +25,10 @@ export default function AboutUs() {
         </div>
       </section>
 
-      <section className=" bg-white bg-[url('/images/shape-15.png')] bg-cover bg-center bg-no-repeat ">
+      <section
+        id="learn-plus"
+        className=" bg-white bg-[url('/images/shape-15.png')] bg-cover bg-center bg-no-repeat "
+      >
         <div className="max-w-screen-xl mx-auto px-8 py-32 flex flex-col-reverse sm:flex-row items-center">
           <div className="sm:w-1/2 p-8">
             <p className="text-lg font-medium uppercase text-secondary">

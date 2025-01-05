@@ -85,7 +85,15 @@ export default function Navbar() {
               </Link>
             </li>
             <li>
-              <Dropdown />
+              <Dropdown
+                items={[
+                  { label: "About Us", href: "/about" },
+                  { label: "Learn Plus", href: "/about#learn-plus" },
+                  { label: "What We Do", href: "/about#what-we-do" },
+                  { label: "What We Offer", href: "/about#what-we-offer" },
+                  { label: "Membership", href: "/about#membership" },
+                ]}
+              />
             </li>
             <li>
               <Link
