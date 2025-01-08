@@ -8,7 +8,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white border-gray-200 my-7 text-[#222] text-lg leading-7 font-semibold ">
+    <nav className="bg-white border-gray-200 my-7 text-[#222] text-lg leading-7 font-semibold font-spartan ">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto ">
         <Link
           href="/"
