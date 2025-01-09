@@ -50,7 +50,7 @@ export default function Tabs() {
             <div className="flex space-x-8 mb-10">
               <button
                 onClick={() => setActiveTab("what-we-do")}
-                className={`px-12 py-3 text-lg rounded-md font-bold transition-colors leading-6 duration-300  ${
+                className={`px-12 py-3 text-lg rounded-md font-bold transition-colors leading-6 duration-300 font-spartan ${
                   activeTab === "what-we-do"
                     ? "text-white bg-primary"
                     : "text-dark bg-white"
@@ -60,7 +60,7 @@ export default function Tabs() {
               </button>
               <button
                 onClick={() => setActiveTab("what-we-offer")}
-                className={`px-12 py-3  text-lg rounded-md font-bold leading-6 transition-colors duration-300  ${
+                className={`px-12 py-3  text-lg rounded-md font-bold leading-6 transition-colors duration-300 font-spartan ${
                   activeTab === "what-we-offer"
                     ? "text-white bg-primary"
                     : "text-dark bg-white"

@@ -21,7 +21,7 @@ export default function Dropdown({ items }) {
 
   return (
     <div
-      className={`relative py-2 xl:py-7 font-spartan ${
+      className={`relative py-2 xl:py-7 font-poppins xl:font-spartan ${
         !isLargerThanXL && "flex flex-col"
       }`}
       onMouseEnter={() => isLargerThanXL && setIsHovered(true)}
@@ -69,10 +69,12 @@ export default function Dropdown({ items }) {
                   <li
                     key={index}
                     style={{
-                      textShadow: "0px 4px 6px rgba(0, 0, 0, 0.3)",
-                      transition: "transform 0.3s ease",
+                      ...(isLargerThanXL && {
+                        textShadow: "0px 4px 6px rgba(0, 0, 0, 0.3)",
+                        transition: "transform 0.3s ease",
+                      }),
                     }}
-                    className=" border-b border-solid border-white border-opacity-10  font-spartan hover:scale-105 "
+                    className=" border-b border-solid border-white border-opacity-10 font-poppins xl:font-spartan xl:hover:scale-105 pl-4 xl:pl-0 "
                   >
                     <Link
                       href={item.href}
