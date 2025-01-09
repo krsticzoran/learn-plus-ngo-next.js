@@ -18,6 +18,7 @@ const tailwindConfig = {
       },
       fontFamily: {
         spartan: ['"League Spartan"', "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
     },
   },

@@ -21,14 +21,16 @@ export default function Dropdown({ items }) {
 
   return (
     <div
-      className={`relative font-spartan ${!isLargerThanXL && "flex flex-col"}`}
+      className={`relative py-2 xl:py-7 font-spartan ${
+        !isLargerThanXL && "flex flex-col"
+      }`}
       onMouseEnter={() => isLargerThanXL && setIsHovered(true)}
       onMouseLeave={() => isLargerThanXL && setIsHovered(false)}
     >
       <Link
         href={items[0].href}
         onClick={() => !isLargerThanXL && setIsOpen((prev) => !prev)}
-        className="flex items-center  w-full py-2 px-3  rounded hover:text-secondary hover:bg-transparent xl:border-0  xl:p-0 xl:w-auto  "
+        className="flex items-center  w-full  px-3  rounded hover:text-secondary hover:bg-transparent xl:border-0  xl:p-0 xl:w-auto  "
       >
         {items[0].label}
         <svg
@@ -56,17 +58,21 @@ export default function Dropdown({ items }) {
           transition={{ duration: 0.3 }}
           className={`${
             isLargerThanXL
-              ? "absolute  z-50 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow xl:bg-secondary"
+              ? "absolute top-[83px] z-50 font-normal bg-white divide-y divide-gray-100 rounded-lg shadow xl:bg-secondary"
               : "font-normal"
           } ${isLargerThanXL ? "w-44" : "w-full"}`}
         >
-          <ul className="text-base font-medium text-white leading-6 capitalize">
+          <ul className="text-base font-medium text-dark xl:text-white leading-6 capitalize">
             {items.map(
               (item, index) =>
                 index !== 0 && (
                   <li
                     key={index}
-                    className=" border-b border-solid border-white border-opacity-10 hover:text-dark font-spartan"
+                    style={{
+                      textShadow: "0px 4px 6px rgba(0, 0, 0, 0.3)",
+                      transition: "transform 0.3s ease",
+                    }}
+                    className=" border-b border-solid border-white border-opacity-10  font-spartan hover:scale-105 "
                   >
                     <Link
                       href={item.href}

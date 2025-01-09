@@ -8,11 +8,11 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white border-gray-200 my-7 text-[#222] text-lg leading-7 font-semibold font-spartan ">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto ">
+    <nav className="bg-white border-gray-200  text-dark text-lg leading-7 font-semibold font-spartan ">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-5 sm:px-8 xl:px-0 ">
         <Link
           href="/"
-          className="flex items-center space-x-3 rtl:space-x-reverse"
+          className="flex py-4 items-center space-x-3 rtl:space-x-reverse"
         >
           <Image
             src="https://flowbite.com/docs/images/logo.svg"
@@ -57,7 +57,7 @@ export default function Navbar() {
           } w-full xl:block xl:w-auto`}
           id="navbar-dropdown"
         >
-          <ul className="flex flex-col font-medium xl:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 xl:space-x-8 rtl:space-x-reverse xl:flex-row xl:mt-0 xl:border-0 xl:bg-white">
+          <ul className="flex xl:items-center flex-col font-medium xl:p-0    xl:space-x-8 rtl:space-x-reverse xl:flex-row xl:mt-0 xl:border-0 xl:bg-white">
             <li>
               <Link
                 href="/"
@@ -91,7 +91,7 @@ export default function Navbar() {
                 Our Partners
               </Link>
             </li>
-            <li>
+            <li className="">
               <Dropdown
                 items={[
                   { label: "About Us", href: "/about" },
