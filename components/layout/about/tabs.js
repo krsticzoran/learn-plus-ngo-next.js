@@ -16,10 +16,18 @@ export default function Tabs() {
   }, []);
 
   return (
-    <section className="bg-gray-100 " id="what-we-do">
+    <section className="bg-white-one relative " id="what-we-do">
       <div id="what-we-offer" className="py-20">
-        <div className="max-w-screen-xl mx-auto px-8 flex">
-          <div className="flex">
+        <div className="max-w-screen-xl mx-auto  flex">
+          <div className="flex relative">
+            <div className="absolute bottom-16 left-[570px] w-[180px] h-[180px] z-0 ">
+              <Image
+                src="/images/shape-16.png"
+                alt="shape"
+                width={180}
+                height={180}
+              />
+            </div>
             <Image
               src="/images/country-1.jpg"
               alt="Map 1"
@@ -30,14 +38,14 @@ export default function Tabs() {
             <Image
               src="/images/country-2.jpg"
               alt="Map 2"
-              className="rounded-lg"
+              className="rounded-lg z-20"
               width={350}
               height={400}
             />
           </div>
 
           <div className=" w-[50%] px-10 pt-10 ">
-            <p className="text-lg font-medium  text-secondary pb-4">
+            <p className="text-lg font-medium  text-secondary pb-4 font-slab">
               Unlock Your Potential
             </p>
             <h2 className="text-3xl font-semibold  text-dark mb-6">

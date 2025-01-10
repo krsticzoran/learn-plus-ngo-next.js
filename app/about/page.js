@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Tabs from "@/components/layout/about/tabs";
+import Link from "next/link";
 
 export default function AboutUs() {
   return (
     <main>
-      <section className="relative w-full h-screen">
+      <section className="relative w-full h-[70vh]">
         <Image
-          src="/images/osijek.jpg"
+          src="/images/osijek.webp"
           alt="Osijek"
           layout="fill"
           style={{ objectFit: "cover" }}
@@ -27,14 +28,14 @@ export default function AboutUs() {
 
       <section
         id="learn-plus"
-        className=" bg-white bg-[url('/images/shape-15.png')] bg-cover bg-center bg-no-repeat "
+        className=" bg-white bg-[url('/images/shape-15.png')] bg-cover bg-center bg-no-repeat  "
       >
-        <div className="max-w-screen-xl mx-auto px-8 py-32 flex flex-col-reverse sm:flex-row items-center">
-          <div className="sm:w-1/2 p-8">
-            <p className="text-lg font-medium uppercase text-secondary">
+        <div className="max-w-screen-xl mx-auto  py-28 flex flex-col-reverse sm:flex-row items-center">
+          <div className="sm:w-1/2 ">
+            <p className="text-lg font-medium uppercase text-secondary font-slab">
               Who We Are?
             </p>
-            <h2 className="text-4xl font-extrabold leading-[60px] mt-2 text-dark">
+            <h2 className="text-4xl font-extrabold leading-[60px] mt-2 text-dark xl:w-[80%]">
               Empowering Lives Through Learn Plus
             </h2>
             <p className="mt-6 text-lg leading-7 text-gray-one">
@@ -92,8 +93,8 @@ export default function AboutUs() {
               </div>
             </div>
           </div>
-          <div className="sm:w-1/2 h-auto flex justify-end  ">
-            <div className="relative h-[513px]  w-[423px]">
+          <div className="sm:w-1/2 h-auto flex justify-end   ">
+            <div className="relative h-[550px]  w-[423px]">
               <div className="absolute top-0 right-0 z-20 w-[423] h-[513px]">
                 <Image
                   src="/images/about-2.jpg"
@@ -121,7 +122,7 @@ export default function AboutUs() {
                   height={180}
                 />
               </div>
-              <div className="absolute bottom-[20px] left-[-250px] w-[180px] h-[180px] z-0 ">
+              <div className="absolute bottom-[56px] left-[-250px] w-[180px] h-[180px] z-0 ">
                 <Image
                   src="/images/shape-16.png"
                   alt="shape"
