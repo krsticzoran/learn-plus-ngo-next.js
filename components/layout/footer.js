@@ -95,7 +95,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="#"
-                    className="text-white transition hover:opacity-75"
+                    className="text-white transition hover:text-secondary"
                   >
                     Services
                   </Link>
@@ -104,7 +104,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="#"
-                    className="text-white transition hover:opacity-75"
+                    className="text-white transition hover:text-secondary"
                   >
                     Erasmus+
                   </Link>
@@ -113,7 +113,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="#"
-                    className="text-white transition hover:opacity-75"
+                    className="text-white transition hover:text-secondary"
                   >
                     Our Partners
                   </Link>
@@ -130,7 +130,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="#"
-                    className="text-white transition hover:opacity-75"
+                    className="text-white transition hover:text-secondary"
                   >
                     Internships & Trainings
                   </Link>
@@ -139,7 +139,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="#"
-                    className="text-white transition hover:opacity-75"
+                    className="text-white transition hover:text-secondary"
                   >
                     Cultural Activities
                   </Link>
@@ -148,7 +148,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="#"
-                    className="text-white transition hover:opacity-75"
+                    className="text-white transition hover:text-secondary"
                   >
                     Project Writing
                   </Link>
@@ -156,7 +156,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="#"
-                    className="text-white transition hover:opacity-75"
+                    className="text-white transition hover:text-secondary"
                   >
                     Job Shadowing
                   </Link>
@@ -173,7 +173,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="#"
-                    className="text-white transition hover:opacity-75"
+                    className="text-white transition hover:text-secondary"
                   >
                     Learn Plus
                   </Link>
@@ -182,7 +182,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="#"
-                    className="text-white transition hover:opacity-75"
+                    className="text-white transition hover:text-secondary"
                   >
                     What We Do
                   </Link>
@@ -191,7 +191,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="#"
-                    className="text-white transition hover:opacity-75"
+                    className="text-white transition hover:text-secondary"
                   >
                     What We Offer
                   </Link>
@@ -199,7 +199,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="#"
-                    className="text-white transition hover:opacity-75"
+                    className="text-white transition hover:text-secondary"
                   >
                     Membership
                   </Link>
@@ -216,7 +216,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="#"
-                    className="text-white transition hover:opacity-75"
+                    className="text-white transition hover:text-secondary"
                   >
                     Privacy Policy
                   </Link>
@@ -225,7 +225,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="#"
-                    className="text-white transition hover:opacity-75"
+                    className="text-white transition hover:text-secondary"
                   >
                     Cookie Policy
                   </Link>
@@ -234,7 +234,7 @@ export default function Footer() {
                 <li>
                   <Link
                     href="#"
-                    className="text-white transition hover:opacity-75"
+                    className="text-white transition hover:text-secondary"
                   >
                     Terms & Conditions
                   </Link>
