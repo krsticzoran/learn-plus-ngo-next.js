@@ -254,7 +254,7 @@ export default function Footer() {
         ></div>
         <div className="flex justify-center py-5">
           <h5 className=" text-white font-poppins ">
-            Copyright &copy; 2025 by immidox theme All Right Reserved.
+            Copyright &copy; 2025 by Learn Plus All Right Reserved.
           </h5>
         </div>
       </div>
