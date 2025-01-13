@@ -2,7 +2,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import Dropdown from "../ui/dropdown";
-import Image from "next/image";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,7 +10,6 @@ export default function Navbar() {
     <header>
       <div className="flex justify-between items-center  px-[70px] bg-primary">
         <div className="flex  gap-2">
-          {/* Email */}
           <Link
             href="mailto:example@example.com"
             className="flex items-center gap-2 py-4 text-white hover:text-secondary mr-6"
@@ -29,11 +27,10 @@ export default function Navbar() {
           <div
             className=" w-[1px]"
             style={{
-              // Adjust height as needed
               backgroundColor: "rgba(247, 245, 245, 0.1)",
             }}
           ></div>
-          {/* Phone */}
+
           <Link
             href="tel:+385992476644"
             className="flex items-center gap-2 py-4 text-white hover:text-secondary ml-6"
@@ -50,9 +47,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Social Media Icons */}
         <ul className=" flex gap-6">
-          {/* Facebook */}
           <li>
             <a
               href="https://www.facebook.com"
@@ -76,7 +71,6 @@ export default function Navbar() {
             </a>
           </li>
 
-          {/* Instagram */}
           <li>
             <a
               href="https://www.instagram.com"
@@ -100,7 +94,6 @@ export default function Navbar() {
             </a>
           </li>
 
-          {/* YouTube */}
           <li>
             <a
               href="https://www.youtube.com"
@@ -122,7 +115,7 @@ export default function Navbar() {
         </ul>
       </div>
 
-      <nav className="bg-white border-gray-200  text-dark text-lg leading-7 font-medium xl:font-semibold font-poppins xl:font-spartan uppercase xl:capitalize ">
+      <nav className="bg-white border-gray-200  text-primary text-lg leading-7 font-medium xl:font-semibold font-poppins xl:font-spartan uppercase xl:capitalize ">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto px-5 sm:px-8 xl:px-0 ">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -196,7 +189,7 @@ export default function Navbar() {
                     { label: "Learn Plus", href: "/about#learn-plus" },
                     { label: "What We Do", href: "/about#what-we-do" },
                     { label: "What We Offer", href: "/about#what-we-offer" },
-                    { label: "Membership", href: "/about#membership" },
+                    { label: "Membership", href: "/membership" },
                   ]}
                   setIsMenuOpen={setIsMenuOpen}
                 />

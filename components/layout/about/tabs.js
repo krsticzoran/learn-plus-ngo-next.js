@@ -48,7 +48,7 @@ export default function Tabs() {
             <p className="text-lg font-medium  text-secondary pb-4 font-slab">
               Unlock Your Potential
             </p>
-            <h2 className="text-3xl font-semibold  text-dark mb-6">
+            <h2 className="text-3xl font-semibold  text-primary mb-6">
               Learning designed around you
             </h2>
             <p className="mb-12 text-lg leading-relaxed text-gray-one">
@@ -61,7 +61,7 @@ export default function Tabs() {
                 className={`px-12 py-3 text-lg rounded-md font-bold transition-colors leading-6 duration-300 font-spartan ${
                   activeTab === "what-we-do"
                     ? "text-white bg-primary"
-                    : "text-dark bg-white"
+                    : "text-primary bg-white"
                 }`}
               >
                 What We Do
@@ -71,7 +71,7 @@ export default function Tabs() {
                 className={`px-12 py-3  text-lg rounded-md font-bold leading-6 transition-colors duration-300 font-spartan ${
                   activeTab === "what-we-offer"
                     ? "text-white bg-primary"
-                    : "text-dark bg-white"
+                    : "text-primary bg-white"
                 }`}
               >
                 What We Offer

@@ -30,12 +30,13 @@ export default function Dropdown({ items, setIsMenuOpen }) {
       <Link
         href={items[0].href}
         onClick={() => !isLargerThanXL && setIsOpen((prev) => !prev)}
-        className="flex items-center  w-full  px-3  rounded hover:text-secondary hover:bg-transparent xl:border-0  xl:p-0 xl:w-auto  "
+        className="flex items-center text-primary w-full  px-3  rounded hover:text-secondary hover:bg-transparent xl:border-0  xl:p-0 xl:w-auto  "
       >
         <div
           onClick={() => {
             setIsMenuOpen(false);
           }}
+          className="text-primary"
         >
           {items[0].label}
         </div>
@@ -68,7 +69,7 @@ export default function Dropdown({ items, setIsMenuOpen }) {
               : "font-normal bg-white-one"
           } ${isLargerThanXL ? "w-44" : "w-full"}`}
         >
-          <ul className="text-base font-medium text-dark xl:text-white leading-6 ">
+          <ul className="text-base font-medium text-primary xl:text-white leading-6 ">
             {items.map(
               (item, index) =>
                 index !== 0 && (

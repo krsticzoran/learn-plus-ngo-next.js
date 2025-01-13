@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Tabs from "@/components/layout/about/tabs";
-import Link from "next/link";
 
 export default function AboutUs() {
   return (
@@ -35,7 +34,7 @@ export default function AboutUs() {
             <p className="text-lg font-medium uppercase text-secondary font-slab">
               Who We Are?
             </p>
-            <h2 className="text-4xl font-extrabold leading-[60px] mt-2 text-dark xl:w-[80%]">
+            <h2 className="text-4xl font-extrabold leading-[60px] mt-2 text-primary xl:w-[80%]">
               Empowering Lives Through Learn Plus
             </h2>
             <p className="mt-6 text-lg leading-7 text-gray-one">
@@ -56,7 +55,7 @@ export default function AboutUs() {
                 </div>
               </div>
               <div className="w-[100%] ml-5">
-                <p className="text-dark text-lg font-extrabold leading-6 mb-2">
+                <p className="text-primary text-lg font-extrabold leading-6 mb-2">
                   Empowering Growth Through Education
                 </p>
                 <p className=" text-lg leading-7 text-gray-one">
@@ -80,7 +79,7 @@ export default function AboutUs() {
                 </div>
               </div>
               <div className="w-[100%] ml-5">
-                <p className="text-dark text-lg font-extrabold leading-6 mb-2">
+                <p className="text-primary text-lg font-extrabold leading-6 mb-2">
                   Learning Hub in Osijek
                 </p>
                 <p className=" text-lg leading-7 text-gray-one">
@@ -136,6 +135,116 @@ export default function AboutUs() {
       </section>
 
       <Tabs />
+      <section id="membership" className=" bg-primary relative ">
+        <Image
+          src="/images/shape-22.png"
+          alt="shape"
+          width={148}
+          height={75}
+          className="absolute top-0 left-0"
+        />
+        <Image
+          src="/images/shape-23.png"
+          alt="shape"
+          width={356}
+          height={170}
+          className="absolute top-0 right-0"
+        />
+        <div className="max-w-screen-xl mx-auto  py-28 flex text-white ">
+          <div className="xl:w-1/2 pr-5">
+            <div className="xl:h-[180px]">
+              <p className="text-lg font-medium uppercase text-secondary font-sla">
+                Join Us to Contribute, Learn, and Grow
+              </p>
+              <h2 className="text-4xl font-extrabold leading-[60px] mt-2 xl:w-[80%]">
+                Membership Eligibility and Opportunities
+              </h2>
+            </div>
+            <p className="text-lg leading-7">
+              Any natural person of Croatian or foreign citizenship and legal
+              entity registered in Croatia who is interested in participating in
+              the Association's activities and contributing to the achievement
+              of the Association's goals, and who accepts the provisions of the
+              Statute, can become a member of the Association.
+            </p>
+            <p className="text-lg leading-7 mt-4">
+              One becomes a member of the Association by registering in the list
+              of members and signing the application form accepting the Statute
+              and other acts of the Association.
+            </p>
+          </div>
+          <div className="xl:w-1/2 xl:pt-[180px] pl-5">
+            <p className="text-lg leading-7 ">
+              Persons under the age of 14 can become members with a written
+              declaration signed by their parent(s) or legal guardian(s) as well
+              as minors over the age of 14 where is necessary that their parents
+              give us written consent.
+            </p>
+            <p className="text-lg leading-7 mt-4">
+              As our member you can have many opportunities - mobilities, free
+              seminars, study visits, field work and other activities.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section className="bg-white-one">
+        <div className="max-w-screen-xl mx-auto py-28  ">
+          <div className="text-center">
+            <p className="text-lg font-medium uppercase text-secondary font-slab">
+              Be Part of Our Community
+            </p>
+            <h2 className="text-4xl font-extrabold leading-[60px] mt-2 mb-16 text-center text-primary">
+              Choose the Best Membership Plan for You
+            </h2>
+          </div>
+          {/* Regular Members Card */}
+          <div className="flex  space-x-8">
+            <div className="bg-white shadow-md rounded-lg p-6 text-center flex-1">
+              <h3 className="text-xl font-semibold text-dark mb-4">
+                Regular Members
+              </h3>
+              <p className="text-gray-700 text-lg">
+                Regular members actively participate in the activities and
+                programs of our association. They can be adults, persons who
+                participated in the founding of the Association, their family
+                members, and friends. Regular members make up the Assembly of
+                the Association and actively participate in its activities while
+                complying with the Statute and all the rules and guidelines of
+                the Association and regularly paying the membership fee.
+              </p>
+            </div>
+
+            {/* Associate Members Card */}
+            <div className="bg-white shadow-md rounded-lg p-6 text-center flex-1">
+              <h3 className="text-xl font-semibold text-dark mb-4">
+                Associate Members
+              </h3>
+              <p className="text-gray-700 text-lg">
+                Associate members occasionally participate in the Association's
+                activities or help the Association achieve its goals with
+                financial or other support. Associated members are natural and
+                legal persons of legal age and minors. Associate members also
+                pay a regular membership fee.
+              </p>
+            </div>
+
+            {/* Honorary Members Card */}
+            <div className="bg-white shadow-md rounded-lg p-6 text-center flex-1">
+              <h3 className="text-xl font-semibold text-dark mb-4">
+                Honorary Members
+              </h3>
+              <p className="text-gray-700 text-lg">
+                Honorary members are persons among the members of the
+                Association, other organizations, academic communities in
+                Croatia and abroad who significantly contributed to the work and
+                reputation of the Association and promote its activities and
+                values. They are appointed exclusively by the Assembly and are
+                not obliged to pay membership fees.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
