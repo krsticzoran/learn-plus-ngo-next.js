@@ -6,7 +6,7 @@ export default function AboutUs() {
     <main>
       <section className="relative w-full h-[70vh]">
         <Image
-          src="/images/osijek.webp"
+          src="/images/osijek.jpg"
           alt="Osijek"
           layout="fill"
           style={{ objectFit: "cover" }}
@@ -137,13 +137,6 @@ export default function AboutUs() {
       <Tabs />
       <section id="membership" className=" bg-primary relative ">
         <Image
-          src="/images/shape-22.png"
-          alt="shape"
-          width={148}
-          height={75}
-          className="absolute top-0 left-0"
-        />
-        <Image
           src="/images/shape-23.png"
           alt="shape"
           width={356}
@@ -160,20 +153,20 @@ export default function AboutUs() {
                 Membership Eligibility and Opportunities
               </h2>
             </div>
-            <div className="flex items-center ">
-              <div className="flex items-center justify-center w-[90px] h-[90px] bg-blue-one rounded-full hover:bg-secondary transition-colors duration-300">
+            <div className="flex items-center mb-4 ">
+              <div className="flex items-center justify-center w-[70px] h-[70px] bg-blue-one rounded-full hover:bg-secondary transition-colors duration-300">
                 <Image
                   src="/icons/people.png"
                   width={40}
                   height={40}
-                  alt="location"
+                  alt="Who Can Join"
                 />
               </div>
-              <p className="text-white text-lg font-extrabold leading-6 mb-2 mt-4 ml-4">
+              <p className="text-white text-lg font-extrabold leading-6 ml-6">
                 Who Can Join
               </p>
             </div>
-            <p className="text-lg leading-7 text-gray-two mt-2">
+            <p className="text-lg leading-7 text-gray-two ">
               Any natural person of Croatian or foreign citizenship and legal
               entity registered in Croatia who is interested in participating in
               the Association's activities and contributing to the achievement
@@ -182,23 +175,45 @@ export default function AboutUs() {
             </p>
           </div>
           <div className="xl:w-1/2  pl-5">
-            <p className="text-white text-lg font-extrabold leading-6 mb-2">
-              How to Join
-            </p>
+            <div className="flex items-center mb-4 ">
+              <div className="flex items-center justify-center w-[70px] h-[70px] bg-blue-one rounded-full hover:bg-secondary transition-colors duration-300">
+                <Image
+                  src="/icons/clipboards.png"
+                  width={40}
+                  height={40}
+                  alt=" How to Join"
+                />
+              </div>
+              <p className="text-white text-lg font-extrabold leading-6 ml-6">
+                How to Join
+              </p>
+            </div>
+
             <p className="text-lg leading-7 mt-4 text-gray-two">
               One becomes a member of the Association by registering in the list
               of members and signing the application form accepting the Statute
               and other acts of the Association.
             </p>
-            <p className="text-lg leading-7 pt-1 text-gray-two">
+            <p className="text-lg leading-7 pt-2 text-gray-two">
               Persons under the age of 14 can become members with a written
               declaration signed by their parents or legal guardians as well as
               minors over the age of 14 where is necessary that their parents
               give us written consent.
             </p>
-            <p className="text-white text-lg font-extrabold leading-6 mt-8">
-              Member Benefits
-            </p>
+            <div className="flex items-center mb-4 mt-6">
+              <div className="flex items-center justify-center w-[70px] h-[70px] bg-blue-one rounded-full hover:bg-secondary transition-colors duration-300">
+                <Image
+                  src="/icons/lamp.png"
+                  width={40}
+                  height={40}
+                  alt="lightbulb"
+                />
+              </div>
+              <p className="text-white text-lg font-extrabold leading-6 ml-6">
+                Member Benefits
+              </p>
+            </div>
+
             <p className="text-lg leading-7 mt-4 text-gray-two">
               As our member you can have many opportunities - mobilities, free
               seminars, study visits, field work and other activities.
@@ -206,50 +221,71 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
-      <section className="bg-white-one">
+      <section className="bg-white bg-[url('/images/shape-15.png')] bg-cover bg-center bg-no-repeat ">
         <div className="max-w-screen-xl mx-auto py-28  ">
-          <div className="text-center">
-            <p className="text-lg font-medium uppercase text-secondary font-slab">
-              Be Part of Our Community
-            </p>
-            <h2 className="text-4xl font-extrabold leading-[60px] mt-2 mb-16 text-center text-primary">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-extrabold leading-[60px]   text-center text-primary">
               Choose the Best Membership Plan for You
             </h2>
+            <h3 className="text-xl font-semibold  font-slab mt-2 text-pretty">
+              For the year 2025 the
+              <span className="text-secondary"> membership fee </span>is 10 EUR
+            </h3>
           </div>
           {/* Regular Members Card */}
           <div className="flex  space-x-8">
-            <div className="bg-white shadow-md rounded-lg p-6 flex-1">
-              <h3 className="text-xl font-semibold text-primary mb-4">
+            <div
+              className="bg-white shadow-md rounded-[20px] py-16 px-8  flex-1"
+              style={{
+                boxShadow: "0px 0px 30px 1px rgba(0, 0, 0, 0.15)",
+              }}
+            >
+              <h3 className="text-xl font-semibold text-primary mb-4 uppercase">
                 Regular Members
               </h3>
               <p className="text-gray-one text-lg">
                 Regular members actively participate in the activities and
                 programs of our association. They can be adults, persons who
                 participated in the founding of the Association, their family
-                members, and friends. Regular members make up the Assembly of
-                the Association and actively participate in its activities while
-                complying with the Statute and all the rules and guidelines of
-                the Association and regularly paying the membership fee.
+                members, and friends.
+              </p>
+              <p className="text-gray-one text-lg mt-2">
+                Regular members make up the Assembly of the Association and
+                actively participate in its activities while complying with the
+                Statute and all the rules and guidelines of the Association and
+                regularly paying the membership fee.
               </p>
             </div>
 
             {/* Associate Members Card */}
-            <div className="bg-white shadow-md rounded-lg p-6  flex-1">
-              <h3 className="text-xl font-semibold text-primary mb-4">
+            <div
+              className="bg-white shadow-md rounded-[20px] py-16 px-8   flex-1"
+              style={{
+                boxShadow: "0px 0px 30px 1px rgba(0, 0, 0, 0.15)",
+              }}
+            >
+              <h3 className="text-xl font-semibold text-primary mb-4 uppercase">
                 Associate Members
               </h3>
-              <p className="text-gray-one text-lg">
+              <p className="text-gray-one text-lg ">
                 Associate members occasionally participate in the Association's
                 activities or help the Association achieve its goals with
-                financial or other support. Associated members are natural and
-                legal persons of legal age and minors. Associate members also
-                pay a regular membership fee.
+                financial or other support.{" "}
+              </p>
+              <p className="text-gray-one text-lg mt-2">
+                Associated members are natural and legal persons of legal age
+                and minors. Associate members also pay a regular membership fee.
               </p>
             </div>
 
             {/* Honorary Members Card */}
-            <div className="bg-white shadow-md rounded-lg p-6  flex-1">
-              <h3 className="text-xl font-semibold text-priamry mb-4 ">
+            <div
+              className="bg-white shadow-md rounded-[20px] py-16 px-8  flex-1"
+              style={{
+                boxShadow: "0px 0px 30px 1px rgba(0, 0, 0, 0.15)",
+              }}
+            >
+              <h3 className="text-xl font-semibold text-priamry mb-4 uppercase ">
                 Honorary Members
               </h3>
               <p className="text-gray-one text-lg">
@@ -257,8 +293,11 @@ export default function AboutUs() {
                 Association, other organizations, academic communities in
                 Croatia and abroad who significantly contributed to the work and
                 reputation of the Association and promote its activities and
-                values. They are appointed exclusively by the Assembly and are
-                not obliged to pay membership fees.
+                values.
+              </p>
+              <p className="text-gray-one text-lg mt-2">
+                They are appointed exclusively by the Assembly and are not
+                obliged to pay membership fees.
               </p>
             </div>
           </div>
