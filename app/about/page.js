@@ -160,27 +160,36 @@ export default function AboutUs() {
                 Membership Eligibility and Opportunities
               </h2>
             </div>
-            <p className="text-lg leading-7">
+            <p className="text-white text-lg font-extrabold leading-6 mb-2 mt-4">
+              Who Can Join
+            </p>
+            <p className="text-lg leading-7 text-gray-two">
               Any natural person of Croatian or foreign citizenship and legal
               entity registered in Croatia who is interested in participating in
               the Association's activities and contributing to the achievement
               of the Association's goals, and who accepts the provisions of the
               Statute, can become a member of the Association.
             </p>
-            <p className="text-lg leading-7 mt-4">
+          </div>
+          <div className="xl:w-1/2  pl-5">
+            <p className="text-white text-lg font-extrabold leading-6 mb-2">
+              How to Join
+            </p>
+            <p className="text-lg leading-7 mt-4 text-gray-two">
               One becomes a member of the Association by registering in the list
               of members and signing the application form accepting the Statute
               and other acts of the Association.
             </p>
-          </div>
-          <div className="xl:w-1/2 xl:pt-[180px] pl-5">
-            <p className="text-lg leading-7 ">
+            <p className="text-lg leading-7 pt-1 text-gray-two">
               Persons under the age of 14 can become members with a written
-              declaration signed by their parent(s) or legal guardian(s) as well
-              as minors over the age of 14 where is necessary that their parents
+              declaration signed by their parents or legal guardians as well as
+              minors over the age of 14 where is necessary that their parents
               give us written consent.
             </p>
-            <p className="text-lg leading-7 mt-4">
+            <p className="text-white text-lg font-extrabold leading-6 mt-8">
+              Member Benefits
+            </p>
+            <p className="text-lg leading-7 mt-4 text-gray-two">
               As our member you can have many opportunities - mobilities, free
               seminars, study visits, field work and other activities.
             </p>

@@ -45,12 +45,12 @@ export default function Tabs() {
           </div>
 
           <div className=" w-[50%] px-10 pt-10 ">
-            <p className="text-lg font-medium  text-secondary pb-4 font-slab">
+            <p className="text-lg font-medium uppercase text-secondary font-sla mb-1">
               Unlock Your Potential
             </p>
-            <h2 className="text-3xl font-semibold  text-primary mb-6">
+            <h3 className="text-3xl font-semibold  text-primary mb-6">
               Learning designed around you
-            </h2>
+            </h3>
             <p className="mb-12 text-lg leading-relaxed text-gray-one">
               Our approach combines innovation and expertise, ensuring every
               step of your journey is tailored to your unique aspirations.
