@@ -47,7 +47,7 @@ export default function AboutUs() {
               <div className="w-[120px] h-auto flex items-center justify-center ">
                 <div className="flex items-center justify-center w-[90px] h-[90px] bg-white-one rounded-full hover:bg-secondary transition-colors duration-300">
                   <Image
-                    src="/mission.png"
+                    src="/icons/mission.png"
                     width={40}
                     height={40}
                     alt="mission"
@@ -71,10 +71,10 @@ export default function AboutUs() {
               <div className="w-[120px] h-auto flex items-center justify-center ">
                 <div className="flex items-center justify-center w-[90px] h-[90px] bg-white-one rounded-full hover:bg-secondary transition-colors duration-300">
                   <Image
-                    src="/location.png"
+                    src="/icons/location.png"
                     width={40}
                     height={40}
-                    alt="mission"
+                    alt="location"
                   />
                 </div>
               </div>
@@ -160,10 +160,20 @@ export default function AboutUs() {
                 Membership Eligibility and Opportunities
               </h2>
             </div>
-            <p className="text-white text-lg font-extrabold leading-6 mb-2 mt-4">
-              Who Can Join
-            </p>
-            <p className="text-lg leading-7 text-gray-two">
+            <div className="flex items-center ">
+              <div className="flex items-center justify-center w-[90px] h-[90px] bg-blue-one rounded-full hover:bg-secondary transition-colors duration-300">
+                <Image
+                  src="/icons/people.png"
+                  width={40}
+                  height={40}
+                  alt="location"
+                />
+              </div>
+              <p className="text-white text-lg font-extrabold leading-6 mb-2 mt-4 ml-4">
+                Who Can Join
+              </p>
+            </div>
+            <p className="text-lg leading-7 text-gray-two mt-2">
               Any natural person of Croatian or foreign citizenship and legal
               entity registered in Croatia who is interested in participating in
               the Association's activities and contributing to the achievement
@@ -208,11 +218,11 @@ export default function AboutUs() {
           </div>
           {/* Regular Members Card */}
           <div className="flex  space-x-8">
-            <div className="bg-white shadow-md rounded-lg p-6 text-center flex-1">
-              <h3 className="text-xl font-semibold text-dark mb-4">
+            <div className="bg-white shadow-md rounded-lg p-6 flex-1">
+              <h3 className="text-xl font-semibold text-primary mb-4">
                 Regular Members
               </h3>
-              <p className="text-gray-700 text-lg">
+              <p className="text-gray-one text-lg">
                 Regular members actively participate in the activities and
                 programs of our association. They can be adults, persons who
                 participated in the founding of the Association, their family
@@ -224,11 +234,11 @@ export default function AboutUs() {
             </div>
 
             {/* Associate Members Card */}
-            <div className="bg-white shadow-md rounded-lg p-6 text-center flex-1">
-              <h3 className="text-xl font-semibold text-dark mb-4">
+            <div className="bg-white shadow-md rounded-lg p-6  flex-1">
+              <h3 className="text-xl font-semibold text-primary mb-4">
                 Associate Members
               </h3>
-              <p className="text-gray-700 text-lg">
+              <p className="text-gray-one text-lg">
                 Associate members occasionally participate in the Association's
                 activities or help the Association achieve its goals with
                 financial or other support. Associated members are natural and
@@ -238,11 +248,11 @@ export default function AboutUs() {
             </div>
 
             {/* Honorary Members Card */}
-            <div className="bg-white shadow-md rounded-lg p-6 text-center flex-1">
-              <h3 className="text-xl font-semibold text-dark mb-4">
+            <div className="bg-white shadow-md rounded-lg p-6  flex-1">
+              <h3 className="text-xl font-semibold text-priamry mb-4 ">
                 Honorary Members
               </h3>
-              <p className="text-gray-700 text-lg">
+              <p className="text-gray-one text-lg">
                 Honorary members are persons among the members of the
                 Association, other organizations, academic communities in
                 Croatia and abroad who significantly contributed to the work and

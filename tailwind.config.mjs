@@ -16,6 +16,7 @@ const tailwindConfig = {
         "gray-one": "#676767",
         "white-one": "#F5F5F5",
         "gray-two": "#BCBDC4",
+        "blue-one": "#2F3343",
       },
       fontFamily: {
         spartan: ['"League Spartan"', "sans-serif"],
