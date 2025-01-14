@@ -189,7 +189,7 @@ export default function Navbar() {
                     { label: "Learn Plus", href: "/about#learn-plus" },
                     { label: "What We Do", href: "/about#what-we-do" },
                     { label: "What We Offer", href: "/about#what-we-offer" },
-                    { label: "Membership", href: "/membership" },
+                    { label: "Membership", href: "/about#membership" },
                   ]}
                   setIsMenuOpen={setIsMenuOpen}
                 />
