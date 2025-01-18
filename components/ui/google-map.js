@@ -1,5 +1,4 @@
 "use client";
-import React, { useCallback, useState } from "react";
 import { GoogleMap, Marker, useJsApiLoader } from "@react-google-maps/api";
 
 const containerStyle = {
@@ -14,19 +13,8 @@ const center = {
 
 export default function GoogleMapComponent() {
   const { isLoaded, loadError } = useJsApiLoader({
-    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY, // Your API Key
+    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
   });
-
-  const [mapInstance, setMapInstance] = useState(null);
-
-  // Callback to save the map instance
-  const onLoad = useCallback((map) => {
-    setMapInstance(map);
-  }, []);
-
-  const onUnmount = useCallback(() => {
-    setMapInstance(null);
-  }, []);
 
   if (loadError) {
     return (
@@ -53,13 +41,7 @@ export default function GoogleMapComponent() {
   }
 
   return (
-    <GoogleMap
-      mapContainerStyle={containerStyle}
-      center={center}
-      zoom={12}
-      onLoad={onLoad}
-      onUnmount={onUnmount}
-    >
+    <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={12}>
       <Marker position={center} />
     </GoogleMap>
   );
