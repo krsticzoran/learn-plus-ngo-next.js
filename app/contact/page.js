@@ -16,12 +16,13 @@ export default function Contact() {
                 check out the additional info PDF for directions and more.
               </p>
             </div>
-            <div className="w-[50%]">
+            <div className="w-[50%] h-auto">
               <Image
                 src="/images/desk.jpg"
                 width={640}
-                height={423}
+                height={427}
                 alt="desk"
+                priority
               />
             </div>
           </div>
