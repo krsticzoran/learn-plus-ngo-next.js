@@ -4,7 +4,7 @@ import GoogleMapComponent from "@/components/ui/google-map";
 export default function Contact() {
   return (
     <>
-      <section className="bg-primary bg-cover bg-center bg-no-repeat  ">
+      <section className="bg-primary bg-cover bg-center bg-no-repeat relative bg-[url('/images/shape-14.png')] ">
         <div className="max-w-screen-xl mx-auto pt-28  ">
           <div className="flex items ">
             <div className="w-[50%] mt-20">
@@ -16,7 +16,7 @@ export default function Contact() {
                 check out the additional info PDF for directions and more.
               </p>
             </div>
-            <div className="w-[50%] h-auto">
+            <div className="w-[50%] h-auto z-50">
               <Image
                 src="/images/desk.jpg"
                 width={640}
@@ -29,7 +29,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="bg-white bg-[url('/images/shape-15.png')] bg-cover bg-center bg-no-repeat   ">
+      <section className="bg-white-one bg-cover bg-center bg-no-repeat   ">
         <div className="max-w-screen-xl mx-auto">
           <div className="flex  space-x-8 pt-28">
             {/* Visit Our Office*/}
@@ -99,7 +99,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="container mx-auto mt-28 mb-28 px-4 sm:px-6">
+          <div className="container mx-auto mt-28 pb-28 px-4 sm:px-6">
             <h2 className="text-4xl font-extrabold leading-[60px]   text-center text-primary mb-16">
               Additional Information
             </h2>
