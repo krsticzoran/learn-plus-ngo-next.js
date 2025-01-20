@@ -67,7 +67,7 @@ export default function Dropdown({ items, setIsMenuOpen }) {
             isLargerThanXL
               ? "absolute top-[83px] z-50 font-normal  divide-y divide-gray-100 rounded-lg shadow  xl:bg-secondary"
               : "font-normal bg-white-one"
-          } ${isLargerThanXL ? "w-44" : "w-full"}`}
+          } ${isLargerThanXL ? "w-[230px]" : "w-full"}`}
         >
           <ul className="text-base font-medium text-primary xl:text-white leading-6 ">
             {items.map(
@@ -81,11 +81,15 @@ export default function Dropdown({ items, setIsMenuOpen }) {
                         transition: "transform 0.3s ease",
                       }),
                     }}
-                    className=" border-b border-solid border-white border-opacity-10  xl:hover:scale-105 pl-4 xl:pl-0 "
+                    className={`${
+                      index === items.length - 1
+                        ? ""
+                        : "border-b border-solid border-white border-opacity-10"
+                    } xl:hover:text-primary xl:hover:scale-105 pl-4 xl:pl-0`}
                   >
                     <Link
                       href={item.href}
-                      className="block px-4 py-2  font-poppins xl:font-spartan"
+                      className="block px-6 py-[10px]  font-poppins xl:font-spartan text-base"
                       onClick={() => {
                         !isLargerThanXL && setIsOpen(false);
                         setIsMenuOpen(false);
