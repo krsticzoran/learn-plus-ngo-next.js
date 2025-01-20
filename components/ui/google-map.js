@@ -41,7 +41,7 @@ export default function GoogleMapComponent() {
   }
 
   return (
-    <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={12}>
+    <GoogleMap mapContainerStyle={containerStyle} center={center} zoom={14}>
       <Marker position={center} />
     </GoogleMap>
   );
