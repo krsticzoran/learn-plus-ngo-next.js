@@ -2,12 +2,13 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Dropdown({ items, setIsMenuOpen }) {
   const [isHovered, setIsHovered] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [isLargerThanXL, setIsLargerThanXL] = useState(false);
-
+  const pathname = usePathname();
   useEffect(() => {
     const updateScreenSize = () => {
       setIsLargerThanXL(window.innerWidth > 1280);
@@ -36,7 +37,9 @@ export default function Dropdown({ items, setIsMenuOpen }) {
           onClick={() => {
             setIsMenuOpen(false);
           }}
-          className="text-primary"
+          className={` ${
+            pathname == "/about" ? "text-secondary" : ""
+          } block py-2 px-3 rounded xl:bg-transparent xl:p-0  hover:text-secondary `}
         >
           {items[0].label}
         </div>
@@ -53,6 +56,7 @@ export default function Dropdown({ items, setIsMenuOpen }) {
             strokeLinejoin="round"
             strokeWidth="2"
             d="m1 1 4 4 4-4"
+            className={` ${pathname == "/about" ? "text-secondary" : ""}`}
           />
         </svg>
       </Link>

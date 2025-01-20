@@ -2,9 +2,10 @@
 import { useState } from "react";
 import Link from "next/link";
 import Dropdown from "../ui/dropdown";
-
+import { usePathname } from "next/navigation";
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header>
@@ -152,7 +153,9 @@ export default function Navbar() {
               <li onClick={() => setIsMenuOpen(false)}>
                 <Link
                   href="/"
-                  className="block py-2 px-3 rounded xl:bg-transparent xl:p-0 hover:text-secondary  "
+                  className={` ${
+                    pathname == "/" ? "text-secondary" : ""
+                  } block py-2 px-3 rounded xl:bg-transparent xl:p-0  hover:text-secondary `}
                 >
                   Home
                 </Link>
@@ -161,7 +164,9 @@ export default function Navbar() {
               <li onClick={() => setIsMenuOpen(false)}>
                 <Link
                   href="/services"
-                  className="block py-2 px-3 rounded xl:bg-transparent xl:p-0  hover:text-secondary "
+                  className={` ${
+                    pathname == "/services" ? "text-secondary" : ""
+                  } block py-2 px-3 rounded xl:bg-transparent xl:p-0  hover:text-secondary `}
                 >
                   Our Services
                 </Link>
@@ -169,7 +174,9 @@ export default function Navbar() {
               <li onClick={() => setIsMenuOpen(false)}>
                 <Link
                   href="/erasmus"
-                  className="block py-2 px-3 rounded xl:bg-transparent xl:p-0 hover:text-secondary  "
+                  className={` ${
+                    pathname == "/erasmus" ? "text-secondary" : ""
+                  } block py-2 px-3 rounded xl:bg-transparent xl:p-0  hover:text-secondary `}
                 >
                   Erasmus+
                 </Link>
@@ -177,8 +184,11 @@ export default function Navbar() {
               <li onClick={() => setIsMenuOpen(false)}>
                 <Link
                   href="/partners"
-                  className="block py-2 px-3 rounded xl:bg-transparent xl:p-0  hover:text-secondary "
+                  className={` ${
+                    pathname == "/partners" ? "text-secondary" : ""
+                  } block py-2 px-3 rounded xl:bg-transparent xl:p-0  hover:text-secondary `}
                 >
+                  {" "}
                   Our Partners
                 </Link>
               </li>
@@ -197,7 +207,9 @@ export default function Navbar() {
               <li onClick={() => setIsMenuOpen(false)}>
                 <Link
                   href="/contact"
-                  className="block py-2 px-3 rounded xl:bg-transparent xl:p-0  hover:text-secondary "
+                  className={` ${
+                    pathname == "/contact" ? "text-secondary" : ""
+                  } block py-2 px-3 rounded xl:bg-transparent xl:p-0  hover:text-secondary `}
                 >
                   Contact
                 </Link>
