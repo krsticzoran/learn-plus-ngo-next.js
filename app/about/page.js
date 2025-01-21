@@ -14,7 +14,7 @@ export default function AboutUs() {
           sizes="(min-width: 250px) 100vw"
           priority
         />
-        <div className="absolute inset-0 bg-black opacity-60"></div>
+        <div className="absolute inset-0 bg-black opacity-40"></div>
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-white">
           <h1 className="text-4xl sm:text-6xl font-bold">
             Welcome to LEARN PLUS

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import GoogleMapComponent from "@/components/ui/google-map";
 
 export default function Contact() {
@@ -12,8 +13,28 @@ export default function Contact() {
                 get in touch
               </h1>
               <p className="mt-4 text-lg leading-7 text-gray-two w-[90%]">
-                We’re here to help! Reach out to us through email or phone, and
-                check out the additional info PDF for directions and more.
+                We’re here to help! Reach out to us through{" "}
+                <Link
+                  href="#email"
+                  className="font-semibold hover:text-secondary"
+                >
+                  email
+                </Link>{" "}
+                or{" "}
+                <Link
+                  href="#contact"
+                  className="font-semibold hover:text-secondary"
+                >
+                  phone
+                </Link>
+                , and check out the additional info{" "}
+                <Link
+                  href="#pdf"
+                  className="font-semibold hover:text-secondary"
+                >
+                  PDF for directions
+                </Link>{" "}
+                and more.
               </p>
             </div>
             <div className="w-[50%] h-auto ">
@@ -58,6 +79,7 @@ export default function Contact() {
 
             {/* Let's Talk */}
             <div
+              id="contact"
               className="bg-white shadow-md rounded-[20px] py-16 px-8  flex-1 flex flex-col  items-center  "
               style={{
                 boxShadow: "0px 0px 30px 1px rgba(0, 0, 0, 0.15)",
@@ -79,6 +101,7 @@ export default function Contact() {
 
             {/* E-mail Us*/}
             <div
+              id="email"
               className="bg-white shadow-md rounded-[20px] py-16 px-8  flex-1 flex flex-col  items-center  "
               style={{
                 boxShadow: "0px 0px 30px 1px rgba(0, 0, 0, 0.15)",
@@ -99,7 +122,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="container mx-auto mt-28 pb-28 px-4 sm:px-6">
+          <div className="container mx-auto mt-28 pb-28 px-4 sm:px-6" id="pdf">
             <h2 className="text-4xl font-extrabold leading-[60px]   text-center text-primary mb-16">
               Additional Information
             </h2>
