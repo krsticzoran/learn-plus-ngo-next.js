@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Tabs from "@/components/layout/about/tabs";
+import Link from "next/link";
 
 export default function AboutUs() {
   return (
@@ -31,7 +32,7 @@ export default function AboutUs() {
       >
         <div className="max-w-screen-xl mx-auto  py-28 flex flex-col-reverse sm:flex-row items-center">
           <div className="sm:w-1/2 ">
-            <p className="text-lg font-medium uppercase text-secondary font-slab">
+            <p className="text-lg font-medium uppercase text-secondary ">
               Who We Are?
             </p>
             <h2 className="text-4xl font-extrabold leading-[60px] mt-2 text-primary xl:w-[80%]">
@@ -43,74 +44,83 @@ export default function AboutUs() {
               continuous education empowers individuals and fosters personal and
               professional growth.
             </p>
-            <div className="flex mt-4">
+            <div className="flex mt-9">
               <div className="w-[120px] h-auto flex items-center justify-center ">
                 <div className="flex items-center justify-center w-[90px] h-[90px] bg-white-one rounded-full hover:bg-secondary transition-colors duration-300">
-                  <Image
-                    src="/icons/mission.png"
-                    width={40}
-                    height={40}
-                    alt="mission"
-                  />
+                  <Link href="/services">
+                    <Image
+                      src="/icons/mission.png"
+                      width={40}
+                      height={40}
+                      alt="mission"
+                    />
+                  </Link>
                 </div>
               </div>
               <div className="w-[100%] ml-5">
-                <p className="text-primary text-lg font-extrabold leading-6 mb-2">
+                <p className="text-primary text-lg font-extrabold leading-6 mb-4">
                   Empowering Growth Through Education
                 </p>
                 <p className=" text-lg leading-7 text-gray-one">
                   Our mission is to deliver high-quality educational
                   opportunities tailored to the needs of our participants.
+                </p>
+                <p className=" text-lg leading-7 text-gray-one mt-1">
                   Through engaging seminars, personalized courses, and
                   innovative non-formal learning experiences, we aim to provide
                   tools for career advancement and self-development.
                 </p>
               </div>
             </div>
-            <div className="flex mt-4">
+            <div className="flex mt-8">
               <div className="w-[120px] h-auto flex items-center justify-center ">
                 <div className="flex items-center justify-center w-[90px] h-[90px] bg-white-one rounded-full hover:bg-secondary transition-colors duration-300">
-                  <Image
-                    src="/icons/location.png"
-                    width={40}
-                    height={40}
-                    alt="location"
-                  />
+                  <Link href="/contact#location">
+                    <Image
+                      src="/icons/location.png"
+                      width={40}
+                      height={40}
+                      alt="location"
+                    />
+                  </Link>
                 </div>
               </div>
               <div className="w-[100%] ml-5">
-                <p className="text-primary text-lg font-extrabold leading-6 mb-2">
+                <p className="text-primary text-lg font-extrabold leading-6 mb-4">
                   Learning Hub in Osijek
                 </p>
                 <p className=" text-lg leading-7 text-gray-one">
                   Located in the heart of Osijek, Croatia, we serve as a hub for
                   learning and collaboration, connecting diverse communities
-                  across the region. Whether you're seeking guidance for your
-                  career or striving for personal improvement, Learn Plus is
-                  here to support your journey.
+                  across the region.
+                </p>
+                <p className="mt-1 text-lg leading-7 text-gray-one">
+                  Whether you're seeking guidance for your career or striving
+                  for personal improvement, Learn Plus is here to support your
+                  journey.
                 </p>
               </div>
             </div>
           </div>
-          <div className="sm:w-1/2 h-auto flex justify-end   ">
-            <div className="relative h-[550px]  w-[423px]">
-              <div className="absolute top-0 right-0 z-20 w-[423] h-[513px]">
+          <div className="sm:w-1/2 h-auto flex justify-end  pt-20  ">
+            <div className="relative ">
+              <div className="z-50 relative">
                 <Image
                   src="/images/about-2.jpg"
                   alt="about us"
                   width={423}
                   height={513}
-                  className="rounded-lg z-10 "
+                  className="rounded-lg  "
                 />
               </div>
-              <div className="absolute top-[403px] left-[-160px] z-20">
+              <div className="absolute top-[403px] left-[-160px] z-50">
                 <Image
                   src="/images/about-3.jpg"
-                  alt="Sabout us"
+                  alt="about us"
                   width={320}
                   height={220}
                   style={{ boxShadow: "0px 20px 60px 10px rgba(0, 0, 0, 0.2)" }}
-                  className="rounded-lg shadow-md"
+                  className="rounded-lg shadow-md "
                 />
               </div>
               <div className="absolute top-[40px] right-[-60px] w-[180px] h-[180px] z-0 ">
@@ -121,7 +131,7 @@ export default function AboutUs() {
                   height={180}
                 />
               </div>
-              <div className="absolute bottom-[56px] left-[-250px] w-[180px] h-[180px] z-0 ">
+              <div className="absolute bottom-[18px] left-[-250px] w-[180px] h-[180px] z-0 ">
                 <Image
                   src="/images/shape-16.png"
                   alt="shape"
@@ -146,7 +156,7 @@ export default function AboutUs() {
         <div className="max-w-screen-xl mx-auto  py-28 flex text-white ">
           <div className="xl:w-1/2 pr-5">
             <div className="xl:h-[180px]">
-              <p className="text-lg font-medium uppercase text-secondary font-sla">
+              <p className="text-lg font-medium uppercase text-secondary ">
                 Join Us to Contribute, Learn, and Grow
               </p>
               <h2 className="text-4xl font-extrabold leading-[60px] mt-2 xl:w-[80%]">
@@ -227,7 +237,7 @@ export default function AboutUs() {
             <h2 className="text-4xl font-extrabold leading-[60px]   text-center text-primary">
               Choose the Best Membership Plan for You
             </h2>
-            <h3 className="text-xl font-semibold  font-slab mt-2 text-pretty">
+            <h3 className="text-2xl  font-semibold  mt-2 text-pretty">
               For the year 2025 the
               <span className="text-secondary"> membership fee </span>is 10 EUR
             </h3>

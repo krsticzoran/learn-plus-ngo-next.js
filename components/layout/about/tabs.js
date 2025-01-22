@@ -45,10 +45,10 @@ export default function Tabs() {
           </div>
 
           <div className=" w-[50%] px-10 pt-10 ">
-            <p className="text-lg font-medium uppercase text-secondary font-sla mb-1">
+            <p className="text-lg font-medium uppercase text-secondary  mb-2">
               Unlock Your Potential
             </p>
-            <h3 className="text-3xl font-semibold  text-primary mb-6">
+            <h3 className="text-3xl font-semibold  text-primary mb-4">
               Learning designed around you
             </h3>
             <p className="mb-12 text-lg leading-relaxed text-gray-one">

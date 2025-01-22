@@ -68,12 +68,12 @@ export default function Contact() {
                   alt="location"
                 />
               </div>
-              <h3 className="text-xl font-semibold text-primary mb-2 uppercase">
+              <h3 className="text-xl font-semibold text-primary  uppercase">
                 Visit Our Office
               </h3>
-              <p className="text-gray-one text-lg">
+              <p className="text-gray-one text-lg text-center">
                 Josipa Jurja Strossmayera 65a
-                <br /> 31000 Osijek
+                <br className="text-center" /> 31000 Osijek
               </p>
             </div>
 
@@ -93,7 +93,7 @@ export default function Contact() {
                   alt="location"
                 />
               </div>
-              <h3 className="text-xl font-semibold text-primary mb-2 uppercase">
+              <h3 className="text-xl font-semibold text-primary  uppercase">
                 Let's Talk
               </h3>
               <p className="text-gray-one text-lg ">+385 99 247 66 44</p>
@@ -115,7 +115,7 @@ export default function Contact() {
                   alt="location"
                 />
               </div>
-              <h3 className="text-xl font-semibold text-primary mb-2 uppercase">
+              <h3 className="text-xl font-semibold text-primary  uppercase">
                 E-mail Us
               </h3>
               <p className="text-gray-one text-lg">someemail@gmail.com</p>
@@ -149,8 +149,9 @@ export default function Contact() {
           </div>
         </div>
       </section>
-
-      <GoogleMapComponent />
+      <section id="location">
+        <GoogleMapComponent />
+      </section>
     </>
   );
 }
