@@ -55,46 +55,68 @@ export default function Tabs() {
               Our approach combines innovation and expertise, ensuring every
               step of your journey is tailored to your unique aspirations.
             </p>
-            <div className="flex space-x-8 mb-10">
-              <button
-                onClick={() => setActiveTab("what-we-do")}
-                className={`px-12 py-3 text-lg rounded-md font-bold transition-colors leading-6 duration-300 font-spartan ${
-                  activeTab === "what-we-do"
-                    ? "text-white bg-primary"
-                    : "text-primary bg-white"
-                }`}
-              >
-                What We Do
-              </button>
-              <button
-                onClick={() => setActiveTab("what-we-offer")}
-                className={`px-12 py-3  text-lg rounded-md font-bold leading-6 transition-colors duration-300 font-spartan ${
-                  activeTab === "what-we-offer"
-                    ? "text-white bg-primary"
-                    : "text-primary bg-white"
-                }`}
-              >
-                What We Offer
-              </button>
-            </div>
+            <div className="    ">
+              <div className="flex    ">
+                <button
+                  onClick={() => setActiveTab("what-we-do")}
+                  className={`px-12 pt-6 pb-3 shadow-md shadow-b-none text-lg rounded-[20px] rounded-b-none  font-bold  leading-6  font-spartan w-full   uppercase ${
+                    activeTab === "what-we-do"
+                      ? " bg-white"
+                      : "border-2 border-white"
+                  }`}
+                  style={{
+                    boxShadow: "0px 0px 30px 1px rgba(0, 0, 0, 0.15)",
+                  }}
+                >
+                  What We Do
+                </button>
+                <button
+                  onClick={() => setActiveTab("what-we-offer")}
+                  className={`px-12 pt-6 pb-3 shadow-md shadow-b-none text-lg rounded-[20px] font-bold leading-6  font-spartan  rounded-b-none uppercase w-full ${
+                    activeTab === "what-we-offer"
+                      ? " bg-white "
+                      : "border-2 border-white"
+                  }`}
+                  style={{
+                    boxShadow: "0px 0px 30px 1px rgba(0, 0, 0, 0.15)",
+                  }}
+                >
+                  What We Offer
+                </button>
+              </div>
 
-            <div className="h-[150px]">
-              {activeTab === "what-we-do" ? (
-                <p className="text-lg leading-relaxed text-gray-one">
-                  At LEARN PLUS, we focus on various educational activities,
-                  including tailored courses, career guidance, and non-formal
-                  learning experiences. Our mission is to empower individuals
-                  with the tools they need to succeed both personally and
-                  professionally.
-                </p>
-              ) : (
-                <p className="text-lg leading-relaxed text-gray-one">
-                  We provide a diverse array of educational services, including
-                  personalized coaching, workshops, and seminars. Our goal is to
-                  help participants develop new skills, expand their knowledge,
-                  and enhance their career opportunities.
-                </p>
-              )}
+              <div
+                className="h-[220px]   bg-white shadow-md  shadow-t-none rounded-[20px] rounded-t-none  p-4 pt-6  "
+                style={{
+                  boxShadow: "0px 0px 30px 1px rgba(0, 0, 0, 0.15)",
+                }}
+              >
+                {activeTab === "what-we-do" ? (
+                  <>
+                    <p className="text-lg leading-relaxed text-gray-one">
+                      At LEARN PLUS, we focus on various educational activities,
+                      including tailored courses, career guidance, and
+                      non-formal learning experiences.
+                    </p>
+                    <p className="text-lg leading-relaxed text-gray-one mt-1">
+                      Our mission is to empower individuals with the tools they
+                      need to succeed both personally and professionally.
+                    </p>
+                  </>
+                ) : (
+                  <>
+                    <p className="text-lg leading-relaxed text-gray-one">
+                      We provide a diverse array of educational services,
+                      including personalized coaching, workshops, and seminars.
+                    </p>
+                    <p className="text-lg leading-relaxed text-gray-one mt-1">
+                      Our goal is to help participants develop new skills,
+                      expand their knowledge, and enhance their career
+                      opportunities.
+                    </p>
+                  </>
+                )}
+              </div>
             </div>
             <div className="flex justify-center">
               <Button />
