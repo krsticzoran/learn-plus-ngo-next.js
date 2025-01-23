@@ -110,7 +110,7 @@ export default function AboutUs() {
                   alt="about us"
                   width={423}
                   height={513}
-                  className="rounded-lg  "
+                  className="rounded-[20px]  "
                 />
               </div>
               <div className="absolute top-[403px] left-[-160px] z-50">
@@ -120,7 +120,7 @@ export default function AboutUs() {
                   width={320}
                   height={220}
                   style={{ boxShadow: "0px 20px 60px 10px rgba(0, 0, 0, 0.2)" }}
-                  className="rounded-lg shadow-md "
+                  className="rounded-[20px]  shadow-md "
                 />
               </div>
               <div className="absolute top-[40px] right-[-60px] w-[180px] h-[180px] z-0 ">
