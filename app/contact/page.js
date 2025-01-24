@@ -16,26 +16,39 @@ export default function Contact() {
                 We’re here to help! Reach out to us through{" "}
                 <Link
                   href="#email"
-                  className="font-semibold hover:text-secondary"
+                  className="font-medium hover:text-secondary text-white"
                 >
                   email
                 </Link>{" "}
                 or{" "}
                 <Link
                   href="#contact"
-                  className="font-semibold hover:text-secondary"
+                  className="font-medium hover:text-secondary  text-white"
                 >
                   phone
                 </Link>
                 , and check out the additional info{" "}
                 <Link
                   href="#pdf"
-                  className="font-semibold hover:text-secondary"
+                  className="font-medium hover:text-secondary text-white"
                 >
                   PDF for directions
                 </Link>{" "}
                 and more.
               </p>
+              <div className="mt-12  flex justify-center w-[90%]">
+                <Link href="#visit">
+                  <div className="w-10 h-10 ">
+                    <Image
+                      src="/icons/arrow.png"
+                      width={64}
+                      height={64}
+                      alt="arrow"
+                      className="animate-bounce hover:animate-none hover:scale-110  transition-transform duration-300 "
+                    />
+                  </div>
+                </Link>
+              </div>
             </div>
             <div className="w-[50%] h-auto ">
               <Image
@@ -50,11 +63,15 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="bg-white-one bg-cover bg-center bg-no-repeat   ">
+      <section
+        className="bg-white-one bg-cover bg-center bg-no-repeat  "
+        id="visit"
+      >
         <div className="max-w-screen-xl mx-auto">
-          <div className="flex  space-x-8 pt-28">
+          <div className="flex  space-x-8 py-28">
             {/* Visit Our Office*/}
             <div
+              id="location"
               className="bg-white shadow-md rounded-[20px] py-16 px-8  flex-1 flex flex-col  items-center  "
               style={{
                 boxShadow: "0px 0px 30px 1px rgba(0, 0, 0, 0.15)",
@@ -90,7 +107,7 @@ export default function Contact() {
                   src="/icons/mobile-phone.png"
                   width={40}
                   height={40}
-                  alt="location"
+                  alt="contact"
                 />
               </div>
               <h3 className="text-xl font-semibold text-primary  uppercase">
@@ -112,7 +129,7 @@ export default function Contact() {
                   src="/icons/email.png"
                   width={40}
                   height={40}
-                  alt="location"
+                  alt="email"
                 />
               </div>
               <h3 className="text-xl font-semibold text-primary  uppercase">
@@ -121,37 +138,32 @@ export default function Contact() {
               <p className="text-gray-one text-lg">someemail@gmail.com</p>
             </div>
           </div>
-
-          <div className="container mx-auto mt-28 pb-28 px-4 sm:px-6" id="pdf">
-            <h2 className="text-4xl font-extrabold leading-[60px]   text-center text-primary mb-16">
-              Additional Information
-            </h2>
-            <div className="mb-16">
-              <iframe
-                src="/information.pdf"
-                className="w-full h-[70vh]  border rounded-md"
-                style={{
-                  overflow: "hidden",
-                  border: "1px solid #ccc",
-                }}
-                title="Information PDF"
-              ></iframe>
-            </div>
-            <div className="">
-              <a
-                href="/information.pdf"
-                download="Information.pdf"
-                className="text-white bg-primary px-12 py-3  text-lg rounded-md font-bold leading-6 transition-colors duration-300 font-spartan"
-              >
-                Download PDF
-              </a>
-            </div>
-          </div>
         </div>
       </section>
-      <section id="location">
-        <GoogleMapComponent />
-      </section>
+      <div className="container mx-auto mt-28 pb-28 px-4 sm:px-6" id="pdf">
+        <div className="mb-16">
+          <iframe
+            src="/information.pdf"
+            className="w-full h-[70vh]  border rounded-md"
+            style={{
+              overflow: "hidden",
+              border: "1px solid #ccc",
+            }}
+            title="Information PDF"
+          ></iframe>
+        </div>
+        <div className="">
+          <a
+            href="/information.pdf"
+            download="Information.pdf"
+            className="text-white bg-primary px-12 py-3  text-lg rounded-md font-bold leading-6 transition-colors duration-300 font-spartan"
+          >
+            Download PDF
+          </a>
+        </div>
+      </div>
+
+      <section></section>
     </>
   );
 }
