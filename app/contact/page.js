@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import GoogleMapComponent from "@/components/ui/google-map";
 
 export default function Contact() {
   return (
@@ -69,10 +68,69 @@ export default function Contact() {
       >
         <div className="max-w-screen-xl mx-auto">
           <div className="flex  space-x-8 py-28">
-            {/* Visit Our Office*/}
+          
+
+            {/* Let's Talk - test */}
+            
+  <div
+    id="contact"
+    className="bg-white shadow-md rounded-[20px] py-16 px-8 flex-1 hover:scale-105 cursor-pointer"
+    style={{
+      boxShadow: "0px 0px 30px 1px rgba(0, 0, 0, 0.15)",
+    }}
+  >
+    <Link href="tel:+385992476644">
+    <div className=" flex flex-col items-center">
+    <div className="flex items-center justify-center w-[70px] h-[70px] bg-white-one rounded-full mb-6">
+      <Image
+        src="/icons/mobile-phone.png"
+        width={40}
+        height={40}
+        alt="contact"
+      />
+    </div>
+    <h3 className="text-xl font-semibold text-primary uppercase">
+      Let's Talk
+    </h3>
+    <p className="text-gray-one text-lg">+385 99 247 66 44</p>
+    </div>
+    </Link>
+    
+  </div>
+
+
+            {/* E-mail Us*/}
             <div
+              id="email"
+              className="bg-white shadow-md rounded-[20px] py-16 px-8  flex-1  hover:scale-105 "
+              style={{
+                boxShadow: "0px 0px 30px 1px rgba(0, 0, 0, 0.15)",
+              }}
+            >
+              
+              <Link
+            href="mailto:example@example.com">
+              <div className="flex flex-col  items-center" >
+              <div className="flex items-center justify-center w-[70px] h-[70px] bg-white-one rounded-full  mb-6">
+                <Image
+                  src="/icons/email.png"
+                  width={40}
+                  height={40}
+                  alt="email"
+                />
+              </div>
+              <h3 className="text-xl font-semibold text-primary  uppercase">
+                E-mail Us
+              </h3>
+              <p className="text-gray-one text-lg">someemail@gmail.com</p>
+              </div>
+              </Link>
+             
+            </div>
+              {/* Visit Our Office*/}
+              <div
               id="location"
-              className="bg-white shadow-md rounded-[20px] py-16 px-8  flex-1 flex flex-col  items-center  "
+              className="bg-white shadow-md rounded-[20px] py-16 px-8  flex-1 flex flex-col  items-center hover:scale-105 "
               style={{
                 boxShadow: "0px 0px 30px 1px rgba(0, 0, 0, 0.15)",
               }}
@@ -92,50 +150,6 @@ export default function Contact() {
                 Josipa Jurja Strossmayera 65a
                 <br className="text-center" /> 31000 Osijek
               </p>
-            </div>
-
-            {/* Let's Talk - test */}
-            <div
-              id="contact"
-              className="bg-white shadow-md rounded-[20px] py-16 px-8  flex-1 flex flex-col  items-center  "
-              style={{
-                boxShadow: "0px 0px 30px 1px rgba(0, 0, 0, 0.15)",
-              }}
-            >
-              <div className="flex items-center justify-center w-[70px] h-[70px] bg-white-one rounded-full  mb-6">
-                <Image
-                  src="/icons/mobile-phone.png"
-                  width={40}
-                  height={40}
-                  alt="contact"
-                />
-              </div>
-              <h3 className="text-xl font-semibold text-primary  uppercase">
-                Let's Talk
-              </h3>
-              <p className="text-gray-one text-lg ">+385 99 247 66 44</p>
-            </div>
-
-            {/* E-mail Us*/}
-            <div
-              id="email"
-              className="bg-white shadow-md rounded-[20px] py-16 px-8  flex-1 flex flex-col  items-center  "
-              style={{
-                boxShadow: "0px 0px 30px 1px rgba(0, 0, 0, 0.15)",
-              }}
-            >
-              <div className="flex items-center justify-center w-[70px] h-[70px] bg-white-one rounded-full  mb-6">
-                <Image
-                  src="/icons/email.png"
-                  width={40}
-                  height={40}
-                  alt="email"
-                />
-              </div>
-              <h3 className="text-xl font-semibold text-primary  uppercase">
-                E-mail Us
-              </h3>
-              <p className="text-gray-one text-lg">someemail@gmail.com</p>
             </div>
           </div>
         </div>
