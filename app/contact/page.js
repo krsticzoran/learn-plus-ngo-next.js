@@ -19,7 +19,7 @@ export default function Contact() {
                   className="font-medium hover:text-secondary text-white"
                 >
                   email
-                </Link>{" "}
+                </Link>{""}
                 or{" "}
                 <Link
                   href="#contact"
@@ -38,15 +38,7 @@ export default function Contact() {
               </p>
               <div className="mt-12  flex justify-center w-[90%]">
                 <Link href="#visit">
-                  <div className="w-10 h-10 ">
-                    <Image
-                      src="/icons/arrow.png"
-                      width={64}
-                      height={64}
-                      alt="arrow"
-                      className="animate-bounce hover:animate-none hover:scale-110  transition-transform duration-300 "
-                    />
-                  </div>
+               
                 </Link>
               </div>
             </div>
@@ -94,7 +86,7 @@ export default function Contact() {
               </p>
             </div>
 
-            {/* Let's Talk */}
+            {/* Let's Talk - test */}
             <div
               id="contact"
               className="bg-white shadow-md rounded-[20px] py-16 px-8  flex-1 flex flex-col  items-center  "
