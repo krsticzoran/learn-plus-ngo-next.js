@@ -10,7 +10,7 @@ export default function Navbar() {
   return (
     <header>
       <div className="flex justify-between items-center  px-[70px] bg-primary">
-        <div className="flex  gap-2">
+        <div className="flex  gap-2 font-poppins" >
           <Link
             href="mailto:example@example.com"
             className="flex items-center gap-2 py-4 text-white hover:text-secondary mr-6"
@@ -117,7 +117,7 @@ export default function Navbar() {
       </div>
 
       <nav className="bg-white border-gray-200  text-primary text-lg leading-7 font-medium xl:font-semibold font-poppins xl:font-spartan uppercase xl:capitalize ">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto px-5 sm:px-8 xl:px-0 ">
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto px-5 sm:px-8 xl:px-0  ">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             type="button"
@@ -149,7 +149,7 @@ export default function Navbar() {
             } w-full xl:block xl:w-auto`}
             id="navbar-dropdown"
           >
-            <ul className="flex xl:items-center flex-col font-medium xl:p-0    xl:space-x-8 rtl:space-x-reverse xl:flex-row xl:mt-0 xl:border-0 xl:bg-white">
+            <ul className="flex xl:items-center flex-col font-medium xl:p-0    xl:space-x-8 rtl:space-x-reverse xl:flex-row xl:mt-0 xl:border-0 xl:bg-white font-poppins">
               <li onClick={() => setIsMenuOpen(false)}>
                 <Link
                   href="/"
@@ -176,7 +176,7 @@ export default function Navbar() {
                   href="/erasmus"
                   className={` ${
                     pathname == "/erasmus" ? "text-secondary" : ""
-                  } block py-2 px-3 rounded xl:bg-transparent xl:p-0  hover:text-secondary `}
+                  } block py-2 px-3 rounded xl:bg-transparent xl:p-0  hover:text-secondary  `}
                 >
                   Erasmus+
                 </Link>
@@ -209,7 +209,7 @@ export default function Navbar() {
                   href="/contact"
                   className={` ${
                     pathname == "/contact" ? "text-secondary" : ""
-                  } block py-2 px-3 rounded xl:bg-transparent xl:p-0  hover:text-secondary `}
+                  } block py-2 px-3 rounded xl:bg-transparent xl:p-0  hover:text-secondary  `}
                 >
                   Contact
                 </Link>

@@ -22,7 +22,7 @@ export default function Dropdown({ items, setIsMenuOpen }) {
 
   return (
     <div
-      className={`relative py-2 xl:py-7 font-poppins xl:font-spartan uppercase xl:capitalize ${
+      className={`relative py-2 xl:py-7 font-poppins font-poppins uppercase xl:capitalize ${
         !isLargerThanXL && "flex flex-col"
       }`}
       onMouseEnter={() => isLargerThanXL && setIsHovered(true)}
@@ -93,7 +93,7 @@ export default function Dropdown({ items, setIsMenuOpen }) {
                   >
                     <Link
                       href={item.href}
-                      className="block px-6 py-[10px]  font-poppins xl:font-spartan text-base"
+                      className="block px-6 py-[10px]  font-poppins font-poppins text-base"
                       onClick={() => {
                         !isLargerThanXL && setIsOpen(false);
                         setIsMenuOpen(false);
