@@ -17,8 +17,8 @@ export default function Contact() {
                   href="#email"
                   className="font-medium hover:text-secondary text-white"
                 >
-                  email
-                </Link>{""}
+                  email 
+                </Link>{" "}
                 or{" "}
                 <Link
                   href="#contact"
