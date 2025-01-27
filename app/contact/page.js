@@ -4,59 +4,95 @@ import Link from "next/link";
 export default function Contact() {
   return (
     <>
-      <section className="bg-primary bg-cover bg-center bg-no-repeat relative bg-[url('/images/shape-14.png')] ">
-        <div className="max-w-screen-xl mx-auto pt-28  ">
-          <div className="flex items ">
-            <div className="w-[50%] mt-20">
-              <h1 className="text-4xl sm:text-6xl font-bold   capitalize text-white ">
+      <section className=" ">
+        <div className=" ">
+          <div className="flex ">
+            <div className=" mt-20 w-[640px] ml-auto">
+              <h1 className="text-4xl sm:text-6xl font-bold   capitalize text-primary ">
                 get in touch
               </h1>
-              <p className="mt-4 text-lg leading-7 text-gray-two w-[90%]">
+              <p className="mt-4 text-lg leading-7 text-primary text-opacity-60 w-[90%]">
                 We’re here to help! Reach out to us through{" "}
-                <Link
-                  href="#email"
-                  className="font-medium hover:text-secondary text-white"
-                >
-                  email 
-                </Link>{" "}
-                or{" "}
-                <Link
-                  href="#contact"
-                  className="font-medium hover:text-secondary  text-white"
-                >
+               
+            email 
+               
+                or
+              
                   phone
-                </Link>
-                , and check out the additional info{" "}
-                <Link
-                  href="#pdf"
-                  className="font-medium hover:text-secondary text-white"
-                >
+                
+                , and check out the additional info
+               
                   PDF for directions
-                </Link>{" "}
+                
                 and more.
               </p>
-              <div className="mt-12  flex justify-center w-[90%]">
-                <Link href="#visit">
-                <div className="w-10 h-10 ">
-                    <Image
-                      src="/icons/arrow.png"
-                      width={64}
-                      height={64}
-                      alt="arrow"
-                      className="animate-bounce hover:animate-none hover:scale-110  transition-transform duration-300 "
-                    />
-                  </div>
-                </Link>
-              </div>
-            </div>
-            <div className="w-[50%] h-auto ">
+              <div className="flex pt-20">
+              <div className="flex flex-col items-center">
               <Image
-                src="/images/desk.jpg"
-                width={640}
-                height={427}
-                alt="desk"
+        src="/icons/email.png"
+        width={35}
+        height={35}
+        alt="email"
+       
+      />
+      <h3 className="text-xl font-semibold text-primary uppercase pt-6">
+      E-mail Us 
+    </h3>
+       <p className="text-primary text-lg pt-1">someemail@gmail.com</p>
+           
+              </div>
+              <div
+            className=" w-[1px] h-[150px] bg-primary mx-16"
+           
+          ></div>
+              <div className="flex flex-col items-center">
+              <Image
+        src="/icons/location.png"
+        width={35}
+        height={35}
+        alt="email"
+      />
+      <h3 className="text-xl font-semibold text-primary uppercase pt-6">
+      Visit Our Office
+    </h3>
+       <p className="text-primary text-lg pt-1"> Josipa Jurja Strossmayera 65a</p>
+       <p className="text-center" > 31000 Osijek</p>
+          
+              
+              </div>
+             
+            </div>
+            
+            </div>
+            <div className="w-[50%]  pl-[120px]  pt-[50px] ">
+              <div className="bg-primary  rounded-[20px] relative h-[500px]  flex pt-20 items-center pl-[300px]"  >
+              <Image
+                src="/images/contact2.png"
+                width={343}
+                height={489}
+               
+                alt="call us"
                 priority
+                className="absolute left-[-80px] bottom-0"
+                
               />
+              <div className="">
+              <div className="flex flex-col items-center pt-8">
+              <Image
+        src="/icons/mobile-phone.png"
+        width={35}
+        height={35}
+        alt="contact"
+        
+      />
+      <h3 className="text-xl font-semibold text-white  uppercase pt-6">
+                Let's Talk
+              </h3>
+       <p className="text-white text-lg pt-1">+385 99 247 66 44</p>
+              </div>
+       </div>
+             
+              </div>
             </div>
           </div>
         </div>
@@ -90,9 +126,10 @@ export default function Contact() {
       />
     </div>
     <h3 className="text-xl font-semibold text-primary uppercase">
-      Let's Talk
+    Visit Our Office
     </h3>
-    <p className="text-gray-one text-lg">+385 99 247 66 44</p>
+    <p className="text-gray-one text-lg"> Josipa Jurja Strossmayera 65a
+    <br className="text-center" /> 31000 Osijek</p>
     </div>
     </Link>
     
