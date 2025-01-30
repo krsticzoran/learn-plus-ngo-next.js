@@ -5,9 +5,9 @@ export default function Contact() {
   return (
     <>
       <section className=" pb-20">
-        <div className=" max-w-screen-xl mx-auto">
+        <div className=" max-w-screen-xl mx-auto ">
           <div className="flex ">
-            <div className=" mt-20 w-[640px] ml-auto">
+            <div className=" mt-36 w-[640px] ml-auto">
               <h1 className="text-4xl sm:text-6xl font-bold   capitalize text-primary ">
                 get in touch
               </h1>
@@ -78,7 +78,7 @@ export default function Contact() {
                 
               />
               <div >
-              <Link href="tel:+385992476644"  className="flex flex-col items-center pt-8  ">
+              <Link href="tel:+385992476644"  className="flex flex-col items-center pt-8 ">
               <Image
         src="/icons/mobile-phone.png"
         width={35}
