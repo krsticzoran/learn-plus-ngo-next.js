@@ -66,6 +66,7 @@ export default function Contact() {
             </div>
             <div className="w-[50%]  pl-[50px]  pt-[50px] ">
               <div className="bg-primary  rounded-[20px] relative h-[500px]  flex pt-20 items-center pl-[345px] "  >
+               
               <Image
                 src="/images/contact1.png"
                 width={485}
@@ -78,7 +79,7 @@ export default function Contact() {
                 
               />
               <div >
-              <Link href="tel:+385992476644"  className="flex flex-col items-center pt-8 ">
+              <Link href="tel:+385992476644"  className="flex flex-col items-center pt-40 ">
               <Image
         src="/icons/mobile-phone.png"
         width={35}
