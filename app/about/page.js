@@ -16,11 +16,11 @@ export default function AboutUs() {
           priority
         />
         <div className="absolute inset-0 bg-black opacity-40"></div>
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-white">
-          <h1 className="text-4xl sm:text-6xl font-bold">
+        <div className="relative z-10 flex flex-col items-center justify-center h-full ">
+          <h1 className="text-4xl sm:text-6xl font-bold text-white">
             Welcome to LEARN PLUS
           </h1>
-          <p className="mt-4 text-xl sm:text-2xl">
+          <p className="mt-4 text-xl sm:text-2xl text-white">
             Promoting lifelong learning and education
           </p>
         </div>

@@ -33,6 +33,7 @@
 body {
   p {
     font-family: "Poppins", sans-serif;
+    color: #1D2133;
   }
 
   h1,
@@ -42,5 +43,6 @@ body {
   h5,
   h6 {
     font-family: "League Spartan", sans-serif;
+    color: #1D2133;
   }
 }

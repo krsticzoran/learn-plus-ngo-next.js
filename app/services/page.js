@@ -37,7 +37,7 @@ export default function Services() {
   }
 
   return (
-    <div className='bg-white-one'>
+    <div  className="bg-white bg-[url('/images/shape-15.png')] bg-cover bg-center bg-no-repeat ">
     <div className="max-w-screen-xl mx-auto py-28">
         <div>
             <h1>OUR SERVICES</h1>
@@ -48,16 +48,19 @@ your current or future projects?</p>
         </div>
         <div className='mt-10'>
       {items.map((item, index) => (
-        <div key={index} className="mb-8 bg-white rounded-lg shadow-md p-4">
+        <div key={index} className="mb-8 bg-white rounded-lg shadow-md pl-7 pr-10 py-4 ">
           <h5>
             <button
-              className="flex items-center justify-between w-full  text-left font-semibold py-2"
+              className="flex items-center justify-between w-full  text-left font-semibold py-2 "
               onClick={(e) => { e.preventDefault(); toggleAccordion(index); }}
               aria-expanded={openIndex === index}
               aria-controls={`accordion-text-${index}`}
             >
-              <span className='text-xl'>{item.question}</span>
-              <svg className="fill-indigo-500 shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+              <div>
+              <span className='text-secondary text-2xl mr-2 font-medium uppercase'>{index + 1}.</span>
+              <span className='text-xl '>{item.question}</span></div>
+              
+              <svg className="fill-secondary shrink-0 ml-8 " width="16" height="16" xmlns="http://www.w3.org/2000/svg">
                 <rect y="7" width="16" height="2" rx="1" className={`transform origin-center transition duration-200 ease-out ${openIndex === index && '!rotate-180'}`} />
                 <rect y="7" width="16" height="2" rx="1" className={`transform origin-center rotate-90 transition duration-200 ease-out ${openIndex === index && '!rotate-180'}`} />
               </svg>           
@@ -70,7 +73,7 @@ your current or future projects?</p>
             className={`grid   overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
           >
             <div className="overflow-hidden">
-              <p className="pb-3">{item.answer}</p>
+              <p className="pb-3 ">{item.answer}</p>
             </div>
           </div>
           
