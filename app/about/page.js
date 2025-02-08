@@ -36,7 +36,7 @@ export default function AboutUs() {
               Who We Are?
             </p>
             <h2 className="text-4xl font-extrabold leading-[60px] mt-2 text-primary xl:w-[80%]">
-              Empowering Lives Through Learn Plus
+              Empowering Lives Through Learn Plus -test
             </h2>
             <p className="mt-6 text-lg leading-7 text-gray-one">
               Learn Plus is a non-governmental organization dedicated to
