@@ -39,11 +39,13 @@ export default function Services() {
   return (
     <div  className="bg-white bg-[url('/images/shape-15.png')] bg-cover bg-center bg-no-repeat ">
     <div className="max-w-screen-xl mx-auto py-28">
-        <div>
+        <div className='w-1/2 '>
             <h1>OUR SERVICES</h1>
-            <p>Are you looking for a new place for your job shadowing program? Do you think that
-students should not learn only in classrooms? Are you looking for reliable partner for
-your current or future projects?</p>
+            <p className='flex flex-col'>
+              <span>Are you looking for a new place for your job shadowing program?</span>
+              <span> Do you think that students should not learn only in classrooms?</span>
+              <span> Are you looking for reliable partner for your current or future projects?</span>
+              </p>
 <p>If your answer to any of these question is YES, then consider one of these options.</p>
         </div>
         <div className='mt-10'>
