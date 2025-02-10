@@ -13,9 +13,9 @@ export default function Services() {
 
   return (
     <div className="bg-white bg-[url('/images/shape-15.png')] bg-cover bg-center bg-no-repeat ">
-      <div className="max-w-screen-xl mx-auto py-28">
-        <div className="flex">
-          <div className="w-1/2 my-auto pr-4 ">
+      <div className="max-w-screen-xl mx-auto  py-16 md:py-20 xl:py-28 px-4 sm:px-6 md:px-8 xl:px-0">
+        <div className="lg:flex">
+          <div className="lg:w-1/2 lg:my-auto pb-10 lg:pr-4  lg:pb-0">
             <h1 className="text-3xl font-extrabold leading-9 mb-6">
               OUR SERVICES
             </h1>
@@ -45,16 +45,17 @@ export default function Services() {
               of these options.
             </p>
           </div>
-          <div className="w-1/2">
+          <div className="lg:w-1/2 ">
             <Image
               src="/images/services.jpg"
               alt="man thinking"
               width={640}
               height={426}
+              className="w-full h-auto"
             />
           </div>
         </div>
-        <div className="mt-10">
+        <div className="mt-12 md:mt-16 xl:mt-20">
           {items.map((item, index) => (
             <div
               key={index}
