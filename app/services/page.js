@@ -60,7 +60,7 @@ export default function Services() {
               key={index}
               className="mb-8 bg-white rounded-lg shadow-md pl-7 pr-10 py-4 "
             >
-              <h5>
+              <h5 id={`accordion-title-${index}`}>
                 <button
                   className="flex items-center justify-between w-full  text-left font-semibold py-2 "
                   onClick={(e) => {
@@ -69,6 +69,7 @@ export default function Services() {
                   }}
                   aria-expanded={openIndex === index}
                   aria-controls={`accordion-text-${index}`}
+                  id={`accordion-button-${index}`}
                 >
                   <div>
                     <span className="text-secondary text-2xl mr-2 font-medium uppercase">
@@ -103,7 +104,7 @@ export default function Services() {
               <div
                 id={`accordion-text-${index}`}
                 role="region"
-                aria-labelledby={`accordion-title-${index}`}
+                aria-labelledby={`accordion-button-${index}`}
                 className={`grid   overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"}`}
               >
                 <div className="overflow-hidden">
