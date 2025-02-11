@@ -85,42 +85,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
-            <div>
-              <p className="text-xl font-semibold leading-7 text-white">
-                Explore
-              </p>
-
-              <ul className="mt-6 space-y-4 ">
-                <li>
-                  <Link
-                    href="#"
-                    className="text-white transition hover:text-secondary"
-                  >
-                    Services
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href="#"
-                    className="text-white transition hover:text-secondary"
-                  >
-                    Erasmus+
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href="#"
-                    className="text-white transition hover:text-secondary"
-                  >
-                    Our Partners
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 lg:col-span-2 mt-10 lg:mt-0 ">
             <div>
               <p className="text-xl font-semibold leading-7 text-white">
                 Services
@@ -206,6 +171,40 @@ export default function Footer() {
                 </li>
               </ul>
             </div>
+            <div>
+              <p className="text-xl font-semibold leading-7 text-white">
+                Explore
+              </p>
+
+              <ul className="mt-6 space-y-4 ">
+                <li>
+                  <Link
+                    href="#"
+                    className="text-white transition hover:text-secondary"
+                  >
+                    Services
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    href="#"
+                    className="text-white transition hover:text-secondary"
+                  >
+                    Erasmus+
+                  </Link>
+                </li>
+
+                <li>
+                  <Link
+                    href="#"
+                    className="text-white transition hover:text-secondary"
+                  >
+                    Our Partners
+                  </Link>
+                </li>
+              </ul>
+            </div>
 
             <div>
               <p className="text-xl font-semibold leading-7 text-white">
@@ -248,13 +247,12 @@ export default function Footer() {
         <div
           className=" h-[1px]"
           style={{
-            // Adjust height as needed
             backgroundColor: "rgba(247, 245, 245, 0.1)",
           }}
         ></div>
         <div className="flex justify-center py-5">
-          <h5 className=" text-white font-poppins ">
-            Copyright &copy; 2025 by Learn Plus All Right Reserved.
+          <h5 className=" text-white font-poppins text-center flex flex-col sm:block">
+            Copyright &copy; 2025 Learn Plus. <span>All rights reserved.</span>
           </h5>
         </div>
       </div>
