@@ -23,17 +23,10 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: "RobotoSlab";
-  src: url("/fonts/RobotoSlab-Regular.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-}
-
 body {
   p {
     font-family: "Poppins", sans-serif;
-    color: #1D2133;
+    color: #1d2133;
   }
 
   h1,
@@ -43,6 +36,6 @@ body {
   h5,
   h6 {
     font-family: "League Spartan", sans-serif;
-    color: #1D2133;
+    color: #1d2133;
   }
 }

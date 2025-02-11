@@ -8,8 +8,6 @@ const tailwindConfig = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
         primary: "#1D2133",
         secondary: "#EC4E4F",
         dark: "#222222",
@@ -21,7 +19,6 @@ const tailwindConfig = {
       fontFamily: {
         spartan: ['"League Spartan"', "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
-        slab: ["RobotoSlab", "sans-serif"],
       },
     },
   },
