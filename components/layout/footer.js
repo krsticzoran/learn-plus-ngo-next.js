@@ -1,4 +1,5 @@
 import Link from "next/link";
+import footerLinks from "@/data/footer-links";
 
 export default function Footer() {
   return (
@@ -86,160 +87,28 @@ export default function Footer() {
           </div>
 
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 lg:col-span-2 mt-10 lg:mt-0 ">
-            <div>
-              <p className="text-xl font-semibold leading-7 text-white">
-                Services
-              </p>
-
-              <ul className="mt-6 space-y-4 ">
-                <li>
-                  <Link
-                    href="#"
-                    className="text-white transition hover:text-secondary"
-                  >
-                    Internships & Trainings
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href="#"
-                    className="text-white transition hover:text-secondary"
-                  >
-                    Cultural Activities
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href="#"
-                    className="text-white transition hover:text-secondary"
-                  >
-                    Project Writing
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="text-white transition hover:text-secondary"
-                  >
-                    Job Shadowing
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <p className="text-xl font-semibold leading-7 text-white">
-                About Us
-              </p>
-
-              <ul className="mt-6 space-y-4 ">
-                <li>
-                  <Link
-                    href="#"
-                    className="text-white transition hover:text-secondary"
-                  >
-                    Learn Plus
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href="#"
-                    className="text-white transition hover:text-secondary"
-                  >
-                    What We Do
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href="#"
-                    className="text-white transition hover:text-secondary"
-                  >
-                    What We Offer
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="text-white transition hover:text-secondary"
-                  >
-                    Membership
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <p className="text-xl font-semibold leading-7 text-white">
-                Explore
-              </p>
-
-              <ul className="mt-6 space-y-4 ">
-                <li>
-                  <Link
-                    href="#"
-                    className="text-white transition hover:text-secondary"
-                  >
-                    Services
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href="#"
-                    className="text-white transition hover:text-secondary"
-                  >
-                    Erasmus+
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href="#"
-                    className="text-white transition hover:text-secondary"
-                  >
-                    Our Partners
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <p className="text-xl font-semibold leading-7 text-white">
-                Legal
-              </p>
-
-              <ul className="mt-6 space-y-4 ">
-                <li>
-                  <Link
-                    href="#"
-                    className="text-white transition hover:text-secondary"
-                  >
-                    Privacy Policy
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href="#"
-                    className="text-white transition hover:text-secondary"
-                  >
-                    Cookie Policy
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href="#"
-                    className="text-white transition hover:text-secondary"
-                  >
-                    Terms & Conditions
-                  </Link>
-                </li>
-              </ul>
-            </div>
+            {footerLinks.map((group, index) => (
+              <div key={index}>
+                <p className="text-xl font-semibold leading-7 text-white">
+                  {group[0]}
+                </p>
+                <ul className="mt-6 space-y-4 ">
+                  {group.map(
+                    (el, i) =>
+                      i > 0 && (
+                        <li key={i}>
+                          <Link
+                            href={el[1]}
+                            className="text-white transition hover:text-secondary"
+                          >
+                            {el[0]}
+                          </Link>
+                        </li>
+                      ),
+                  )}
+                </ul>
+              </div>
+            ))}
           </div>
         </div>
       </div>
