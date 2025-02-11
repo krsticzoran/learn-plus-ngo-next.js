@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Tabs from "@/components/layout/about/tabs";
+import Tabs from "@/components/ui/tabs";
 import Link from "next/link";
 
 export default function AboutUs() {
