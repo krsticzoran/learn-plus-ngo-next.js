@@ -42,7 +42,7 @@ export default function Services() {
               alt="man thinking"
               width={640}
               height={426}
-              className="w-full h-auto"
+              className="w-full h-auto rounded-[20px]"
             />
           </div>
         </div>
