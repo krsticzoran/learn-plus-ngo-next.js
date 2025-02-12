@@ -159,7 +159,7 @@ export default function AboutUs() {
               <p className="text-lg font-medium uppercase text-secondary ">
                 Join Us to Contribute, Learn, and Grow
               </p>
-              <h2 className="text-4xl font-extrabold leading-[60px] mt-2 xl:w-[80%]">
+              <h2 className="text-4xl font-extrabold leading-[60px] mt-2 xl:w-[80%] text-white">
                 Membership Eligibility and Opportunities
               </h2>
             </div>
