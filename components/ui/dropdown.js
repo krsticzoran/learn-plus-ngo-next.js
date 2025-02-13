@@ -31,14 +31,14 @@ export default function Dropdown({ items, setIsMenuOpen }) {
       <Link
         href={items[0].href}
         onClick={() => !isLargerThanXL && setIsOpen((prev) => !prev)}
-        className="flex items-center text-primary w-full  px-3  rounded hover:text-secondary hover:bg-transparent xl:border-0  xl:p-0 xl:w-auto  "
+        className={` ${pathname == "/contact" ? "text-white" : "text-primary"} flex items-center  w-full  px-3  rounded hover:text-secondary hover:bg-transparent xl:border-0  xl:p-0 xl:w-auto `}
       >
         <div
           onClick={() => {
             setIsMenuOpen(false);
           }}
           className={` ${
-            pathname == "/about" ? "text-secondary" : ""
+            pathname == "/contact" ? "text-white" : "text-primary"
           } block py-2 px-3 rounded xl:bg-transparent xl:p-0  hover:text-secondary `}
         >
           {items[0].label}
@@ -56,7 +56,7 @@ export default function Dropdown({ items, setIsMenuOpen }) {
             strokeLinejoin="round"
             strokeWidth="2"
             d="m1 1 4 4 4-4"
-            className={` ${pathname == "/about" ? "text-secondary" : ""}`}
+            className={` ${pathname == "/contact" ? "text-white" : "text-primary"}`}
           />
         </svg>
       </Link>
@@ -102,7 +102,7 @@ export default function Dropdown({ items, setIsMenuOpen }) {
                       {item.label}
                     </Link>
                   </li>
-                )
+                ),
             )}
           </ul>
         </motion.div>
