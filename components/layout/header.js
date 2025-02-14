@@ -85,7 +85,7 @@ export default function Navbar() {
             className={`${
               pathname == "/contact"
                 ? "text-white border-white"
-                : "text-primary border-primaryd"
+                : "text-primary border-primary"
             } mr-5 border  px-4 py-2 rounded-full `}
           >
             {contactInfo.phone}
