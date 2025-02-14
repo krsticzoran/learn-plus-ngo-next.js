@@ -2,7 +2,7 @@ export const headerLinks = [
   { label: "Services", href: "/services" },
   { label: "Erasmus+", href: "/erasmus" },
   { label: "Our Partners", href: "/partners" },
-  {},
+  {}, // position of dropdown aboutItems
   { label: "Contact", href: "/contact" },
 ];
 
@@ -16,3 +16,8 @@ export const aboutItems = [
   },
   { label: "Membership", href: "/about#membership" },
 ];
+
+export const contactInfo = {
+  phone: "+385 99 247 66 44",
+  logo: "", // Update this path to actual logo file
+};
