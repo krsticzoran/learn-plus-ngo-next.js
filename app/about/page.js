@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Tabs from "@/components/ui/tabs";
 import Link from "next/link";
+import { membership } from "@/data/about";
 
 export default function AboutUs() {
   return (
@@ -242,74 +243,22 @@ export default function AboutUs() {
               <span className="text-secondary"> membership fee </span>is 10 EUR
             </h3>
           </div>
-          {/* Regular Members Card */}
+
           <div className="flex  space-x-8">
-            <div
-              className="bg-white shadow-md rounded-[20px] py-16 px-8  flex-1"
-              style={{
-                boxShadow: "0px 0px 30px 1px rgba(0, 0, 0, 0.15)",
-              }}
-            >
-              <h3 className="text-xl font-semibold text-primary mb-4 uppercase">
-                Regular Members
-              </h3>
-              <p className="text-gray-one text-lg">
-                Regular members actively participate in the activities and
-                programs of our association. They can be adults, persons who
-                participated in the founding of the Association, their family
-                members, and friends.
-              </p>
-              <p className="text-gray-one text-lg mt-2">
-                Regular members make up the Assembly of the Association and
-                actively participate in its activities while complying with the
-                Statute and all the rules and guidelines of the Association and
-                regularly paying the membership fee.
-              </p>
-            </div>
-
-            {/* Associate Members Card */}
-            <div
-              className="bg-white shadow-md rounded-[20px] py-16 px-8   flex-1"
-              style={{
-                boxShadow: "0px 0px 30px 1px rgba(0, 0, 0, 0.15)",
-              }}
-            >
-              <h3 className="text-xl font-semibold text-primary mb-4 uppercase">
-                Associate Members
-              </h3>
-              <p className="text-gray-one text-lg ">
-                Associate members occasionally participate in the Association's
-                activities or help the Association achieve its goals with
-                financial or other support.{" "}
-              </p>
-              <p className="text-gray-one text-lg mt-2">
-                Associated members are natural and legal persons of legal age
-                and minors. Associate members also pay a regular membership fee.
-              </p>
-            </div>
-
-            {/* Honorary Members Card */}
-            <div
-              className="bg-white shadow-md rounded-[20px] py-16 px-8  flex-1"
-              style={{
-                boxShadow: "0px 0px 30px 1px rgba(0, 0, 0, 0.15)",
-              }}
-            >
-              <h3 className="text-xl font-semibold text-priamry mb-4 uppercase ">
-                Honorary Members
-              </h3>
-              <p className="text-gray-one text-lg">
-                Honorary members are persons among the members of the
-                Association, other organizations, academic communities in
-                Croatia and abroad who significantly contributed to the work and
-                reputation of the Association and promote its activities and
-                values.
-              </p>
-              <p className="text-gray-one text-lg mt-2">
-                They are appointed exclusively by the Assembly and are not
-                obliged to pay membership fees.
-              </p>
-            </div>
+            {membership.map((el) => (
+              <div
+                className="bg-white shadow-md rounded-[20px] py-16 px-8  flex-1"
+                style={{
+                  boxShadow: "0px 0px 30px 1px rgba(0, 0, 0, 0.15)",
+                }}
+              >
+                <h3 className="text-xl font-semibold text-primary mb-4 uppercase">
+                  {el.question}
+                </h3>
+                <p className="text-gray-one text-lg">{el.answer}</p>
+                <p className="text-gray-one text-lg mt-2">{el.secondAnswer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
