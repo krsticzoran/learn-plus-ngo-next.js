@@ -3,8 +3,8 @@ import Accordion from "@/components/ui/accordion";
 
 export default function Services() {
   return (
-    <div className="bg-white bg-[url('/images/shape-15.png')] bg-cover bg-center bg-no-repeat ">
-      <div className="max-w-screen-xl mx-auto  py-16 md:py-20 xl:py-28 px-4 sm:px-6 md:px-8 xl:px-0">
+    <div className="bg-white bg-[url('/images/shape-15.png')] bg-cover bg-center bg-no-repeat  ">
+      <div className="max-w-screen-xl mx-auto  py-16 md:py-20 xl:pt-40 px-4 sm:px-6 md:px-8 xl:px-0">
         <div className="lg:flex">
           <div className="lg:w-1/2 lg:my-auto pb-10 lg:pr-4  lg:pb-0">
             <h1 className="text-3xl font-extrabold leading-9 mb-6">

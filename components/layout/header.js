@@ -53,7 +53,9 @@ export default function Navbar() {
             } w-full xl:block xl:w-auto `}
             id="navbar-dropdown"
           >
-            <ul className="  flex xl:items-center flex-col font-medium xl:p-0    xl:space-x-8 rtl:space-x-reverse xl:flex-row xl:mt-0 xl:border-0  font-poppins ml-28 ">
+            <ul
+              className={` ${pathname === "/contact" && "ml-28"}  flex xl:items-center flex-col font-medium xl:p-0    xl:space-x-8 rtl:space-x-reverse xl:flex-row xl:mt-0 xl:border-0  font-poppins  `}
+            >
               {headerLinks.map((el, i) => (
                 <li key={i}>
                   {i === 3 ? (
@@ -68,7 +70,7 @@ export default function Navbar() {
                         pathname === "/contact" &&
                         el.href === "/contact" &&
                         "text-white"
-                      }  py-2 px-3 rounded xl:bg-transparent xl:p-0 hover:text-secondary `}
+                      }  py-2 px-3  rounded xl:bg-transparent xl:p-0 hover:text-secondary `}
                     >
                       {el.label}
                     </Link>
