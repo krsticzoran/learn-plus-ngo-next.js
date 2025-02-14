@@ -15,16 +15,17 @@ export default function Contact() {
                 We’re here to help! Reach out to us through email or phone , and
                 check out the additional info PDF for directions and more.
               </p>
-              <div className="flex pt-20">
+              <div className="flex pt-20 ">
                 <Link
                   href="mailto:example@example.com"
-                  className="flex flex-col items-center"
+                  className="flex flex-col items-center group"
                 >
                   <Image
                     src="/icons/email.png"
                     width={35}
                     height={35}
                     alt="email"
+                    className="transition-transform duration-300 group-hover:scale-150"
                   />
                   <h3 className="text-xl font-semibold text-primary uppercase pt-6">
                     E-mail Us
@@ -34,12 +35,13 @@ export default function Contact() {
                   </p>
                 </Link>
                 <div className=" w-[1px] h-[150px] bg-primary mx-16"></div>
-                <Link href="#pdf" className="flex flex-col items-center">
+                <Link href="#pdf" className="flex flex-col items-center group">
                   <Image
                     src="/icons/location.png"
                     width={35}
                     height={35}
                     alt="email"
+                    className="transition-transform duration-300 group-hover:scale-150"
                   />
                   <h3 className="text-xl font-semibold text-primary uppercase pt-6">
                     Visit Our Office
@@ -65,13 +67,14 @@ export default function Contact() {
                 <div>
                   <Link
                     href="tel:+385992476644"
-                    className="flex flex-col items-center pt-40 "
+                    className="flex flex-col items-center pt-40 group "
                   >
                     <Image
                       src="/icons/mobile-phone.png"
                       width={35}
                       height={35}
                       alt="contact"
+                      className="transition-transform duration-300 group-hover:scale-150"
                     />
                     <h3 className="text-xl font-semibold text-white  uppercase pt-6">
                       Let's Talk
