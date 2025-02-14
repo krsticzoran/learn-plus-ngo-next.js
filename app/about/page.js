@@ -6,7 +6,7 @@ import { membership } from "@/data/about";
 export default function AboutUs() {
   return (
     <main>
-      <section className="relative w-full h-[70vh]">
+      <section className="relative w-full h-[90vh]">
         <Image
           src="/images/osijek.jpg"
           alt="Osijek"
