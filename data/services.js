@@ -32,3 +32,9 @@ const items = [
 ];
 
 export default items;
+
+export const questions = [
+  "Are you looking for a new place for your job shadowing program?",
+  "Do you think that students should not learn only in classrooms?",
+  "Are you looking for reliable partner for your current or future projects?",
+];
