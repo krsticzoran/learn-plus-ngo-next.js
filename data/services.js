@@ -1,4 +1,4 @@
-const items = [
+export const options = [
   {
     question: "Structured Courses",
     answer:
@@ -30,8 +30,6 @@ const items = [
       "With so many finished projects, mobilities, hostings and everything we do, we can guarantee you our partners in previous projects. Not all experiences are good – depending of your needs we will connect you with only reliable organizations and persons that can provide you their bests!",
   },
 ];
-
-export default items;
 
 export const questions = [
   "Are you looking for a new place for your job shadowing program?",

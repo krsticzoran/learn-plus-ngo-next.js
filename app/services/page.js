@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Accordion from "@/components/ui/accordion";
-import { questions } from "@/data/services";
+import { questions, options } from "@/data/services";
 
 export default function Services() {
   return (
@@ -39,7 +39,7 @@ export default function Services() {
             />
           </div>
         </div>
-        <Accordion />
+        <Accordion data={options} />
       </div>
     </section>
   );

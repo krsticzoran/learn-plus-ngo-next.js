@@ -1,8 +1,8 @@
 "use client";
-import items from "@/data/services";
+
 import { useState } from "react";
 
-export default function Accordion() {
+export default function Accordion({ data }) {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleAccordion = (index) => {
@@ -11,7 +11,7 @@ export default function Accordion() {
 
   return (
     <div className="mt-12 md:mt-16 xl:mt-20">
-      {items.map((item, index) => (
+      {data.map((item, index) => (
         <div
           key={index}
           className="mb-8 bg-white rounded-lg shadow-md pl-7 pr-10 py-4 "
