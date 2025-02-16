@@ -17,7 +17,7 @@ export default function Navbar() {
           {contactInfo.logo ? (
             <Image src={contactInfo.logo} width={24} height={24} alt="logo" />
           ) : (
-            <p className={`${pathname === "/about" && "text-white"}`}>LOGO</p>
+            <p className={`${pathname === "" && "text-white"}`}>LOGO</p>
           )}
         </Link>
 
@@ -54,7 +54,7 @@ export default function Navbar() {
             id="navbar-dropdown"
           >
             <ul
-              className={` ${pathname === "/contact" && "ml-28"} ${pathname === "/about" && "text-white"}  flex xl:items-center flex-col font-medium xl:p-0    xl:space-x-8 rtl:space-x-reverse xl:flex-row xl:mt-0 xl:border-0  font-poppins  `}
+              className={` ${pathname === "/contact" && "ml-28"} ${pathname === "" && "text-white"}  flex xl:items-center flex-col font-medium xl:p-0    xl:space-x-8 rtl:space-x-reverse xl:flex-row xl:mt-0 xl:border-0  font-poppins  `}
             >
               {headerLinks.map((el, i) => (
                 <li key={i}>
@@ -83,7 +83,7 @@ export default function Navbar() {
         <Link href={`tel:${contactInfo.phone}`}>
           <p
             className={`${
-              pathname == "/contact" || pathname == "/about"
+              pathname == "/contact" || pathname == ""
                 ? "text-white border-white"
                 : "text-primary border-primary"
             } mr-5 border  px-4 py-2 rounded-full `}

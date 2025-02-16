@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Tabs from "@/components/layout/about/tabs";
-import HeroSection from "@/components/layout/about/hero-section";
+import Introduction from "@/components/layout/about/introduction";
 
 import { membership } from "@/data/about";
 
 export default function AboutUs() {
   return (
     <main>
-      <HeroSection />
+      <Introduction />
       <Tabs />
       <section id="membership" className=" bg-primary relative ">
         <Image
