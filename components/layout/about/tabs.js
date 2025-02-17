@@ -19,21 +19,33 @@ export default function Tabs() {
     <section className="bg-white-one relative " id="what-we-do">
       <div id="what-we-offer" className="py-20">
         <div className="max-w-screen-xl mx-auto  flex">
-          <div className="flex w-1/2 h-[699px] ">
-            <Image
-              src="/images/country-1.jpg"
-              alt="Map 1"
-              className="rounded-[20px] mr-4"
-              width={350}
-              height={500}
-            />
-            <Image
-              src="/images/country-2.jpg"
-              alt="Map 2"
-              className="rounded-[20px] "
-              width={350}
-              height={500}
-            />
+          <div className=" w-1/2  flex flex-col mr-2">
+            <div className="relative w-5/6 h-1/2 mb-4">
+              <Image
+                src="images/tabs3.jpg"
+                fill
+                className="rounded-[20px] object-cover"
+                alt="seminar"
+              />
+            </div>
+            <div className="flex   h-1/2 ">
+              <div className="relative w-full mr-2  ">
+                <Image
+                  src="images/tabs1.jpg"
+                  fill
+                  className="rounded-[20px] object-cover  "
+                  alt="seminar"
+                />
+              </div>
+              <div className="relative w-full ml-2 ">
+                <Image
+                  src="images/tabs2.jpg"
+                  fill
+                  className="rounded-[20px] object-cover "
+                  alt="seminar"
+                />
+              </div>
+            </div>
           </div>
 
           <div className=" w-[50%] px-10 pt-10 ">
@@ -48,30 +60,26 @@ export default function Tabs() {
               step of your journey is tailored to your unique aspirations.
             </p>
             <div>
-              <div className="flex    ">
+              <div className="flex">
                 <button
                   onClick={() => setActiveTab("what-we-do")}
-                  className={`px-12 pt-6 pb-3   text-lg rounded-[20px] rounded-b-none  font-bold  leading-6  font-spartan w-full   uppercase ${
-                    activeTab === "what-we-do"
-                      ? " bg-white"
-                      : "border-2 border-white"
+                  className={`px-12 pt-6 pb-3   text-lg  font-bold leading-6  font-spartan   uppercase rounded-md border-2 border-primary w-full mr-5 ${
+                    activeTab === "what-we-do" && "bg-primary text-white"
                   }`}
                 >
                   What We Do
                 </button>
                 <button
                   onClick={() => setActiveTab("what-we-offer")}
-                  className={`px-12 pt-6 pb-3  shadow-b-none text-lg rounded-[20px] font-bold leading-6  font-spartan  rounded-b-none uppercase w-full ${
-                    activeTab === "what-we-offer"
-                      ? " bg-white "
-                      : "border-2 border-white"
+                  className={`px-12 pt-6 pb-3   text-lg  font-bold leading-6  font-spartan   uppercase rounded-md border-2 border-primary w-full  ${
+                    activeTab === "what-we-offer" && "bg-primary text-white"
                   }`}
                 >
                   What We Offer
                 </button>
               </div>
 
-              <div className="   bg-white  shadow-t-none rounded-[20px] rounded-t-none  p-4 pt-10  ">
+              <div className="   p-4 pt-8  ">
                 <div className="">
                   {activeTab === "what-we-do" ? (
                     <>
@@ -80,7 +88,7 @@ export default function Tabs() {
                         activities, including tailored courses, career guidance,
                         and non-formal learning experiences.
                       </p>
-                      <p className="text-lg leading-relaxed text-gray-one mt-1">
+                      <p className="text-lg leading-relaxed text-gray-one mt-2">
                         Our mission is to empower individuals with the tools
                         they need to succeed both personally and professionally.
                       </p>
@@ -92,16 +100,13 @@ export default function Tabs() {
                         including personalized coaching, workshops, and
                         seminars.
                       </p>
-                      <p className="text-lg leading-relaxed text-gray-one mt-1">
+                      <p className="text-lg leading-relaxed text-gray-one mt-2">
                         Our goal is to help participants develop new skills,
                         expand their knowledge, and enhance their career
                         opportunities.
                       </p>
                     </>
                   )}
-                </div>
-                <div className="flex justify-center">
-                  <Button />
                 </div>
               </div>
             </div>
