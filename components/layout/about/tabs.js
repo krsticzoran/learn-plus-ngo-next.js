@@ -60,10 +60,10 @@ export default function Tabs() {
               step of your journey is tailored to your unique aspirations.
             </p>
             <div>
-              <div className="flex">
+              <div className="flex  ">
                 <button
                   onClick={() => setActiveTab("what-we-do")}
-                  className={`px-12 pt-6 pb-3   text-lg  font-bold leading-6  font-spartan   uppercase rounded-md border-2 border-primary w-full mr-5 ${
+                  className={`text-center py-4   text-lg  font-bold leading-6  font-spartan   uppercase rounded-md border-2 border-primary w-full mr-5 ${
                     activeTab === "what-we-do" && "bg-primary text-white"
                   }`}
                 >
@@ -71,7 +71,7 @@ export default function Tabs() {
                 </button>
                 <button
                   onClick={() => setActiveTab("what-we-offer")}
-                  className={`px-12 pt-6 pb-3   text-lg  font-bold leading-6  font-spartan   uppercase rounded-md border-2 border-primary w-full  ${
+                  className={`text-center py-4   text-lg  font-bold leading-6  font-spartan   uppercase rounded-md border-2 border-primary w-full  ${
                     activeTab === "what-we-offer" && "bg-primary text-white"
                   }`}
                 >
