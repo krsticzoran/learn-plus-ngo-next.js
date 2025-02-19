@@ -21,3 +21,28 @@ export const membership = [
       "They are appointed exclusively by the Assembly and are not obliged to pay membership fees.",
   },
 ];
+
+export const membershipInfo = [
+  {
+    iconSrc: "/icons/people.png",
+    title: "Who Can Join",
+    description:
+      "Any natural person of Croatian or foreign citizenship and legal entity registered in Croatia who is interested in participating in the Association's activities and contributing to the achievement of the Association's goals, and who accepts the provisions of the Statute, can become a member of the Association.",
+  },
+  {
+    iconSrc: "/icons/clipboards.png",
+    title: "How to Join",
+    description: [
+      "One becomes a member of the Association by registering in the list of members and signing the application form accepting the Statute and other acts of the Association.",
+      "Persons under the age of 14 can become members with a written declaration signed by their parents or legal guardians as well as minors over the age of 14 where it is necessary that their parents give us written consent.",
+    ],
+  },
+  {
+    iconSrc: "/icons/lamp.png",
+    title: "Member Benefits",
+    description: [
+      "As our member you can have many opportunities - mobilities, free seminars, study visits, field work and other activities.",
+      "For the year 2025 the membership fee is 10 EUR.",
+    ],
+  },
+];

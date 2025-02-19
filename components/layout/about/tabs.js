@@ -1,7 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import Button from "@/components/ui/button";
 
 export default function Tabs() {
   const [activeTab, setActiveTab] = useState("");
@@ -19,36 +18,7 @@ export default function Tabs() {
     <section className="bg-white-one relative " id="what-we-do">
       <div id="what-we-offer" className="py-20">
         <div className="max-w-screen-xl mx-auto  flex">
-          <div className=" w-1/2  flex flex-col mr-2">
-            <div className="relative w-5/6 h-1/2 mb-4">
-              <Image
-                src="images/tabs3.jpg"
-                fill
-                className="rounded-[20px] object-cover"
-                alt="seminar"
-              />
-            </div>
-            <div className="flex   h-1/2 ">
-              <div className="relative w-full mr-2  ">
-                <Image
-                  src="images/tabs1.jpg"
-                  fill
-                  className="rounded-[20px] object-cover  "
-                  alt="seminar"
-                />
-              </div>
-              <div className="relative w-full ml-2 ">
-                <Image
-                  src="images/tabs2.jpg"
-                  fill
-                  className="rounded-[20px] object-cover "
-                  alt="seminar"
-                />
-              </div>
-            </div>
-          </div>
-
-          <div className=" w-[50%] px-10 pt-10 ">
+          <div className=" w-[50%] pr-10 pt-10 ">
             <p className="text-lg font-medium uppercase text-secondary  mb-2">
               Unlock Your Potential
             </p>
@@ -108,6 +78,34 @@ export default function Tabs() {
                     </>
                   )}
                 </div>
+              </div>
+            </div>
+          </div>
+          <div className=" w-1/2  flex flex-col ml-2">
+            <div className="relative w-5/6 h-1/2 mb-4 self-end">
+              <Image
+                src="images/tabs3.jpg"
+                fill
+                className="rounded-[20px] object-cover"
+                alt="seminar"
+              />
+            </div>
+            <div className="flex   h-1/2 ">
+              <div className="relative w-full mr-2 ">
+                <Image
+                  src="images/tabs2.jpg"
+                  fill
+                  className="rounded-[20px] object-cover "
+                  alt="seminar"
+                />
+              </div>
+              <div className="relative w-full ml-2  ">
+                <Image
+                  src="images/tabs1.jpg"
+                  fill
+                  className="rounded-[20px] object-cover  "
+                  alt="seminar"
+                />
               </div>
             </div>
           </div>

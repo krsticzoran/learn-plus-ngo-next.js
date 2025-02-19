@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { membership } from "@/data/about";
+import { membership, membershipInfo } from "@/data/about";
+import MembershipInfoCard from "@/components/ui/membership-info-card";
 
 export default function Membership() {
   return (
@@ -14,7 +15,7 @@ export default function Membership() {
         />
         <div className="max-w-screen-xl mx-auto  py-28 flex text-white ">
           <div className="xl:w-1/2 pr-5">
-            <div className="xl:h-[180px]">
+            <div className="mb-10">
               <p className="text-lg font-medium uppercase text-secondary ">
                 Join Us to Contribute, Learn, and Grow
               </p>
@@ -22,71 +23,13 @@ export default function Membership() {
                 Membership Eligibility and Opportunities
               </h2>
             </div>
-            <div className="flex items-center mb-4 ">
-              <div className="flex items-center justify-center w-[70px] h-[70px] bg-blue-one rounded-full hover:bg-secondary transition-colors duration-300">
-                <Image
-                  src="/icons/people.png"
-                  width={40}
-                  height={40}
-                  alt="Who Can Join"
-                />
-              </div>
-              <p className="text-white text-lg font-extrabold leading-6 ml-6">
-                Who Can Join
-              </p>
-            </div>
-            <p className="text-lg leading-7 text-gray-two ">
-              Any natural person of Croatian or foreign citizenship and legal
-              entity registered in Croatia who is interested in participating in
-              the Association's activities and contributing to the achievement
-              of the Association's goals, and who accepts the provisions of the
-              Statute, can become a member of the Association.
-            </p>
+            <MembershipInfoCard data={membershipInfo[0]} />
           </div>
           <div className="xl:w-1/2  pl-5">
-            <div className="flex items-center mb-4 ">
-              <div className="flex items-center justify-center w-[70px] h-[70px] bg-blue-one rounded-full hover:bg-secondary transition-colors duration-300">
-                <Image
-                  src="/icons/clipboards.png"
-                  width={40}
-                  height={40}
-                  alt=" How to Join"
-                />
-              </div>
-              <p className="text-white text-lg font-extrabold leading-6 ml-6">
-                How to Join
-              </p>
+            <MembershipInfoCard data={membershipInfo[1]} />
+            <div className="mt-6">
+              <MembershipInfoCard data={membershipInfo[2]} />
             </div>
-
-            <p className="text-lg leading-7 mt-4 text-gray-two">
-              One becomes a member of the Association by registering in the list
-              of members and signing the application form accepting the Statute
-              and other acts of the Association.
-            </p>
-            <p className="text-lg leading-7 pt-2 text-gray-two">
-              Persons under the age of 14 can become members with a written
-              declaration signed by their parents or legal guardians as well as
-              minors over the age of 14 where is necessary that their parents
-              give us written consent.
-            </p>
-            <div className="flex items-center mb-4 mt-6">
-              <div className="flex items-center justify-center w-[70px] h-[70px] bg-blue-one rounded-full hover:bg-secondary transition-colors duration-300">
-                <Image
-                  src="/icons/lamp.png"
-                  width={40}
-                  height={40}
-                  alt="lightbulb"
-                />
-              </div>
-              <p className="text-white text-lg font-extrabold leading-6 ml-6">
-                Member Benefits
-              </p>
-            </div>
-
-            <p className="text-lg leading-7 mt-4 text-gray-two">
-              As our member you can have many opportunities - mobilities, free
-              seminars, study visits, field work and other activities.
-            </p>
           </div>
         </div>
       </section>
