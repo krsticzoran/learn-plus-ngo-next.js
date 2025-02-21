@@ -1,5 +1,5 @@
 import Link from "next/link";
-import footerLinks from "@/data/footer-links";
+import { footerLinks, currentYear } from "@/data/footer-links";
 
 export default function Footer() {
   return (
@@ -121,7 +121,8 @@ export default function Footer() {
         ></div>
         <div className="flex justify-center py-5">
           <h5 className=" text-white font-poppins text-center flex flex-col sm:block">
-            Copyright &copy; 2025 Learn Plus. <span>All rights reserved.</span>
+            {`Copyright  ${currentYear} Learn Plus.`}{" "}
+            <span>All rights reserved.</span>
           </h5>
         </div>
       </div>

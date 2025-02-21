@@ -1,4 +1,4 @@
-const footerLinks = [
+export const footerLinks = [
   [
     "Services",
     ["Internships & Trainings", "#"],
@@ -22,4 +22,4 @@ const footerLinks = [
   ],
 ];
 
-export default footerLinks;
+export const currentYear = new Date().getFullYear();
