@@ -10,11 +10,11 @@ export default function Accordion({ data }) {
   };
 
   return (
-    <div className="mt-12 md:mt-16 xl:mt-20">
+    <div>
       {data.map((item, index) => (
         <div
           key={index}
-          className="mb-8 bg-white rounded-lg shadow-md pl-7 pr-10 py-4 "
+          className={` ${index === data.length - 1 ? "" : "mb-8"}  bg-white rounded-lg shadow-md pl-7 pr-10 py-4`}
         >
           <h5 id={`accordion-title-${index}`}>
             <button
@@ -65,6 +65,9 @@ export default function Accordion({ data }) {
           >
             <div className="overflow-hidden">
               <p className="pb-3 ">{item.answer}</p>
+              {item.secondAnswer && (
+                <p className="pb-3 ">{item.secondAnswer}</p>
+              )}
             </div>
           </div>
         </div>

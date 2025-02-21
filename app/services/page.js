@@ -39,7 +39,9 @@ export default function Services() {
             />
           </div>
         </div>
-        <Accordion data={options} />
+        <div className="mt-12 md:mt-16 xl:mt-20">
+          <Accordion data={options} />
+        </div>
       </div>
     </section>
   );

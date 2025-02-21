@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { membership, membershipInfo } from "@/data/about";
 import MembershipInfoCard from "@/components/ui/membership-info-card";
+import Accordion from "@/components/ui/accordion";
 
 export default function Membership() {
   return (
@@ -35,31 +36,23 @@ export default function Membership() {
       </section>
       <section className="bg-white bg-[url('/images/shape-15.png')] bg-cover bg-center bg-no-repeat ">
         <div className="max-w-screen-xl mx-auto py-28  ">
-          <div className="text-center mb-16">
+          <div className="text-center mb-20">
             <h2 className="text-4xl font-extrabold leading-[60px]   text-center text-primary">
               Choose the Best Membership Plan for You
             </h2>
-            <h3 className="text-2xl  font-semibold  mt-2 text-pretty">
-              For the year 2025 the
-              <span className="text-secondary"> membership fee </span>is 10 EUR
-            </h3>
           </div>
-
-          <div className="flex  space-x-8">
-            {membership.map((el) => (
-              <div
-                className="bg-white shadow-md rounded-[20px] py-16 px-8  flex-1"
-                style={{
-                  boxShadow: "0px 0px 30px 1px rgba(0, 0, 0, 0.15)",
-                }}
-              >
-                <h3 className="text-xl font-semibold text-primary mb-4 uppercase">
-                  {el.question}
-                </h3>
-                <p className="text-gray-one text-lg">{el.answer}</p>
-                <p className="text-gray-one text-lg mt-2">{el.secondAnswer}</p>
-              </div>
-            ))}
+          <div className="flex">
+            <div className="relative w-1/2 mr-6">
+              <Image
+                src="/images/membership.jpg"
+                fill
+                alt="exam"
+                className="rounded-[20px] object-cover overflow-hidden"
+              />
+            </div>
+            <div className="w-1/2  ml-6 flex">
+              <Accordion data={membership} />
+            </div>
           </div>
         </div>
       </section>
