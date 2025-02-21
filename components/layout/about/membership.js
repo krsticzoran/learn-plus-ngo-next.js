@@ -50,7 +50,7 @@ export default function Membership() {
                 className="rounded-[20px] object-cover overflow-hidden"
               />
             </div>
-            <div className="w-1/2  ml-6 flex">
+            <div className="w-1/2  ml-6 flex py-8">
               <Accordion data={membership} />
             </div>
           </div>
