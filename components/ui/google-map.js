@@ -11,6 +11,9 @@ const center = {
   lng: 18.669181629740997,
 };
 
+// This component is currently unused because the client is unsure if they want it.
+// Keeping it here for now in case we need it later.
+
 export default function GoogleMapComponent() {
   const { isLoaded, loadError } = useJsApiLoader({
     googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
