@@ -11,27 +11,24 @@ export default function MembershipInfoCard({ data }) {
           {data.title}
         </p>
       </div>
-      <ul role="list">
-        {Array.isArray(data.description) ? (
-          data.description.map((el, i) =>
-            i === 0 ? (
-              <li
-                key={i}
-                role="listitem"
-                className="text-lg leading-7 mt-4 text-gray-two"
-              >
-                {el}
-              </li>
-            ) : (
-              <li className="text-lg leading-7 mt-2 text-gray-two">{el}</li>
-            ),
-          )
-        ) : (
-          <p className="text-lg leading-7 mt-4 text-gray-two">
-            {data.description}
-          </p>
-        )}
-      </ul>
+
+      {Array.isArray(data.description) ? (
+        <ul role="list">
+          {data.description.map((el, i) => (
+            <li
+              key={i}
+              role="listitem"
+              className={`text-lg leading-7 ${i === 0 ? "mt-4" : "mt-2"} text-gray-two`}
+            >
+              {el}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="text-lg leading-7 mt-4 text-gray-two">
+          {data.description}
+        </p>
+      )}
     </>
   );
 }
