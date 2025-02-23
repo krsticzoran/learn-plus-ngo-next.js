@@ -11,7 +11,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="absolute bg-transparent  z-50  w-full  ">
+    <header className="absolute bg-transparent  z-50  w-full text-primary ">
       <nav className="flex items-center justify-between mx-auto max-w-screen-xl  text-lg leading-7 font-medium xl:font-semibold font-poppins xl:font-spartan uppercase xl:capitalize ">
         <Link href="/">
           {contactInfo.logo ? (
