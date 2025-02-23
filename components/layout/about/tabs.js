@@ -18,7 +18,7 @@ export default function Tabs() {
     <section className="bg-white-one relative " id="what-we-do">
       <div id="what-we-offer" className="py-20">
         <div className="max-w-screen-xl mx-auto  flex">
-          <div className=" w-[50%] pr-10 pt-10 ">
+          <div className=" w-[50%] pr-10 pt-16 ">
             <p className="text-lg font-medium uppercase text-secondary  mb-2">
               Unlock Your Potential
             </p>
@@ -30,7 +30,7 @@ export default function Tabs() {
               step of your journey is tailored to your unique aspirations.
             </p>
             <div>
-              <div className="flex  ">
+              <div className="flex">
                 <button
                   onClick={() => setActiveTab("what-we-do")}
                   className={`text-center py-4   text-lg  font-bold leading-6  font-spartan   uppercase rounded-md border-2 border-primary w-full mr-5 ${
@@ -49,8 +49,8 @@ export default function Tabs() {
                 </button>
               </div>
 
-              <div className="   p-4 pt-8  ">
-                <div className="">
+              <div className="p-4 pt-8 h-[200px]">
+                <div>
                   {activeTab === "what-we-do" ? (
                     <>
                       <p className="text-lg leading-relaxed text-gray-one">
