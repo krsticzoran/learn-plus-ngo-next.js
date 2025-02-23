@@ -46,3 +46,14 @@ export const membershipInfo = [
     ],
   },
 ];
+
+export const tabContent = {
+  "what-we-do": [
+    "At LEARN PLUS, we focus on various educational activities, including tailored courses, career guidance, and non-formal learning experiences.",
+    "Our mission is to empower individuals with the tools they need to succeed both personally and professionally.",
+  ],
+  "what-we-offer": [
+    "We provide a diverse array of educational services, including personalized coaching, workshops, and seminars.",
+    "Our goal is to help participants develop new skills, expand their knowledge, and enhance their career opportunities.",
+  ],
+};
