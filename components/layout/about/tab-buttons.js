@@ -19,7 +19,7 @@ export default function TabButtons() {
         <button
           onClick={() => setActiveTab("what-we-do")}
           className={`text-center py-4   text-lg  font-bold leading-6  font-spartan   uppercase rounded-md border-2 border-primary w-full mr-5 ${
-            activeTab === "what-we-do" && "bg-primary text-white"
+            activeTab === "what-we-do" ? "bg-primary text-white" : ""
           }`}
         >
           What We Do
@@ -27,7 +27,7 @@ export default function TabButtons() {
         <button
           onClick={() => setActiveTab("what-we-offer")}
           className={`text-center py-4   text-lg  font-bold leading-6  font-spartan   uppercase rounded-md border-2 border-primary w-full  ${
-            activeTab === "what-we-do" ? "bg-primary text-white" : ""
+            activeTab === "what-we-offer" ? "bg-primary text-white" : ""
           }`}
         >
           What We Offer
