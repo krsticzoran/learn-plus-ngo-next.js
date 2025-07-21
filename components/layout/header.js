@@ -12,7 +12,7 @@ export default function Navbar() {
   return (
     <header className="absolute bg-transparent z-50 w-full text-primary ">
       <nav
-        className={`flex items-center justify-between mx-auto max-w-screen-xl  text-lg leading-7 font-medium xl:font-semibold font-poppins xl:font-spartan uppercase xl:capitalize ${pathname === "/contact" ? " mt-5" : "mt-10"}`}
+        className={`flex items-center justify-between mx-auto max-w-screen-xl  text-lg leading-7 font-medium xl:font-semibold font-poppins xl:font-spartan uppercase xl:capitalize ${pathname === "/contact" ? " mt-10" : "mt-[60px]"}`}
       >
         <Link href="/">
           {contactInfo.logo ? (
