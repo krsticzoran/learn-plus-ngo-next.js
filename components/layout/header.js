@@ -1,8 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import Dropdown from "../ui/dropdown";
-import { headerLinks, aboutItems, contactInfo } from "@/data/header-links";
+import { headerLinks, contactInfo } from "@/data/header-links";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 
@@ -11,8 +10,10 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="absolute bg-transparent  z-50  w-full text-primary ">
-      <nav className="flex items-center justify-between mx-auto max-w-screen-xl  text-lg leading-7 font-medium xl:font-semibold font-poppins xl:font-spartan uppercase xl:capitalize ">
+    <header className="absolute bg-transparent z-50 w-full text-primary ">
+      <nav
+        className={`flex items-center justify-between mx-auto max-w-screen-xl  text-lg leading-7 font-medium xl:font-semibold font-poppins xl:font-spartan uppercase xl:capitalize ${pathname === "/contact" ? " mt-5" : "mt-10"}`}
+      >
         <Link href="/">
           {contactInfo.logo ? (
             <Image src={contactInfo.logo} width={24} height={24} alt="logo" />
@@ -54,27 +55,20 @@ export default function Navbar() {
             id="navbar-dropdown"
           >
             <ul
-              className={` ${pathname === "/contact" && "ml-28"} ${pathname === "" && "text-white"}  flex xl:items-center flex-col font-medium xl:p-0    xl:space-x-8 rtl:space-x-reverse xl:flex-row xl:mt-0 xl:border-0  font-poppins  `}
+              className={` ${pathname === "/contact" && "ml-52"} ${pathname === "" && "text-white"}  flex xl:items-center flex-col font-medium xl:p-0    xl:space-x-8 rtl:space-x-reverse xl:flex-row xl:mt-0 xl:border-0  font-poppins  `}
             >
               {headerLinks.map((el, i) => (
                 <li key={i}>
-                  {i === 3 ? (
-                    <Dropdown
-                      setIsMenuOpen={setIsMenuOpen}
-                      items={aboutItems}
-                    />
-                  ) : (
-                    <Link
-                      href={el.href}
-                      className={`${
-                        pathname === "/contact" &&
-                        el.href === "/contact" &&
-                        "text-white"
-                      }  py-2 px-3  rounded xl:bg-transparent xl:p-0 hover:text-secondary `}
-                    >
-                      {el.label}
-                    </Link>
-                  )}
+                  <Link
+                    href={el.href}
+                    className={`${
+                      pathname === "/contact" &&
+                      (el.href === "/contact" || el.href === "/partners") &&
+                      "text-white"
+                    }  py-2 px-3  rounded xl:bg-transparent xl:p-0 hover:text-secondary `}
+                  >
+                    {el.label}
+                  </Link>
                 </li>
               ))}
             </ul>

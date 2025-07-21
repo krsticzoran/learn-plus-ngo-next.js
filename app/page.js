@@ -1,9 +1,13 @@
-import Image from "next/image";
+import Tabs from "@/components/layout/about/tabs";
+import Introduction from "@/components/layout/about/introduction";
+import Membership from "@/components/layout/about/membership";
 
-export default function Home() {
+export default function AboutUs() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white">
-      <h1 className="text-4xl font-semibold text-gray-800">Learn Plus</h1>
-    </div>
+    <main>
+      <Introduction />
+      <Tabs />
+      <Membership />
+    </main>
   );
 }
