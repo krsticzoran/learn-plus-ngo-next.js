@@ -8,5 +8,5 @@ export const headerLinks = [
 
 export const contactInfo = {
   phone: "+385 99 247 66 44",
-  logo: "", // Update this path to actual logo file
+  logo: "/logo2.png", // Update this path to actual logo file
 };

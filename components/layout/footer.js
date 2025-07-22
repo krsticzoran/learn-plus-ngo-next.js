@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { footerLinks, currentYear } from "@/data/footer-links";
 
 export default function Footer() {
@@ -8,14 +9,16 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
             <div className="text-secondary">
-              <p className="font-spartan text-2xl font-semibold uppercase leading-7">
-                <span className="text-white">learn</span> plus
-              </p>
+              <Image
+                src="../logofooter.png"
+                width={112}
+                height={58}
+                alt="logo"
+              />
             </div>
 
             <p className="mt-4 max-w-xs text-white">
-              Learn Plus is a non-governmental organization dedicated to
-              promoting lifelong learning and education.
+              We are dedicated to promoting lifelong learning and education.
             </p>
 
             <ul className="mt-8 flex gap-6">
