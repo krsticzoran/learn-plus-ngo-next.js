@@ -22,7 +22,7 @@ export default function GoogleMapComponent() {
   if (loadError) {
     return (
       <div
-        className="bg-red-100 text-red-500 text-center p-4"
+        className="bg-red-100 p-4 text-center text-red-500"
         style={{ height: "600px" }}
       >
         Failed to load Google Maps
@@ -33,7 +33,7 @@ export default function GoogleMapComponent() {
   if (!isLoaded || typeof google === "undefined") {
     return (
       <div
-        className="bg-white flex justify-center items-center"
+        className="flex items-center justify-center bg-white"
         style={{
           height: "600px",
         }}

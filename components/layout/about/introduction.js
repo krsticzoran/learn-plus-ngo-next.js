@@ -6,29 +6,29 @@ export default function Introduction() {
     <>
       <section
         id="learn-plus"
-        className=" bg-white bg-[url('/images/shape-15.png')] bg-cover bg-center bg-no-repeat  "
+        className="bg-white bg-[url('/images/shape-15.png')] bg-cover bg-center bg-no-repeat"
       >
-        <div className="max-w-screen-xl mx-auto  pb-28 pt-40 grid grid-cols-12 grid-rows-4 gap-4 ">
-          <div className=" col-span-8 row-span-2 bg-primary  rounded-[20px]">
-            <div className=" flex flex-col items-center justify-center h-[500px] ">
-              <h1 className="text-4xl sm:text-6xl font-bold text-white">
+        <div className="mx-auto grid max-w-screen-xl grid-cols-12 grid-rows-4 gap-4 pb-28 pt-40">
+          <div className="col-span-8 row-span-2 rounded-[20px] bg-primary">
+            <div className="flex h-[500px] flex-col items-center justify-center">
+              <h1 className="text-4xl font-bold text-white sm:text-6xl">
                 We are LEARN PLUS
               </h1>
-              <p className="mt-4 text-xl sm:text-xl text-white px-10 text-center">
+              <p className="mt-4 px-10 text-center text-xl text-white sm:text-xl">
                 a non-governmental organization with a main goal - promoting
                 lifelong learning and education.
               </p>
             </div>
           </div>
-          <div className="relative  col-span-4 row-span-2 ">
+          <div className="relative col-span-4 row-span-2">
             <Image
               src="/images/about1.jpg"
               fill
               alt="exam"
-              className="rounded-[20px] object-cover overflow-hidden"
+              className="overflow-hidden rounded-[20px] object-cover"
             />
           </div>
-          <div className="col-span-4 row-span-2 flex flex-col items-center justify-center bg-secondary rounded-[20px] px-5 text-lg  font-semibold">
+          <div className="col-span-4 row-span-2 flex flex-col items-center justify-center rounded-[20px] bg-secondary px-5 text-lg font-semibold">
             <p>
               Through our seminars, lessons, tailor-made courses and different
               types of non-formal education we provide our members and
@@ -50,9 +50,9 @@ export default function Introduction() {
               alt="exam"
               className="rounded-[20px] object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-[20px]"></div>
+            <div className="absolute inset-0 rounded-[20px] bg-gradient-to-t from-black/60 to-transparent"></div>
             <div className="absolute bottom-10 px-10 text-lg font-medium">
-              <p className=" text-white">
+              <p className="text-white">
                 Our main office is located in Osijek, the center of
                 Osijek-Baranya county, in the easternmost part of Croatia, very
                 near three countries - Serbia, Bosnia and Herzegovina and

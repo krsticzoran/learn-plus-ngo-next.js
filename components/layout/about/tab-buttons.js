@@ -18,7 +18,7 @@ export default function TabButtons() {
       <div className="flex">
         <button
           onClick={() => setActiveTab("what-we-do")}
-          className={`text-center py-4   text-lg  font-bold leading-6  font-spartan   uppercase rounded-md border-2 border-primary w-full mr-5 ${
+          className={`mr-5 w-full rounded-md border-2 border-primary py-4 text-center font-spartan text-lg font-bold uppercase leading-6 ${
             activeTab === "what-we-do" ? "bg-primary text-white" : ""
           }`}
         >
@@ -26,14 +26,14 @@ export default function TabButtons() {
         </button>
         <button
           onClick={() => setActiveTab("what-we-offer")}
-          className={`text-center py-4   text-lg  font-bold leading-6  font-spartan   uppercase rounded-md border-2 border-primary w-full  ${
+          className={`w-full rounded-md border-2 border-primary py-4 text-center font-spartan text-lg font-bold uppercase leading-6 ${
             activeTab === "what-we-offer" ? "bg-primary text-white" : ""
           }`}
         >
           What We Offer
         </button>
       </div>
-      <div className="p-4 pt-8 h-[200px]">
+      <div className="h-[200px] p-4 pt-8">
         <ul>
           {tabContent[activeTab]?.map((text, index) => (
             <li

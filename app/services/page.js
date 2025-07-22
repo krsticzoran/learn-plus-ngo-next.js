@@ -4,18 +4,18 @@ import { questions, options } from "@/data/services";
 
 export default function Services() {
   return (
-    <section className="bg-white bg-[url('/images/shape-15.png')] bg-cover bg-center bg-no-repeat  ">
-      <div className="max-w-screen-xl mx-auto  py-16 md:py-20 xl:pt-40 px-4 sm:px-6 md:px-8 xl:px-0">
+    <section className="bg-white bg-[url('/images/shape-15.png')] bg-cover bg-center bg-no-repeat">
+      <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 md:px-8 md:py-20 xl:px-0 xl:pt-40">
         <div className="lg:flex">
           {/* Left Content Section */}
-          <div className="lg:w-1/2 lg:my-auto pb-10 lg:pr-4  lg:pb-0">
-            <h1 className="text-3xl font-extrabold leading-9 mb-6">
+          <div className="pb-10 lg:my-auto lg:w-1/2 lg:pb-0 lg:pr-4">
+            <h1 className="mb-6 text-3xl font-extrabold leading-9">
               OUR SERVICES
             </h1>
             <ul className="flex flex-col text-lg">
               {questions.map((el, index) => (
                 <li className="mt-2" key={index}>
-                  <span className="text-secondary text-2xl font-medium uppercase mr-2">
+                  <span className="mr-2 text-2xl font-medium uppercase text-secondary">
                     q
                   </span>
                   {el}
@@ -28,13 +28,13 @@ export default function Services() {
             </p>
           </div>
           {/* Right Image Section */}
-          <div className="lg:w-1/2 ml-4 ">
+          <div className="ml-4 lg:w-1/2">
             <Image
               src="/images/services.jpg"
               alt="man thinking"
               width={640}
               height={426}
-              className="w-full h-auto rounded-[20px]"
+              className="h-auto w-full rounded-[20px]"
               priority
             />
           </div>

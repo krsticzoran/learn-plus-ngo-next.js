@@ -3,11 +3,11 @@ import Image from "next/image";
 export default function MembershipInfoCard({ data }) {
   return (
     <>
-      <div className="flex items-center ">
-        <div className="flex items-center justify-center w-[70px] h-[70px] bg-blue-one rounded-full hover:bg-secondary transition-colors duration-300">
+      <div className="flex items-center">
+        <div className="flex h-[70px] w-[70px] items-center justify-center rounded-full bg-blue-one transition-colors duration-300 hover:bg-secondary">
           <Image src={data.iconSrc} width={40} height={40} alt={data.title} />
         </div>
-        <p className="text-white text-lg font-extrabold leading-6 ml-6">
+        <p className="ml-6 text-lg font-extrabold leading-6 text-white">
           {data.title}
         </p>
       </div>
@@ -25,7 +25,7 @@ export default function MembershipInfoCard({ data }) {
           ))}
         </ul>
       ) : (
-        <p className="text-lg leading-7 mt-4 text-gray-two">
+        <p className="mt-4 text-lg leading-7 text-gray-two">
           {data.description}
         </p>
       )}

@@ -10,9 +10,9 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="absolute bg-transparent z-50 w-full text-primary ">
+    <header className="absolute z-50 w-full bg-transparent text-primary">
       <nav
-        className={`flex items-center justify-between mx-auto max-w-screen-xl  text-lg leading-7 font-medium xl:font-semibold font-poppins xl:font-spartan uppercase xl:capitalize ${pathname === "/contact" ? " mt-10" : "mt-[60px]"}`}
+        className={`mx-auto flex max-w-screen-xl items-center justify-between px-4 font-poppins text-lg font-medium uppercase leading-7 sm:px-6 lg:px-8 xl:font-spartan xl:font-semibold xl:capitalize ${pathname === "/contact" ? "mt-10" : "mt-[60px]"}`}
       >
         <Link href="/">
           {contactInfo.logo ? (
@@ -22,17 +22,17 @@ export default function Navbar() {
           )}
         </Link>
 
-        <div className="  flex flex-wrap   px-5 sm:px-8 xl:px-0  ">
+        <div className="flex flex-wrap px-5 sm:px-8 xl:px-0">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             type="button"
-            className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm  rounded-lg xl:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
+            className="inline-flex h-10 w-10 items-center justify-center rounded-lg p-2 text-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 xl:hidden"
             aria-controls="navbar-dropdown"
             aria-expanded={isMenuOpen}
           >
             <span className="sr-only">Open main menu</span>
             <svg
-              className="w-5 h-5"
+              className="h-5 w-5"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -51,11 +51,11 @@ export default function Navbar() {
           <div
             className={`${
               isMenuOpen ? "block" : "hidden"
-            } w-full xl:block xl:w-auto `}
+            } w-full xl:block xl:w-auto`}
             id="navbar-dropdown"
           >
             <ul
-              className={` ${pathname === "/contact" && "ml-52"} ${pathname === "" && "text-white"}  flex xl:items-center flex-col font-medium xl:p-0    xl:space-x-8 rtl:space-x-reverse xl:flex-row xl:mt-0 xl:border-0  font-poppins  `}
+              className={` ${pathname === "/contact" && "ml-52"} ${pathname === "" && "text-white"} flex flex-col font-poppins font-medium xl:mt-0 xl:flex-row xl:items-center xl:space-x-8 xl:border-0 xl:p-0 rtl:space-x-reverse`}
             >
               {headerLinks.map((el, i) => (
                 <li key={i}>
@@ -65,7 +65,7 @@ export default function Navbar() {
                       pathname === "/contact" &&
                       (el.href === "/contact" || el.href === "/partners") &&
                       "text-white"
-                    }  py-2 px-3  rounded xl:bg-transparent xl:p-0 hover:text-secondary `}
+                    } rounded px-3 py-2 hover:text-secondary xl:bg-transparent xl:p-0`}
                   >
                     {el.label}
                   </Link>
@@ -78,9 +78,9 @@ export default function Navbar() {
           <p
             className={`${
               pathname == "/contact" || pathname == ""
-                ? "text-white border-white"
-                : "text-primary border-primary"
-            } mr-5 border  px-4 py-2 rounded-full `}
+                ? "border-white text-white"
+                : "border-primary text-primary"
+            } mr-5 rounded-full border px-4 py-2`}
           >
             {contactInfo.phone}
           </p>

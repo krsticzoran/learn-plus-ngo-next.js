@@ -3,12 +3,12 @@ import { footerLinks, currentYear } from "@/data/footer-links";
 
 export default function Footer() {
   return (
-    <footer className="bg-primary  bg-[url('/images/shape-14.png')]">
+    <footer className="bg-primary bg-[url('/images/shape-14.png')]">
       <div className="mx-auto max-w-screen-xl space-y-8 px-4 py-16 sm:px-6 lg:space-y-16 lg:px-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
             <div className="text-secondary">
-              <p className="uppercase text-2xl font-semibold leading-7 font-spartan">
+              <p className="font-spartan text-2xl font-semibold uppercase leading-7">
                 <span className="text-white">learn</span> plus
               </p>
             </div>
@@ -24,11 +24,11 @@ export default function Footer() {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="flex items-center justify-center w-10 h-10 bg-[rgba(255,255,255,0.13)] rounded-full text-white transition hover:bg-secondary"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(255,255,255,0.13)] text-white transition hover:bg-secondary"
                 >
                   <span className="sr-only">Facebook</span>
                   <svg
-                    className="w-6 h-6"
+                    className="h-6 w-6"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                     aria-hidden="true"
@@ -47,11 +47,11 @@ export default function Footer() {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="flex items-center justify-center w-10 h-10 bg-[rgba(255,255,255,0.13)] rounded-full text-white transition hover:bg-secondary"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(255,255,255,0.13)] text-white transition hover:bg-secondary"
                 >
                   <span className="sr-only">Instagram</span>
                   <svg
-                    className="w-6 h-6"
+                    className="h-6 w-6"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                     aria-hidden="true"
@@ -70,11 +70,11 @@ export default function Footer() {
                   href="#"
                   rel="noreferrer"
                   target="_blank"
-                  className="flex items-center justify-center w-10 h-10 bg-[rgba(255,255,255,0.13)] rounded-full text-white transition  hover:bg-secondary"
+                  className="flex h-10 w-10 items-center justify-center rounded-full bg-[rgba(255,255,255,0.13)] text-white transition hover:bg-secondary"
                 >
-                  <span className="sr-only ">YouTube</span>
+                  <span className="sr-only">YouTube</span>
                   <svg
-                    className="w-6 h-6"
+                    className="h-6 w-6"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                     aria-hidden="true"
@@ -86,13 +86,13 @@ export default function Footer() {
             </ul>
           </div>
 
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-4 lg:col-span-2 mt-10 lg:mt-0 ">
+          <div className="mt-10 grid grid-cols-2 gap-8 sm:grid-cols-4 lg:col-span-2 lg:mt-0">
             {footerLinks.map((group, index) => (
               <div key={index}>
                 <p className="text-xl font-semibold leading-7 text-white">
                   {group[0]}
                 </p>
-                <ul className="mt-6 space-y-4 ">
+                <ul className="mt-6 space-y-4">
                   {group.map(
                     (el, i) =>
                       i > 0 && (
@@ -114,13 +114,13 @@ export default function Footer() {
       </div>
       <div>
         <div
-          className=" h-[1px]"
+          className="h-[1px]"
           style={{
             backgroundColor: "rgba(247, 245, 245, 0.1)",
           }}
         ></div>
         <div className="flex justify-center py-5">
-          <h5 className=" text-white font-poppins text-center flex flex-col sm:block">
+          <h5 className="flex flex-col text-center font-poppins text-white sm:block">
             {`Copyright  ${currentYear} Learn Plus.`}{" "}
             <span>All rights reserved.</span>
           </h5>

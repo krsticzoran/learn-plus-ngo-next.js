@@ -1,11 +1,10 @@
-import pluginNext from "@next/eslint-plugin-next";
-import parser from "@typescript-eslint/parser"; // optional
+import prettierConfig from "eslint-config-prettier";
 
 export default [
   {
     name: "ESLint Config - nextjs",
     languageOptions: {
-      parser, // optional
+      parser,
       parserOptions: {
         ecmaVersion: "latest",
         sourceType: "module",
@@ -23,4 +22,5 @@ export default [
       ...pluginNext.configs["core-web-vitals"].rules,
     },
   },
+  prettierConfig,
 ];
