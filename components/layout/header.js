@@ -38,9 +38,9 @@ export default function Navbar() {
                   href={el.href}
                   className={`${
                     pathname === "/contact" &&
-                    (el.href === "/contact" || el.href === "/partners") &&
+                    el.href === "/partners" &&
                     "text-white"
-                  } rounded px-3 py-2 hover:text-secondary xl:bg-transparent xl:p-0`}
+                  } ${pathname === el.href && "text-secondary"} rounded px-3 py-2 hover:text-secondary xl:bg-transparent xl:p-0`}
                 >
                   {el.label}
                 </Link>
