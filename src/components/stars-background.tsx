@@ -48,7 +48,7 @@ export default function StarsBackground() {
 
       ctx.fillStyle = "white";
 
-      for (let star of stars) {
+      for (const star of stars) {
         star.z -= star.speed;
         if (star.z <= 0) {
           star.z = width;
