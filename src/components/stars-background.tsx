@@ -8,6 +8,7 @@ interface Star {
   z: number;
   size: number;
   speed: number;
+  twinklePhase: number;
 }
 
 export default function StarsBackground() {
@@ -38,15 +39,17 @@ export default function StarsBackground() {
         z: Math.random() * width,
         size: Math.random() * 1.5 + 0.5,
         speed: 0.1 + Math.random() * 0.4,
+        twinklePhase: Math.random() * Math.PI * 2,
       });
     }
 
+    const colors = ["#ffffff", "#ffe9c4", "#d4fbff"];
+
     const animate = () => {
       if (!ctx || !canvas) return;
+
       ctx.fillStyle = "black";
       ctx.fillRect(0, 0, width, height);
-
-      ctx.fillStyle = "white";
 
       for (const star of stars) {
         star.z -= star.speed;
@@ -56,15 +59,32 @@ export default function StarsBackground() {
           star.y = (Math.random() - 0.5) * height;
           star.speed = 0.1 + Math.random() * 0.4;
           star.size = Math.random() * 1.5 + 0.5;
+          star.twinklePhase = Math.random() * Math.PI * 2;
         }
 
         const sx = centerX + (star.x / star.z) * width;
         const sy = centerY + (star.y / star.z) * height;
-        const starSize = Math.max((1 - star.z / width) * star.size * 3, 0.1);
+
+        const starSizeRaw = Math.max((1 - star.z / width) * star.size * 3, 0.1);
+        const starSize = starSizeRaw * 0.8; // smanjeno za 20%
+
+        star.twinklePhase += 0.05;
+        const twinkle = (Math.sin(star.twinklePhase) + 1) / 2; // 0 do 1
+
+        const color = colors[Math.floor(Math.random() * colors.length)];
+
+        ctx.shadowColor = color;
+        ctx.shadowBlur = starSize * 8 * twinkle; // jači sjaj
 
         ctx.beginPath();
+        ctx.fillStyle = color;
+        ctx.globalAlpha = 0.7 + 0.3 * twinkle; // svetlije, opacity od 0.7 do 1
         ctx.arc(sx, sy, starSize, 0, Math.PI * 2);
         ctx.fill();
+
+        ctx.globalAlpha = 1;
+        ctx.shadowBlur = 0;
+        ctx.shadowColor = "transparent";
       }
 
       requestAnimationFrame(animate);
