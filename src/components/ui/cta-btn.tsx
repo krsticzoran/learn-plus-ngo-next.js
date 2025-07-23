@@ -13,7 +13,7 @@ export default function CtaButton({
     <Link href={href} className="w-fit">
       <Button
         type="button"
-        className="text-[#CFCFF1] group font-medium !px-6 !py-3 rounded-full backdrop-blur-md bg-[linear-gradient(135deg,_#A3C2E5_0%,_#4C5B85_30%,_#4F63A0_70%,_#B6D3F5_100%)] hover:opacity-90 transition-all cursor-pointer mb-4 w-fit"
+        className="text-foreground group font-medium !px-6 !py-3 rounded-full backdrop-blur-md bg-[linear-gradient(135deg,_#A3C2E5_0%,_#4C5B85_30%,_#4F63A0_70%,_#B6D3F5_100%)] hover:opacity-90 transition-all cursor-pointer mb-4 w-fit"
       >
         <span className="flex items-center">
           {title}
