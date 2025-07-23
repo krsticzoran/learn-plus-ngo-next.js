@@ -9,9 +9,9 @@ export default function Home() {
         as="main"
         className="relative flex justify-start items-center min-h-screen"
       >
-        <div className="z-30 mt-[70px] flex flex-col">
+        <div className="z-30 mt-[105px] flex flex-col">
           <h1 className="text-6xl uppercase leading-[1.3] ">
-            Learn Plus & the Journey to a Galaxy of Knowledge
+            Learn Plus & the Journey to <br /> a Galaxy of Knowledge
           </h1>
 
           <p className="mt-4 mb-8 text-[#CFCFF1] leading-[1.35] w-[36vw]">
