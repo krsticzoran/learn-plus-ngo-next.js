@@ -1,5 +1,6 @@
 import EarthAnimation from "@/components/ui/earth-animation";
 import { Container } from "@/components/layout/container";
+import CtaButton from "@/components/ui/cta-btn";
 
 export default function Home() {
   return (
@@ -8,16 +9,18 @@ export default function Home() {
         as="main"
         className="relative flex justify-start items-center min-h-screen"
       >
-        <div className="z-30 mt-[70px]">
+        <div className="z-30 mt-[70px] flex flex-col">
           <h1 className="text-6xl uppercase leading-[1.3] ">
             Learn Plus & the Journey to a Galaxy of Knowledge
           </h1>
 
-          <p className="mt-4 text-[#CFCFF1] leading-[1.35] w-[36vw]">
+          <p className="mt-4 mb-8 text-[#CFCFF1] leading-[1.35] w-[36vw]">
             Learn Plus is a non-governmental organization with a core mission to
             promote lifelong learning and empower individuals through education,
             exploration, and continuous personal growth.
           </p>
+          <CtaButton title="Uncover Our Purpose and Values" href="/" />
+          <CtaButton title="Explore Our Membership Options" href="/" />
         </div>
         <EarthAnimation />
       </Container>
