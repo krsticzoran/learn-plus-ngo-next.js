@@ -14,7 +14,7 @@ export default function Navbar() {
     <header className="absolute z-50 w-full bg-transparent text-primary">
       <Container
         as="nav"
-        className={`flex items-center justify-between font-poppins text-lg font-medium uppercase leading-7 xl:font-spartan xl:font-semibold xl:capitalize ${pathname === "/contact" ? "lg:mt-10" : "mt-5 lg:mt-[60px]"}`}
+        className={`flex items-center justify-between font-poppins text-lg font-medium uppercase leading-7 xl:font-spartan xl:font-semibold xl:capitalize ${pathname === "/contact" ? "xl:mt-10" : "mt-5 xl:mt-[60px]"}`}
       >
         {/*Logo*/}
         <Link href="/">

@@ -1,21 +1,51 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Container } from "@/components/ui/container";
 
 export default function Contact() {
   return (
-    <>
-      <section className="mt-5 px-4 pb-20 sm:px-6 lg:px-8 xl:px-0">
-        <div className="mx-auto max-w-screen-xl">
-          <div className="flex">
-            <div className="ml-auto mt-36 w-[640px] pt-20">
+    <Container as="div" className="relative">
+      <main className="mt-5 pb-10 sm:pb-20 ">
+        <div>
+          <div className="flex flex-col md:flex-row">
+            <div className="xl:ml-auto mt-8 md:mt-40 lg:mt-48 xl:mt-[164px] w-full md:w-1/2 max-w-[640px] pt-20">
               <h1 className="text-4xl font-bold capitalize text-primary sm:text-6xl">
                 get in touch
               </h1>
-              <p className="mt-4 w-[90%] text-lg leading-7 text-primary text-opacity-60">
+              <p className="mt-4 w-[90%] sm:text-lg leading-7 text-primary text-opacity-60">
                 We’re here to help! Reach out to us through email or phone , and
                 check out the additional info PDF for directions and more.
               </p>
-              <div className="flex pt-20">
+              <div className="flex xl:hidden gap-6 mt-6">
+                <Link href="mailto:example@example.com">
+                  <Image
+                    src="/icons/email.png"
+                    width={35}
+                    height={35}
+                    alt="email"
+                    className="transition-transform duration-300 hover:scale-125"
+                  />
+                </Link>
+                <Link href="#pdf">
+                  <Image
+                    src="/icons/location.png"
+                    width={35}
+                    height={35}
+                    alt="email"
+                    className="transition-transform duration-300 hover:scale-125"
+                  />
+                </Link>
+                <Link href="tel:+385992476644">
+                  <Image
+                    src="/icons/mobile-black.png"
+                    width={35}
+                    height={35}
+                    alt="contact"
+                    className="transition-transform duration-300 hover:scale-125"
+                  />
+                </Link>
+              </div>
+              <div className="hidden xl:flex pt-20">
                 <Link
                   href="mailto:example@example.com"
                   className="group flex flex-col items-center"
@@ -54,20 +84,20 @@ export default function Contact() {
                 </Link>
               </div>
             </div>
-            <div className="w-[50%] pl-[50px]">
-              <div className="relative flex h-[620px] items-center rounded-[20px] bg-primary pl-[345px] pt-[210px]">
+            <div className="w-[50%] pl-[50px] mt-32 xl:mt-5 hidden md:block">
+              <div className="relative  md:flex h-[400px] xl:h-[620px] items-center rounded-[20px] bg-primary pl-[345px] pt-[210px]">
                 <Image
                   src="/images/contact1.png"
                   width={485}
                   height={515}
                   alt="call us"
                   priority
-                  className="absolute bottom-0 left-[-125px]"
+                  className="absolute bottom-0 md:left-[-90px] lg:left-[-100px] xl:left-[-125px]"
                 />
                 <div>
                   <Link
                     href="tel:+385992476644"
-                    className="group flex flex-col items-center pt-40"
+                    className="group hidden xl:flex flex-col items-center pt-40"
                   >
                     <Image
                       src="/icons/mobile-phone.png"
@@ -88,7 +118,7 @@ export default function Contact() {
             </div>
           </div>
         </div>
-      </section>
+      </main>
 
       <section
         className="bg-white bg-[url('/images/shape-15.png')] bg-cover bg-center bg-no-repeat pb-28 pt-28"
@@ -117,6 +147,6 @@ export default function Contact() {
           </div>
         </div>
       </section>
-    </>
+    </Container>
   );
 }
