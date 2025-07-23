@@ -16,35 +16,54 @@ export default function Contact() {
                 We’re here to help! Reach out to us through email or phone , and
                 check out the additional info PDF for directions and more.
               </p>
-              <div className="flex xl:hidden gap-6 mt-6">
-                <Link href="mailto:example@example.com">
-                  <Image
-                    src="/icons/email.png"
-                    width={35}
-                    height={35}
-                    alt="email"
-                    className="transition-transform duration-300 hover:scale-125"
-                  />
-                </Link>
-                <Link href="#pdf">
-                  <Image
-                    src="/icons/location.png"
-                    width={35}
-                    height={35}
-                    alt="email"
-                    className="transition-transform duration-300 hover:scale-125"
-                  />
-                </Link>
-                <Link href="tel:+385992476644">
-                  <Image
-                    src="/icons/mobile-black.png"
-                    width={35}
-                    height={35}
-                    alt="contact"
-                    className="transition-transform duration-300 hover:scale-125"
-                  />
-                </Link>
+              <div className="flex xl:hidden gap-8 mt-6">
+                {/* Email */}
+                <div className="flex flex-col items-center text-sm text-gray-700">
+                  <Link href="mailto:example@example.com">
+                    <Image
+                      src="/icons/email.png"
+                      width={35}
+                      height={35}
+                      alt="Email"
+                      className="transition-transform duration-300 hover:scale-125"
+                    />
+                  </Link>
+                  <span className="mt-1">Email us</span>
+                </div>
+
+                {/* Phone */}
+                <div className="flex flex-col items-center text-sm text-gray-700">
+                  <Link href="tel:+385992476644">
+                    <Image
+                      src="/icons/mobile-black.png"
+                      width={35}
+                      height={35}
+                      alt="Call"
+                      className="transition-transform duration-300 hover:scale-125"
+                    />
+                  </Link>
+                  <span className="mt-1">Call us</span>
+                </div>
+
+                {/* PDF Download */}
+                <div className="flex flex-col items-center text-sm text-gray-700">
+                  <a href="/information.pdf" download>
+                    <Image
+                      src="/icons/pdf-icon.png"
+                      width={35}
+                      height={35}
+                      alt="Download PDF"
+                      className="transition-transform duration-300 hover:scale-125"
+                    />
+                  </a>
+                  <span className="mt-1 text-center">
+                    Download
+                    <br />
+                    info
+                  </span>
+                </div>
               </div>
+
               <div className="hidden xl:flex pt-20">
                 <Link
                   href="mailto:example@example.com"
@@ -121,7 +140,7 @@ export default function Contact() {
       </main>
 
       <section
-        className="bg-white bg-[url('/images/shape-15.png')] bg-cover bg-center bg-no-repeat pb-28 pt-28"
+        className="bg-white bg-[url('/images/shape-15.png')] bg-cover bg-center bg-no-repeat py-28 hidden xl:block"
         id="pdf"
       >
         <div className="mx-auto max-w-screen-xl">
