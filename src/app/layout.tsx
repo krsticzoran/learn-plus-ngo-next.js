@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { JetBrains_Mono, Outfit } from "next/font/google";
 import "./globals.css";
 import StarsBackground from "@/components/layout/stars-background";
+import { Header } from "@/components/layout/header";
 
 const jetBrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
@@ -31,6 +32,7 @@ export default function RootLayout({
         className={`${jetBrainsMono.variable} ${outfit.variable} relative antialiased`}
       >
         <StarsBackground />
+        <Header />
         {children}
       </body>
     </html>
