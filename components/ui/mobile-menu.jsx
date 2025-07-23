@@ -27,6 +27,7 @@ export default function MobileMenu() {
           variant="ghost"
           size="icon"
           className="hover:bg-transparent xl:hidden"
+          aria-label="Open mobile menu"
         >
           <Menu className="!h-8 !w-8 text-primary" />
         </Button>

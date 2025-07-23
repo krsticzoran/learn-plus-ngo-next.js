@@ -8,11 +8,11 @@ export default function Contact() {
       <main className="mt-5 pb-10 sm:pb-20 ">
         <div>
           <div className="flex flex-col md:flex-row">
-            <div className="xl:ml-auto mt-8 md:mt-40 lg:mt-48 xl:mt-[164px] w-full md:w-1/2 max-w-[640px] pt-20">
+            <div className="xl:ml-auto mt-20 md:mt-36 lg:mt-40 xl:mt-[164px] w-full md:w-1/2 max-w-[640px] pt-20">
               <h1 className="text-4xl font-bold capitalize text-primary sm:text-6xl">
                 get in touch
               </h1>
-              <p className="mt-4 w-[90%] sm:text-lg leading-7 text-primary text-opacity-60">
+              <p className="mt-4 w-[90%] sm:text-lg leading-7 text-primary text-opacity-80">
                 We’re here to help! Reach out to us through email or phone , and
                 check out the additional info PDF for directions and more.
               </p>
