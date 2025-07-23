@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono, Outfit } from "next/font/google";
 import "./globals.css";
-import StarsBackground from "@/components/stars-background";
+import StarsBackground from "@/components/layout/stars-background";
 
 const jetBrainsMono = JetBrains_Mono({
   variable: "--font-jetbrains-mono",
