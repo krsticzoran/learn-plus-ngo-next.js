@@ -59,10 +59,10 @@ export default function Footer() {
           }}
         ></div>
         <div className="flex justify-center py-5">
-          <h5 className="flex flex-col text-center font-poppins text-white sm:block">
+          <p className="flex flex-col text-center font-poppins text-white sm:block">
             {`Copyright  ${currentYear} Learn Plus.`}{" "}
             <span>All rights reserved.</span>
-          </h5>
+          </p>
         </div>
       </div>
     </footer>
