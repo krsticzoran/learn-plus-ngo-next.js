@@ -3,13 +3,13 @@ import { IBM_Plex_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/header";
 
-export const ibmPlexSans = IBM_Plex_Sans({
+const ibmPlexSans = IBM_Plex_Sans({
   variable: "--font-ibm-plex-sans",
   subsets: ["latin"],
   display: "swap",
 });
 
-export const inter = Inter({
+const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
