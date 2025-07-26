@@ -7,12 +7,9 @@ import { Container } from "./container";
 export const Header = () => {
   return (
     <header className="fixed top-0 left-0 w-full z-50 ">
-      <Container className="py-4 px-3 flex items-center justify-between mt-[30px] backdrop-blur-md bg-transparent border rounded-full border-[#6A6B70]">
+      <Container className="py-[10px] px-3 flex items-center justify-between mt-[30px] bg-background rounded-xl ">
         {/* Logo */}
-        <Link
-          href="/"
-          className=" font-bold tracking-wide uppercase font-jetbrains"
-        >
+        <Link href="/" className=" font-bold tracking-wide uppercase ">
           Learn Plus
         </Link>
 

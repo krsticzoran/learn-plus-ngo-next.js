@@ -1,4 +1,3 @@
-import EarthAnimation from "@/components/ui/earth-animation";
 import { Container } from "@/components/layout/container";
 import CtaButton from "@/components/ui/cta-btn";
 
@@ -22,7 +21,6 @@ export default function Home() {
           <CtaButton title="Uncover Our Purpose and Values" href="/" />
           <CtaButton title="Explore Our Membership Options" href="/" />
         </div>
-        <EarthAnimation />
       </Container>
       <div className="min-h-screen">
         <p className=" mt-20 text-center text-2xl">ja sam text</p>
