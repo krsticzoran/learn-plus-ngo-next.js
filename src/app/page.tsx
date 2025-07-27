@@ -6,9 +6,9 @@ export default function Home() {
     <>
       <Container
         as="main"
-        className="relative flex justify-start items-center min-h-screen "
+        className="relative flex justify-start items-center  mt-[90px] lg:mt-[105px] gap-[10px] h-[calc(100vh-95px)] lg:h-[calc(100vh-110px)] "
       >
-        <div className="z-30 mt-[105px] flex flex-col">
+        <div className="z-30  flex flex-col w-2/3 rounded-3xl bg-background  h-full">
           <h1 className="text-6xl uppercase leading-[1.3] ">
             Learn Plus & the Journey to <br /> a Galaxy of Knowledge
           </h1>
@@ -21,6 +21,7 @@ export default function Home() {
           <CtaButton title="Uncover Our Purpose and Values" href="/" />
           <CtaButton title="Explore Our Membership Options" href="/" />
         </div>
+        <div className="bg-blue-muted h-full rounded-3xl w-1/3"> dfjdsf</div>
       </Container>
       <div className="min-h-screen">
         <p className=" mt-20 text-center text-2xl">ja sam text</p>
