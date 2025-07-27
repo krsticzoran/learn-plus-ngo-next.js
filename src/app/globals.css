@@ -6,6 +6,9 @@
 @theme {
   --font-ibm-plex-sans: "IBM Plex Sans", sans-serif;
   --font-inter: "Inter", sans-serif;
+  --color-black-muted: #0b0a13;
+  --color-blue-muted: #584ad1;
+  --color-green-muted: #bedc6e;
 }
 
 @theme inline {
@@ -122,7 +125,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground font-inter;
+    @apply bg-[#EEEFF1] text-black-muted font-inter;
   }
   h1,
   h2,

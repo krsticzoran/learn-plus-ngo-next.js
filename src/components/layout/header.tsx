@@ -20,7 +20,7 @@ export const Header = () => {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-sm font-medium uppercase"
+                  className="text-sm font-medium uppercase text-black-muted"
                 >
                   {link.label}
                 </Link>
