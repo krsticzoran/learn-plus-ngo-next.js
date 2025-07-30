@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { IBM_Plex_Sans, Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/header";
+import ParallaxProviderWrapper from "@/providers/parallax-provider-wrapper";
 
 const ibmPlexSans = IBM_Plex_Sans({
   variable: "--font-ibm-plex-sans",
@@ -31,7 +32,7 @@ export default function RootLayout({
         className={`${ibmPlexSans.variable} ${inter.variable} relative antialiased`}
       >
         <Header />
-        {children}
+        <ParallaxProviderWrapper>{children}</ParallaxProviderWrapper>
       </body>
     </html>
   );

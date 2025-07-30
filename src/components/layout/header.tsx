@@ -2,6 +2,8 @@
 import Link from "next/link";
 import { links } from "@/data/links";
 import MobileNav from "./mobile-nav";
+import Image from "next/image";
+import Logo from "@/assets/logo/logo.png";
 
 import { Container } from "./container";
 
@@ -11,7 +13,7 @@ export const Header = () => {
       <Container className="px-4 lg:px-6 flex items-center justify-between mt-[10px] lg:mt-[15px] bg-background rounded-3xl h-[70px] lg:h-[80px]">
         {/* Logo */}
         <Link href="/" className=" font-bold tracking-wide uppercase ">
-          Learn Plus
+          <Image src={Logo} height={150} width={150} alt="learn plus logo" />
         </Link>
 
         {/* Nav */}

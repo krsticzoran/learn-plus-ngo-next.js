@@ -9,6 +9,7 @@
   --color-black-muted: #0b0a13;
   --color-blue-muted: #584ad1;
   --color-green-muted: #bedc6e;
+  --color-background-muted: #eeeff1;
 }
 
 @theme inline {
@@ -125,7 +126,7 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-[#EEEFF1] text-black-muted font-inter;
+    @apply bg-background-muted text-black-muted font-inter;
   }
   h1,
   h2,
