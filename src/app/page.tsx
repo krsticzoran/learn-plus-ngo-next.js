@@ -1,6 +1,7 @@
 import { Container } from "@/components/layout/container";
 import { Button } from "@/components/ui/button";
 import HeroImg from "@/components/ui/hero-img";
+import ScrollingText from "@/components/ui/scrolling-text";
 
 export default function Home() {
   return (
@@ -51,7 +52,9 @@ export default function Home() {
           </div>
           <HeroImg />
         </div>
-        <div className="w-full bg-background h-20 rounded-4xl"></div>
+        <div className="w-full bg-background  rounded-4xl overflow-hidden flex items-center justify-center min-h-[70px] lg:min-h-[80px">
+          <ScrollingText />
+        </div>
       </Container>
       <div className="min-h-screen">
         <p className=" mt-20 text-center text-2xl">ja sam text</p>
