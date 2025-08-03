@@ -4,6 +4,9 @@ import "./globals.css";
 import { Header } from "@/components/layout/header";
 import ParallaxProviderWrapper from "@/providers/parallax-provider-wrapper";
 
+import Template from "@/components/animations/template";
+import PageFadeIn from "@/components/animations/page-fade-in";
+
 const ibmPlexSans = IBM_Plex_Sans({
   variable: "--font-ibm-plex-sans",
   subsets: ["latin"],
@@ -31,8 +34,12 @@ export default function RootLayout({
       <body
         className={`${ibmPlexSans.variable} ${inter.variable} relative antialiased`}
       >
-        <Header />
-        <ParallaxProviderWrapper>{children}</ParallaxProviderWrapper>
+        <PageFadeIn>
+          <Header />
+          <Template>
+            <ParallaxProviderWrapper>{children}</ParallaxProviderWrapper>
+          </Template>
+        </PageFadeIn>
       </body>
     </html>
   );
