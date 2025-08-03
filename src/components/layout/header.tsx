@@ -36,7 +36,7 @@ export const Header = () => {
         <div className="hidden lg:block">
           <a
             href="tel:+385992476644"
-            className="bg-blue-muted hover:bg-blue-muted/90 text-white capitalize rounded-full cursor-pointer py-4 px-6 duration-300 "
+            className="bg-blue-muted hover:bg-blue-muted/70 text-white capitalize rounded-full cursor-pointer py-3 px-6 duration-300 "
           >
             Ask About Erasmus+
           </a>

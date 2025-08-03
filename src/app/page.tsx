@@ -1,5 +1,5 @@
 import { Container } from "@/components/layout/container";
-import { Button } from "@/components/ui/button";
+import CustomButton from "@/components/ui/custom-button";
 import HeroImg from "@/components/ui/hero-img";
 import ScrollingText from "@/components/ui/scrolling-text";
 
@@ -24,12 +24,8 @@ export default function Home() {
               <span className="text-blue-muted">personal growth</span>.
             </p>
             <div className="flex gap-2">
-              <Button className="py-6 px-10 bg-green-muted text-foreground cursor-pointer hover:bg-green-muted/70 rounded-full duration-300">
-                Explore Programs
-              </Button>
-              <Button className="py-6 px-10 bg-background-muted hover:bg-background-muted/70 text-foreground cursor-pointer rounded-full duration-300">
-                Become a Member
-              </Button>
+              <CustomButton href="/"> Explore Programs</CustomButton>
+              <CustomButton variant="secondary">Become a Member</CustomButton>
             </div>
             <div className="mt-auto flex gap-8">
               <div>
