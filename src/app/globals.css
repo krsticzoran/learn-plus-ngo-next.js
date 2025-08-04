@@ -10,6 +10,7 @@
   --color-blue-muted: #584ad1;
   --color-green-muted: #bedc6e;
   --color-background-muted: #eeeff1;
+  --color-border-muted: #757478;
 }
 
 @theme inline {

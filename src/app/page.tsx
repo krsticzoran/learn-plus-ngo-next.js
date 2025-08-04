@@ -1,7 +1,10 @@
 import { Container } from "@/components/layout/container";
 import CustomButton from "@/components/ui/custom-button";
-import HeroImg from "@/components/ui/hero-img";
+import ParallaxImg from "@/components/ui/parallax-img";
+import Hero from "@/assets/images/hero.jpg";
+import Osijek from "@/assets/images/osijek.jpg";
 import ScrollingText from "@/components/ui/scrolling-text";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -46,15 +49,83 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <HeroImg />
+          <div className="bg-background h-full rounded-4xl w-1/3 relative overflow-hidden">
+            <ParallaxImg src={Hero} alt="Hero Image" />
+          </div>
         </div>
         <div className="w-full bg-background  rounded-4xl overflow-hidden flex items-center justify-center min-h-[70px] lg:min-h-[80px">
           <ScrollingText />
         </div>
       </Container>
-      <div className="min-h-screen">
-        <p className=" mt-20 text-center text-2xl">ja sam text</p>
-      </div>
+      <Container as="section" className="bg-white rounded-4xl p-8 ">
+        <div>
+          <div className="py-2.5 text-sm px-6 border border-border-muted w-fit rounded-4xl ">
+            <p className="text-black-muted/60">about us</p>
+          </div>
+          <h2 className="text-5xl font-medium mt-3">Find Out Who We Are</h2>
+        </div>
+        <div className="flex gap-[10px] my-2.5">
+          <div className="bg-background-muted h-60 w-full rounded-4xl p-4 flex flex-col">
+            <h3 className="text-3xl">
+              Guiding You Toward Personal and Professional Success
+            </h3>
+            <p className="mt-auto">
+              Through our seminars, lessons, tailor-made courses, job shadowing,
+              group mobilities and different types of non-formal education we
+              provide our members and participants career guidance and better
+              chances in their professional and private lives.
+            </p>
+          </div>
+          <div className="bg-background-muted h-60 w-full rounded-4xl p-6 flex flex-col">
+            <h3 className="text-3xl">Expertise That Comes With Experience</h3>
+
+            <p className="mt-auto">
+              Although we are new NGO, all our members and board staff have huge
+              experience in working with and for national and international
+              stakeholders, organizations like UN, International Organization
+              for Migration (IOM) and similar. In that manner we can provide you
+              expertise in many fields.
+            </p>
+          </div>
+        </div>
+        <div className="bg-background h-100 rounded-4xl w-full relative overflow-hidden">
+          <Image
+            fill
+            src={Osijek}
+            alt="Osijek"
+            className="object-cover rounded-4xl"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent rounded-4xl z-10" />
+          <p className="absolute bottom-4 left-4 w-[70%] text-white z-20 text-lg font-medium">
+            Our main office is located in Osijek, the center of Osijek-Baranya
+            county, in the easternmost part of Croatia, very near three
+            countries - Serbia, Bosnia and Herzegovina and Hungary.
+          </p>{" "}
+        </div>
+        <div className="flex gap-[10px] my-2.5">
+          <div className="bg-background-muted h-60 w-full rounded-4xl p-4 flex flex-col">
+            <h3 className="text-3xl"> What We Do</h3>
+            <p className="mt-auto">
+              Through our seminars, lessons, tailor-made courses, job shadowing,
+              group mobilities and different types of non-formal education we
+              provide our members and participants career guidance and better
+              chances in their professional and private lives.
+            </p>
+          </div>
+          <div className="bg-background-muted h-60 w-full rounded-4xl p-6 flex flex-col">
+            <h3 className="text-3xl">What We Offer</h3>
+
+            <p className="mt-auto">
+              Although we are new NGO, all our members and board staff have huge
+              experience in working with and for national and international
+              stakeholders, organizations like UN, International Organization
+              for Migration (IOM) and similar. In that manner we can provide you
+              expertise in many fields.
+            </p>
+          </div>
+        </div>
+      </Container>
+      <div className="min-h-screen"></div>
     </>
   );
 }
