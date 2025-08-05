@@ -12,6 +12,7 @@ export function Container<T extends ElementType = "div">({
   className = "",
   children,
   style,
+  ...rest // contains aria props
 }: ContainerProps<T>) {
   const Component = as || "div";
 
@@ -19,6 +20,7 @@ export function Container<T extends ElementType = "div">({
     <Component
       className={`mx-auto max-w-[1570px] w-[95%] sm:w-[96%] md:w-[97%] xl:w-[98%] ${className}`}
       style={style}
+      {...rest} // spread rest props to allow passing aria attributes
     >
       {children}
     </Component>
