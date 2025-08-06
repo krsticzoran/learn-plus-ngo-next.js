@@ -3,6 +3,8 @@ import CustomButton from "@/components/ui/custom-button";
 import ParallaxImg from "@/components/ui/parallax-img";
 import HeroImage from "@/assets/images/hero.jpg";
 import { Container } from "@/components/layout/container";
+import KeyMetrics from "@/components/ui/key-metrics";
+import { statsData } from "@/data/stats-data";
 
 export default function Hero() {
   return (
@@ -30,24 +32,8 @@ export default function Hero() {
             <CustomButton href="/"> Explore Programs</CustomButton>
             <CustomButton variant="secondary">Become a Member</CustomButton>
           </div>
-          <div className="mt-auto flex gap-8">
-            <div>
-              <p className="text-4xl mb-2">200+</p>
-              <p className="text-sm">Students successfully trained</p>
-            </div>
-            <div>
-              <p className="text-4xl mb-2">6+</p>
-              <p className="text-sm">Years of experience</p>
-            </div>
-            <div>
-              <p className="text-4xl mb-2">10+</p>
-              <p className="text-sm">Countries we reached</p>
-            </div>
-            <div>
-              <p className="text-4xl mb-2"> 50+</p>
-              <p className="text-sm">Trainings delivered worldwide</p>
-            </div>
-          </div>
+
+          <KeyMetrics data={statsData} />
         </div>
         <div className="bg-background h-full rounded-4xl w-1/3 relative overflow-hidden">
           <ParallaxImg
