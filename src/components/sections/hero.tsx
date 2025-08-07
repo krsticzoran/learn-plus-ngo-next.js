@@ -11,18 +11,18 @@ export default function Hero() {
     <Container
       as="main"
       aria-labelledby="hero-heading"
-      className="relative mt-[90px] lg:mt-[105px] gap-[10px] h-[calc(100vh-95px)] lg:h-[calc(100vh-110px)] flex flex-col pb-[10px]"
+      className="relative mt-[90px] flex h-[calc(100vh-95px)] flex-col gap-[10px] pb-[10px] lg:mt-[105px] lg:h-[calc(100vh-110px)]"
     >
-      <div className="flex justify-start items-center flex-1 w-full gap-[10px]">
-        <div className="z-30 flex flex-col w-2/3 rounded-4xl bg-background p-12 h-full">
+      <div className="flex w-full flex-1 items-center justify-start gap-[10px]">
+        <div className="bg-background z-30 flex h-full w-2/3 flex-col rounded-4xl p-12">
           <h1
             id="hero-heading"
-            className="text-4xl sm:text-6xl font-medium mb-6 leading-tight"
+            className="mb-6 text-4xl leading-tight font-medium sm:text-6xl"
           >
             Empowering Growth Through Lifelong Learning
           </h1>
 
-          <p className="w-[75%] mb-8 text-lg">
+          <p className="mb-8 w-[75%] text-lg">
             Learn Plus is a non-governmental organization with a core mission to
             promote <span className="text-blue-muted">lifelong learning</span>{" "}
             and empower individuals through education, exploration, and
@@ -33,9 +33,12 @@ export default function Hero() {
             <CustomButton variant="secondary">Become a Member</CustomButton>
           </div>
 
+          {/*Display key statistics like number of students, countries...*/}
           <KeyMetrics data={statsData} />
         </div>
-        <div className="bg-background h-full rounded-4xl w-1/3 relative overflow-hidden">
+
+        {/* Hero image with parallax effect */}
+        <div className="bg-background relative h-full w-1/3 overflow-hidden rounded-4xl">
           <ParallaxImg
             src={HeroImage}
             alt="People attending educational training session"
@@ -44,8 +47,9 @@ export default function Hero() {
       </div>
       <div
         aria-label="Upcoming and past Erasmus opportunities"
-        className="w-full bg-background  rounded-4xl overflow-hidden flex items-center justify-center min-h-[70px] lg:min-h-[80px]"
+        className="bg-background flex min-h-[70px] w-full items-center justify-center overflow-hidden rounded-4xl lg:min-h-[80px]"
       >
+        {/* Scrolling text component for displaying upcoming and past opportunities */}
         <ScrollingText />
       </div>
     </Container>
