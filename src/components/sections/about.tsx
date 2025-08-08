@@ -7,15 +7,15 @@ export default function About() {
     <Container
       as="section"
       aria-labelledby="about-heading"
-      className="bg-white rounded-4xl p-8 "
+      className="rounded-4xl bg-white p-8"
     >
-      <div className="flex gap-[10px] my-2.5 text-lg">
-        <div className="font-medium h-80 w-full rounded-3xl p-4 flex flex-col">
+      <div className="my-2.5 flex gap-[10px] text-lg">
+        <div className="flex h-80 w-full flex-col rounded-3xl p-4 font-medium">
           <div>
-            <div className="py-1 text-sm px-6 border border-border-muted w-fit rounded-4xl ">
+            <div className="border-border-muted w-fit rounded-4xl border px-6 py-1 text-sm">
               <p className="text-black-muted/60">about us</p>
             </div>
-            <h2 id="about-heading" className="text-5xl font-medium mt-3">
+            <h2 id="about-heading" className="mt-3 text-5xl font-medium">
               Find Out Who We Are
             </h2>
           </div>
@@ -26,7 +26,7 @@ export default function About() {
             chances in their professional and private lives.
           </p>
         </div>
-        <div className="bg-blue-muted text-white font-medium h-80 w-full rounded-3xl p-6 flex flex-col">
+        <div className="bg-blue-muted flex h-80 w-full flex-col rounded-3xl p-6 font-medium text-white">
           <h3 className="text-3xl">Expertise That Comes With Experience</h3>
 
           <p className="mt-auto">
@@ -38,7 +38,7 @@ export default function About() {
         </div>
       </div>
       <div className="flex gap-2.5">
-        <div className="bg-black-muted text-white  w-1/2 h-80 rounded-3xl p-6 flex flex-col">
+        <div className="bg-black-muted flex h-80 w-1/2 flex-col rounded-3xl p-6 text-white">
           <h3 className="text-3xl">What We Offer</h3>
 
           <p className="mt-auto text-lg">
@@ -48,18 +48,19 @@ export default function About() {
             their career opportunities.
           </p>
         </div>
-        <div className="bg-background h-80 rounded-3xl w-1/2 relative overflow-hidden">
+        <div className="bg-background relative h-80 w-1/2 overflow-hidden rounded-3xl">
           <Image
             fill
             src={Osijek}
             alt="Photo of Osijek, where the main office is located"
-            className="object-cover rounded-3xl"
+            sizes="(max-width: 1023px) 100vw, 50vw"
+            className="rounded-3xl object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent rounded-3xl z-10" />
-          <div className="absolute top-4 left-4 text-sm px-6 py-1 border border-white w-fit rounded-4xl z-20">
+          <div className="absolute inset-0 z-10 rounded-3xl bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
+          <div className="absolute top-4 left-4 z-20 w-fit rounded-4xl border border-white px-6 py-1 text-sm">
             <p className="text-white">location</p>
           </div>
-          <p className="absolute bottom-4 left-4 w-[95%] text-white z-20 text-lg font-medium">
+          <p className="absolute bottom-4 left-4 z-20 w-[95%] text-lg font-medium text-white">
             Our main office is located in Osijek, the center of Osijek-Baranya
             county, in the easternmost part of Croatia, very near three
             countries - Serbia, Bosnia and Herzegovina and Hungary.

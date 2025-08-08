@@ -10,7 +10,14 @@ interface ParallaxImgProps {
 export default function ParallaxImg({ src, alt }: ParallaxImgProps) {
   return (
     <Parallax className="absolute inset-0" scale={[2, 0.5]}>
-      <Image fill src={src} alt={alt} className="object-cover rounded-4xl" />
+      <Image
+        fill
+        src={src}
+        alt={alt}
+        className="rounded-4xl object-cover"
+        sizes="(max-width: 1023px) 100vw, 33vw"
+        priority
+      />
     </Parallax>
   );
 }
