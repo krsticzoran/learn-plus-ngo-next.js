@@ -1,7 +1,9 @@
-// odraditi tipove
-// odraditi da radi membership i na resize i debounce
+type MembershipItem = {
+  name: string;
+  value: string;
+};
 
-export const membershipData = [
+export const membershipData: MembershipItem[] = [
   {
     name: "General Membership Info",
     value: `
