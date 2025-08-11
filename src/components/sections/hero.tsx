@@ -11,7 +11,7 @@ export default function Hero() {
     <Container
       as="main"
       aria-labelledby="hero-heading"
-      className="relative mt-[90px] flex h-[calc(100vh-95px)] flex-col gap-[10px] pb-[10px] lg:mt-[105px] lg:h-[calc(100vh-110px)]"
+      className="relative flex h-[calc(100vh-95px)] flex-col gap-[10px] pb-[10px] lg:h-[calc(100vh-110px)]"
     >
       <div className="flex w-full flex-1 items-center justify-start gap-[10px]">
         <div className="bg-background z-30 flex h-full w-2/3 flex-col rounded-4xl p-12">
