@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Sans, Inter } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/layout/header";
+import Header from "@/components/layout/header";
+import Footer from "@/components/layout/footer";
 import ParallaxProviderWrapper from "@/providers/parallax-provider-wrapper";
 
 import Template from "@/components/animations/template";
@@ -38,6 +39,7 @@ export default function RootLayout({
           <Header />
           <Template>
             <ParallaxProviderWrapper>{children}</ParallaxProviderWrapper>
+            <Footer />
           </Template>
         </PageFadeIn>
       </body>

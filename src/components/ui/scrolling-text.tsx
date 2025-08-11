@@ -18,14 +18,14 @@ const links = [
 
 export default function ScrollingText() {
   return (
-    <div className="bg-transparent text-black py-4 lg:py-6 overflow-hidden whitespace-nowrap group">
+    <div className="group overflow-hidden bg-transparent py-4 whitespace-nowrap text-black lg:py-6">
       <ul className="animate-scroll inline-block min-w-full">
         {[...links, ...links].map((link, index) => (
           <li
             key={index}
-            className="mx-6 text-lg lg:text-xl font-medium inline-block hover:underline pointer-events-auto"
+            className="pointer-events-auto mx-6 inline-block text-lg font-medium hover:underline lg:text-xl"
           >
-            <Link href={link.href} className="text-blue-muted">
+            <Link href={link.href} className="text-blue-muted!">
               {link.label}
             </Link>
           </li>

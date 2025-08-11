@@ -7,12 +7,12 @@ import Logo from "@/assets/logo/logo.png";
 
 import { Container } from "./container";
 
-export const Header = () => {
+export default function Header() {
   return (
-    <header className="fixed top-0 left-0 w-full z-50 ">
-      <Container className="px-4 lg:px-6 flex items-center justify-between mt-[10px] lg:mt-[15px] bg-background rounded-3xl h-[70px] lg:h-[80px]">
+    <header className="fixed top-0 left-0 z-50 w-full">
+      <Container className="bg-background mt-[10px] flex h-[70px] items-center justify-between rounded-3xl px-4 lg:mt-[15px] lg:h-[80px] lg:px-6">
         {/* Logo */}
-        <Link href="/" className=" font-bold tracking-wide uppercase ">
+        <Link href="/" className="font-bold tracking-wide uppercase">
           <Image src={Logo} height={150} width={150} alt="learn plus logo" />
         </Link>
 
@@ -23,7 +23,7 @@ export const Header = () => {
               <li key={link.href}>
                 <Link
                   href={link.href}
-                  className="capitalize text-black-muted hover:text-blue-muted duration-300"
+                  className="hover:text-blue-muted capitalize duration-300"
                 >
                   {link.label}
                 </Link>
@@ -36,15 +36,15 @@ export const Header = () => {
         <div className="hidden lg:block">
           <a
             href="tel:+385992476644"
-            className="bg-blue-muted hover:bg-blue-muted/70 text-white capitalize rounded-full cursor-pointer py-3 px-6 duration-300 "
+            className="bg-blue-muted hover:bg-blue-muted/70 cursor-pointer rounded-full px-6 py-3 text-white capitalize duration-300"
           >
             Ask About Erasmus+
           </a>
         </div>
-        {/* Mobile Nav */}
 
+        {/* Mobile Nav */}
         <MobileNav />
       </Container>
     </header>
   );
-};
+}
