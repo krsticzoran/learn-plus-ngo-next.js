@@ -11,18 +11,18 @@ export default function Hero() {
     <Container
       as="main"
       aria-labelledby="hero-heading"
-      className="relative flex h-[calc(100vh-95px)] flex-col gap-[10px] pb-[10px] lg:h-[calc(100vh-110px)]"
+      className="relative flex flex-col gap-[10px] pb-[10px] lg:h-[calc(100vh-110px)]"
     >
-      <div className="flex w-full flex-1 items-center justify-start gap-[10px]">
-        <div className="bg-background z-30 flex h-full w-2/3 flex-col rounded-4xl p-12">
+      <div className="flex h-full w-full flex-1 flex-col items-center justify-start gap-[10px] lg:min-h-[calc(100vh-210px)] lg:flex-row">
+        <div className="bg-background z-30 flex h-full w-full flex-1 flex-col rounded-4xl p-6 sm:p-12 lg:w-2/3">
           <h1
             id="hero-heading"
-            className="mb-6 text-4xl leading-tight font-medium sm:text-6xl"
+            className="mb-4 text-2xl leading-tight font-medium sm:mb-6 sm:text-5xl xl:text-6xl"
           >
             Empowering Growth Through Lifelong Learning
           </h1>
 
-          <p className="mb-8 w-[75%] text-lg">
+          <p className="mb-6 sm:mb-8 sm:text-lg xl:w-[75%]">
             Learn Plus is a non-governmental organization with a core mission to
             promote <span className="text-blue-muted">lifelong learning</span>{" "}
             and empower individuals through education, exploration, and
@@ -38,7 +38,7 @@ export default function Hero() {
         </div>
 
         {/* Hero image with parallax effect */}
-        <div className="bg-background relative h-full w-1/3 overflow-hidden rounded-4xl">
+        <div className="bg-background relative h-full min-h-[500px] w-full overflow-hidden rounded-4xl lg:w-1/3">
           <ParallaxImg
             src={HeroImage}
             alt="People attending educational training session"

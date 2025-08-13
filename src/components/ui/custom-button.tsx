@@ -15,7 +15,7 @@ interface CustomButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const baseStyles =
-  "rounded-full py-3 px-6 duration-300 cursor-pointer text-foreground";
+  "rounded-full py-2 px-4 sm:py-3 sm:px-6 duration-300 cursor-pointer text-xs xs:text-sm text-foreground";
 
 const variants: Record<Variant, string> = {
   primary: "bg-green-muted hover:bg-green-muted/70",

@@ -38,7 +38,7 @@ export default function Header() {
       <div className="hidden lg:block">
         <a
           href="tel:+385992476644"
-          className="bg-blue-muted hover:bg-blue-muted/70 cursor-pointer rounded-full px-6 py-3 text-white capitalize duration-300"
+          className="bg-blue-muted hover:bg-blue-muted/70 cursor-pointer rounded-full px-6 py-3 text-white! capitalize duration-300"
         >
           Ask About Erasmus+
         </a>
