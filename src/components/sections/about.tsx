@@ -10,7 +10,7 @@ export default function About() {
       className="rounded-4xl bg-white p-8"
     >
       <div className="my-2.5 flex gap-[10px] text-lg">
-        <div className="flex h-80 w-full flex-col rounded-3xl p-4 font-medium">
+        <div className="flex h-80 w-full flex-col rounded-3xl p-4">
           <div>
             <div className="border-border-muted w-fit rounded-4xl border px-6 py-1 text-sm">
               <p className="text-black-muted/60">about us</p>
@@ -26,7 +26,7 @@ export default function About() {
             chances in their professional and private lives.
           </p>
         </div>
-        <div className="bg-blue-muted flex h-80 w-full flex-col rounded-3xl p-6 font-medium text-white">
+        <div className="bg-blue-muted flex h-80 w-full flex-col rounded-3xl p-6 text-white">
           <h3 className="text-3xl">Expertise That Comes With Experience</h3>
 
           <p className="mt-auto">

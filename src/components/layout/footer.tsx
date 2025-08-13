@@ -29,7 +29,7 @@ export default function Footer() {
             <Link href="https://youtube.com" aria-label="YouTube">
               <IconBrandYoutube size={24} stroke={2} />
             </Link>
-            <a href="mailto:info@example.com">
+            <a href="mailto:info@example.com" aria-label="Email us">
               {" "}
               <IconMail size={24} stroke={2} />
             </a>

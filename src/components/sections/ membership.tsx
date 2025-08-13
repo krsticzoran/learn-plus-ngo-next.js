@@ -44,27 +44,27 @@ export default function Membership() {
       </h2>
       <Tabs
         orientation="vertical"
-        defaultValue={tabs[0].name}
+        defaultValue={tabs[0].id}
         className="flex w-full flex-row items-start justify-center gap-2.5"
       >
-        <TabsList className="bg-background-muted grid h-auto w-1/3 shrink-0 grid-cols-1 gap-1 rounded-3xl p-4">
+        <TabsList className="bg-background-muted/50 grid h-auto w-1/3 shrink-0 grid-cols-1 gap-1 rounded-3xl p-4">
           {tabs.map((tab) => (
             <TabsTrigger
-              key={tab.name}
-              value={tab.name}
+              key={tab.id}
+              value={tab.id}
               className="data-[state=active]:bg-background-muted data-[state=active]:text-blue-muted hover:bg-blue-muted/20 cursor-pointer justify-start py-1.5 text-left text-lg data-[state=active]:shadow-none"
             >
               {tab.name}
             </TabsTrigger>
           ))}
         </TabsList>
-        <div className="text-muted-foreground flex w-full items-center justify-center font-medium">
+        <div className="flex w-full items-center justify-center font-medium">
           {tabs.map((tab, index) => (
             <TabsContent
-              key={tab.name}
-              value={tab.name}
+              key={tab.id}
+              value={tab.id}
               ref={index === 0 ? firstTabRef : undefined}
-              className="bg-background-muted flex w-full flex-col items-start justify-start rounded-3xl p-4 text-lg"
+              className="bg-background-muted/50 flex w-full flex-col items-start justify-start rounded-3xl p-4 text-lg font-medium"
               style={{
                 height:
                   index === 0 ? "auto" : height ? `${height}px` : undefined,
@@ -73,7 +73,14 @@ export default function Membership() {
               }}
             >
               {tab.value.split("\n\n").map((paragraph, idx, arr) => (
-                <p key={idx} className={idx === arr.length - 1 ? "" : "mb-4"}>
+                <p
+                  key={idx}
+                  className={
+                    idx === arr.length - 1
+                      ? "!text-black/60"
+                      : "mb-4 !text-black/60"
+                  }
+                >
                   {paragraph.trim()}
                 </p>
               ))}

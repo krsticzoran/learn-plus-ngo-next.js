@@ -1,11 +1,13 @@
 type MembershipItem = {
   name: string;
   value: string;
+  id: string;
 };
 
 export const membershipData: MembershipItem[] = [
   {
     name: "General Membership Info",
+    id: "general-membership-info",
     value: `
 Any natural person of Croatian or foreign citizenship and legal entity registered in Croatia who is interested in participating in the Association's activities and contributing to the achievement of the Association's goals, and who accepts the provisions of the Statute, can become a member of the Association.
 
@@ -18,6 +20,7 @@ As our member you can have many opportunities – mobilities, free seminars, stu
   },
   {
     name: "Regular Membership",
+    id: "regular-membership",
     value: `
 Regular members are those members who actively participate in the activities and programs of our association.
 
@@ -28,6 +31,7 @@ Regular members are making the Assembly of the Association and actively particip
   },
   {
     name: "Associate Membership",
+    id: "associate-membership",
     value: `
 Associate members are those members who occasionally participate in the Association's activities or help the Association achieve its goals with financial or other support.
 
@@ -38,6 +42,7 @@ Associate members are natural and legal persons of legal age and minors. Associa
   },
   {
     name: "Honorary Membership",
+    id: "honorary-membership",
     value: `
 Honorary members are persons among the members of the Association, other organizations, academic communities in Croatia and abroad who significantly contributed to the work and reputation of the Association and promote the activity and value of the Association through their activities.
 
@@ -46,6 +51,7 @@ They are appointed exclusively by the Assembly and they are not obliged to pay m
   },
   {
     name: "Membership Fee",
+    id: "membership-fee",
     value: `For the year 2025 the membership fee is 10 EUR.`,
   },
 ];
