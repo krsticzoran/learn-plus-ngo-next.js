@@ -29,7 +29,7 @@ export default function About() {
             chances in their professional and private lives.
           </p>
         </div>
-        <div className="bg-blue-muted flex w-full flex-col rounded-3xl p-4 text-white sm:p-6 lg:w-1/2">
+        <div className="bg-blue-muted flex h-80 w-full flex-col rounded-3xl p-4 text-white sm:p-6 lg:w-1/2">
           <h3 className="text-2xl sm:text-3xl">
             Expertise That Comes With Experience
           </h3>
