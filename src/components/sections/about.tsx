@@ -9,13 +9,16 @@ export default function About() {
       aria-labelledby="about-heading"
       className="rounded-4xl bg-white p-8"
     >
-      <div className="my-2.5 flex gap-[10px] text-lg">
-        <div className="flex h-80 w-full flex-col rounded-3xl p-4">
+      <div className="my-2.5 flex flex-col gap-[10px] sm:text-lg lg:flex-row">
+        <div className="bg-background-muted/50 flex h-92 w-full flex-col rounded-3xl p-6 sm:h-80 sm:bg-white lg:w-1/2">
           <div>
-            <div className="border-border-muted w-fit rounded-4xl border px-6 py-1 text-sm">
+            <div className="border-border-muted hidden w-fit rounded-4xl border px-6 py-1 text-sm sm:block">
               <p className="text-black-muted/60">about us</p>
             </div>
-            <h2 id="about-heading" className="mt-3 text-5xl font-medium">
+            <h2
+              id="about-heading"
+              className="text-2xl font-medium sm:mt-3 sm:text-4xl xl:text-5xl"
+            >
               Find Out Who We Are
             </h2>
           </div>
@@ -26,8 +29,10 @@ export default function About() {
             chances in their professional and private lives.
           </p>
         </div>
-        <div className="bg-blue-muted flex h-80 w-full flex-col rounded-3xl p-6 text-white">
-          <h3 className="text-3xl">Expertise That Comes With Experience</h3>
+        <div className="bg-blue-muted flex h-92 w-full flex-col rounded-3xl p-6 text-white sm:h-80 lg:w-1/2">
+          <h3 className="text-2xl sm:text-3xl">
+            Expertise That Comes With Experience
+          </h3>
 
           <p className="mt-auto">
             Although we are new NGO, all our members and board staff have huge
@@ -37,18 +42,18 @@ export default function About() {
           </p>
         </div>
       </div>
-      <div className="flex gap-2.5">
-        <div className="bg-black-muted flex h-80 w-1/2 flex-col rounded-3xl p-6 text-white">
-          <h3 className="text-3xl">What We Offer</h3>
+      <div className="flex flex-col gap-2.5 lg:flex-row">
+        <div className="bg-black-muted flex h-92 w-full flex-col rounded-3xl p-6 text-white sm:h-80 lg:w-1/2">
+          <h3 className="text-2xl sm:text-3xl">What We Offer</h3>
 
-          <p className="mt-auto text-lg">
+          <p className="mt-auto">
             We provide a diverse array of educational services, including
             personalized coaching, workshops, and seminars. Our goal is to help
             participants develop new skills, expand their knowledge, and enhance
             their career opportunities.
           </p>
         </div>
-        <div className="bg-background relative h-80 w-1/2 overflow-hidden rounded-3xl">
+        <div className="bg-background relative h-92 w-full overflow-hidden rounded-3xl sm:h-80 lg:w-1/2">
           <Image
             fill
             src={Osijek}
@@ -60,7 +65,7 @@ export default function About() {
           <div className="absolute top-4 left-4 z-20 w-fit rounded-4xl border border-white px-6 py-1 text-sm">
             <p className="text-white">location</p>
           </div>
-          <p className="absolute bottom-4 left-4 z-20 w-[95%] text-lg font-medium text-white">
+          <p className="absolute bottom-4 left-4 z-20 w-[95%] font-medium text-white">
             Our main office is located in Osijek, the center of Osijek-Baranya
             county, in the easternmost part of Croatia, very near three
             countries - Serbia, Bosnia and Herzegovina and Hungary.
