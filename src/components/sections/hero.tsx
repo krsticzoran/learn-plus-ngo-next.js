@@ -47,7 +47,7 @@ export default function Hero() {
       </div>
       <div
         aria-label="Upcoming and past Erasmus opportunities"
-        className="bg-background flex min-h-[70px] w-full items-center justify-center overflow-hidden rounded-4xl lg:min-h-[80px]"
+        className="bg-background flex min-h-[70px] w-full items-center justify-center overflow-hidden rounded-3xl lg:min-h-[80px]"
       >
         {/* Scrolling text component for displaying upcoming and past opportunities */}
         <ScrollingText />
