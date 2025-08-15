@@ -11,7 +11,7 @@ export default function Header() {
   return (
     <Container
       as="header"
-      className="bg-background my-[10px] flex h-[70px] items-center justify-between rounded-3xl px-4 sm:px-6 lg:h-[80px]"
+      className="bg-background my-[10px] flex h-[70px] items-center justify-between rounded-3xl px-6 sm:px-12 lg:h-[80px]"
     >
       {/* Logo */}
       <div className="relative flex h-8 w-24 items-center lg:h-10 lg:w-[120px]">
