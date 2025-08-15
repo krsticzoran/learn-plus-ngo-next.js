@@ -23,7 +23,7 @@ export default function ScrollingText() {
         {[...links, ...links].map((link, index) => (
           <li
             key={index}
-            className="pointer-events-auto mx-6 inline-block text-lg font-medium hover:underline lg:text-xl"
+            className="pointer-events-auto mx-6 inline-block font-medium hover:underline sm:text-lg lg:text-xl"
           >
             <Link href={link.href} className="text-blue-muted!">
               {link.label}

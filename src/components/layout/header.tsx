@@ -11,13 +11,20 @@ export default function Header() {
   return (
     <Container
       as="header"
-      className="bg-background my-[10px] flex h-[70px] items-center justify-between rounded-3xl px-4 lg:h-[80px] lg:px-6"
+      className="bg-background my-[10px] flex h-[70px] items-center justify-between rounded-3xl px-4 sm:px-6 lg:h-[80px]"
     >
       {/* Logo */}
-      <Link href="/" className="font-bold tracking-wide uppercase">
-        <Image src={Logo} height={150} width={150} alt="learn plus logo" />
-      </Link>
-
+      <div className="relative flex h-8 w-24 items-center lg:h-10 lg:w-[120px]">
+        <Link href="/">
+          <Image
+            src={Logo}
+            fill
+            alt="learn plus logo"
+            sizes="(min-width: 1024px) 120px, 96px"
+            style={{ objectFit: "contain" }}
+          />
+        </Link>
+      </div>
       {/* Nav */}
       <nav className="hidden lg:block">
         <ul className="flex space-x-10">

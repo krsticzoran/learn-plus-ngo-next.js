@@ -1,6 +1,8 @@
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import Logo from "@/assets/logo/logo.png";
 import {
   Sheet,
   SheetContent,
@@ -19,26 +21,36 @@ export default function MobileNav() {
             variant="ghost"
             size="icon"
             aria-label="Open menu"
-            className="hover:bg-transparent cursor-pointer"
+            className="cursor-pointer hover:bg-transparent"
           >
-            <Menu className="w-7! h-7!" />
+            <Menu className="h-7! w-7!" />
           </Button>
         </SheetTrigger>
 
         <SheetContent
           side="left"
-          className="bg-background p-6  [&>button:last-child]:hidden w-full"
+          className="bg-background w-full p-6 [&>button:last-child]:hidden"
         >
-          <div className="flex items-center justify-between mb-6">
-            <SheetTitle className="text-lg font-bold">Learn Plus</SheetTitle>
+          <div className="mb-6 flex items-center justify-between">
+            <SheetTitle>
+              <div className="relative flex h-8 w-24 items-center lg:h-10 lg:w-[120px]">
+                <Image
+                  src={Logo}
+                  fill
+                  alt="learn plus logo"
+                  sizes="(min-width: 1024px) 120px, 96px"
+                  style={{ objectFit: "contain" }}
+                />
+              </div>
+            </SheetTitle>
             <SheetClose asChild>
               <Button
                 variant="ghost"
                 size="icon"
                 aria-label="Close menu"
-                className="hover:bg-transparent cursor-pointer"
+                className="cursor-pointer hover:bg-transparent"
               >
-                <X className="w-7! h-7!" />
+                <X className="h-7! w-7!" />
                 <span className="sr-only">Open menu</span>
               </Button>
             </SheetClose>
@@ -49,7 +61,7 @@ export default function MobileNav() {
               <SheetClose asChild key={link.href}>
                 <Link
                   href={link.href}
-                  className="text-base font-medium hover:text-blue-muted transition-colors duration-300"
+                  className="hover:text-blue-muted text-base font-medium transition-colors duration-300"
                 >
                   {link.label}
                 </Link>
