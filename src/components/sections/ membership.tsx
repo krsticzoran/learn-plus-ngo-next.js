@@ -55,7 +55,7 @@ export default function Membership() {
     <Container
       aria-labelledby="membership-heading"
       as="section"
-      className="my-2.5 rounded-4xl bg-white p-8"
+      className="my-2.5 rounded-4xl bg-white p-6 sm:p-8"
     >
       <h2 id="membership-heading" className="sr-only">
         Membership Information
@@ -82,7 +82,7 @@ export default function Membership() {
               key={tab.id}
               value={tab.id}
               ref={index === 0 ? firstTabRef : undefined}
-              className="bg-background-muted/50 flex w-full flex-col items-start justify-start rounded-3xl p-4 font-medium lg:text-lg"
+              className="bg-background-muted/50 flex w-full flex-col items-start justify-start rounded-3xl p-4 font-medium sm:p-6 lg:text-lg"
               style={{
                 height: isDesktop
                   ? index === 0
