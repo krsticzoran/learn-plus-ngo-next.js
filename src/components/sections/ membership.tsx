@@ -13,6 +13,24 @@ import { useDebounce } from "@/hooks/useDebounce";
 export default function Membership() {
   const firstTabRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState<number>(0);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    // Check if the screen width is at least 768px
+    const mql = window.matchMedia("(min-width: 768px)");
+
+    setIsDesktop(mql.matches);
+
+    const handleChange = (e: MediaQueryListEvent) => {
+      setIsDesktop(e.matches);
+    };
+
+    mql.addEventListener("change", handleChange);
+
+    return () => {
+      mql.removeEventListener("change", handleChange);
+    };
+  }, []);
 
   const updateHeight = useCallback(() => {
     if (firstTabRef.current) {
@@ -45,14 +63,14 @@ export default function Membership() {
       <Tabs
         orientation="vertical"
         defaultValue={tabs[0].id}
-        className="flex w-full flex-row items-start justify-center gap-2.5"
+        className="flex w-full items-start justify-center gap-2.5 md:flex-row"
       >
-        <TabsList className="bg-background-muted/50 grid h-auto w-1/3 shrink-0 grid-cols-1 gap-1 rounded-3xl p-4">
+        <TabsList className="bg-background-muted/50 grid h-auto w-full shrink-0 grid-cols-1 gap-1 rounded-3xl p-4 md:w-fit lg:w-1/3">
           {tabs.map((tab) => (
             <TabsTrigger
               key={tab.id}
               value={tab.id}
-              className="data-[state=active]:bg-background-muted data-[state=active]:text-blue-muted hover:bg-blue-muted/20 cursor-pointer justify-start py-1.5 text-left text-lg data-[state=active]:shadow-none"
+              className="data-[state=active]:bg-background-muted data-[state=active]:text-blue-muted hover:bg-blue-muted/20 cursor-pointer justify-start py-1.5 text-left text-base data-[state=active]:shadow-none lg:text-lg"
             >
               {tab.name}
             </TabsTrigger>
@@ -64,10 +82,15 @@ export default function Membership() {
               key={tab.id}
               value={tab.id}
               ref={index === 0 ? firstTabRef : undefined}
-              className="bg-background-muted/50 flex w-full flex-col items-start justify-start rounded-3xl p-4 text-lg font-medium"
+              className="bg-background-muted/50 flex w-full flex-col items-start justify-start rounded-3xl p-4 font-medium lg:text-lg"
               style={{
-                height:
-                  index === 0 ? "auto" : height ? `${height}px` : undefined,
+                height: isDesktop
+                  ? index === 0
+                    ? "auto"
+                    : height
+                      ? `${height}px`
+                      : undefined
+                  : "auto",
                 overflow: "hidden",
                 transition: "height 0.3s ease",
               }}
