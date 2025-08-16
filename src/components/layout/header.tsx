@@ -1,4 +1,3 @@
-// components/Header.tsx
 import Link from "next/link";
 import { links } from "@/data/links";
 import MobileNav from "./mobile-nav";

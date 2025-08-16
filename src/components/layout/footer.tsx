@@ -13,12 +13,12 @@ import {
 
 export default function Footer() {
   return (
-    <Container as="footer" className="mb-2.5 rounded-4xl bg-white p-12">
-      <div className="flex flex-col justify-between gap-8 md:flex-row">
+    <Container as="footer" className="mb-2.5 rounded-4xl bg-white p-6 sm:p-12">
+      <div className="flex flex-col justify-between gap-8 lg:flex-row">
         {/* Left section */}
-        <div className="flex max-w-[440px] flex-col 2xl:max-w-[480px]">
+        <div className="flex flex-col sm:max-w-[80%] lg:max-w-[350px] xl:max-w-[440px] 2xl:max-w-[480px]">
           <div className="flex min-h-fit items-center justify-start">
-            <div className="relative flex h-12 w-36 items-center">
+            <div className="relative flex h-8 w-24 items-center sm:h-12 sm:w-36">
               <Link href="/">
                 <Image
                   src={Logo}
@@ -29,7 +29,7 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-          <p className="text-black-muted/80 mt-6 text-sm">
+          <p className="text-black-muted/80 mt-6 text-sm sm:text-base">
             Learn Plus engages in Erasmus+ projects, promoting knowledge
             exchange, cultural diversity, and meaningful lifelong learning
             opportunities for people of all ages.
@@ -37,26 +37,26 @@ export default function Footer() {
         </div>
 
         {/* Right section */}
-        <div className="flex gap-24">
-          <div>
-            <h3 className="mb-4 text-xl font-medium">Quick Links</h3>
+        <div className="flex w-full flex-col justify-between sm:flex-row lg:w-fit lg:gap-12 xl:gap-24 2xl:gap-32">
+          <div className="mb-6 flex flex-col sm:mb-0">
+            <h3 className="mb-4 text-lg font-medium sm:text-xl">Quick Links</h3>
             <ul className="flex flex-col">
               {links.slice(1).map((link) => (
-                <li key={link.label} className="mb-2 text-sm">
+                <li key={link.label} className="mb-2 text-sm sm:text-base">
                   <Link href={link.href}>{link.label}</Link>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="flex flex-col">
-            <h3 className="mb-4 text-xl font-medium">Site Info</h3>
-            <Link href="/" className="mb-2 text-sm">
+          <div className="mb-6 flex flex-col sm:mb-0">
+            <h3 className="mb-4 text-lg font-medium sm:text-xl">Site Info</h3>
+            <Link href="/" className="mb-2 text-sm sm:text-base">
               Terms and Conditions
             </Link>
-            <Link href="/" className="mb-2 text-sm">
+            <Link href="/" className="mb-2 text-sm sm:text-base">
               Privacy Policy
             </Link>
-            <p className="text-sm">
+            <p className="text-sm sm:text-base">
               Created by{" "}
               <a href="https://zkrstic.dev/" className="text-blue-muted!">
                 zkrstic
@@ -64,7 +64,9 @@ export default function Footer() {
             </p>
           </div>
           <div>
-            <h3 className="mb-4 text-xl font-medium">Connect With Us</h3>
+            <h3 className="mb-4 text-lg font-medium sm:text-xl">
+              Connect With Us
+            </h3>
             <div className="mb-4 flex gap-4">
               <Link href="https://facebook.com" aria-label="Facebook">
                 <IconBrandFacebook size={24} stroke={2} />
