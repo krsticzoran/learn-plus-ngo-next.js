@@ -55,7 +55,7 @@ export default function Membership() {
     <Container
       aria-labelledby="membership-heading"
       as="section"
-      className="my-2.5 rounded-4xl bg-white p-6 sm:p-8"
+      className="my-2.5 rounded-4xl bg-white p-6"
     >
       <h2 id="membership-heading" className="sr-only">
         Membership Information

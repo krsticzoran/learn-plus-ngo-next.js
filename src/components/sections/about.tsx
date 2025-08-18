@@ -7,10 +7,10 @@ export default function About() {
     <Container
       as="section"
       aria-labelledby="about-heading"
-      className="rounded-4xl bg-white p-6 sm:p-8"
+      className="rounded-4xl bg-white p-6"
     >
       <div className="my-2.5 flex flex-col gap-[10px] sm:text-lg lg:flex-row">
-        <div className="bg-background-muted/50 flex h-80 w-full flex-col rounded-3xl p-4 sm:bg-white sm:p-6 lg:w-1/2">
+        <div className="bg-background-muted/50 flex h-80 w-full flex-col rounded-3xl p-6 sm:bg-white lg:w-1/2">
           <div>
             <div className="border-border-muted hidden w-fit rounded-4xl border px-6 py-1 text-sm sm:block">
               <p className="text-black-muted/60">about us</p>
