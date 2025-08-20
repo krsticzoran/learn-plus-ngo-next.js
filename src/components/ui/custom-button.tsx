@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { ButtonHTMLAttributes } from "react";
 
-type Variant = "primary" | "secondary";
+type Variant = "primary" | "secondary" | "tertiary";
 
 interface CustomButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: Variant;
@@ -15,11 +15,12 @@ interface CustomButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const baseStyles =
-  "rounded-full py-2 px-4 sm:py-3 sm:px-6 duration-300 cursor-pointer text-xs xs:text-sm text-foreground";
+  "rounded-full py-2 px-4 sm:py-3 sm:px-6 duration-300 cursor-pointer text-xs xs:text-sm";
 
 const variants: Record<Variant, string> = {
-  primary: "bg-green-muted hover:bg-green-muted/70",
-  secondary: "bg-background-muted hover:bg-background-muted/50",
+  primary: "bg-green-muted hover:bg-green-muted/70 text-foreground",
+  secondary: "bg-background-muted hover:bg-background-muted/50 text-foreground",
+  tertiary: "bg-blue-muted !text-white hover:bg-blue-muted/70",
 };
 
 export default function CustomButton({

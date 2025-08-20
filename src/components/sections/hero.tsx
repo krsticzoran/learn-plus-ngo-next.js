@@ -29,8 +29,10 @@ export default function Hero() {
             continuous <span className="text-blue-muted">personal growth</span>.
           </p>
           <div className="flex gap-2">
-            <CustomButton href="/"> Explore Programs</CustomButton>
-            <CustomButton variant="secondary">Become a Member</CustomButton>
+            <CustomButton href="/services"> Explore Programs</CustomButton>
+            <CustomButton variant="secondary" href="/#membership-heading">
+              Become a Member
+            </CustomButton>
           </div>
 
           {/*Display key statistics like number of students, countries...*/}
