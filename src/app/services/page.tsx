@@ -4,12 +4,13 @@ import { questions } from "@/data/services-data";
 import ServicesImage from "@/assets/images/services.jpg";
 import ParallaxImg from "@/components/ui/parallax-img";
 import CustomButton from "@/components/ui/custom-button";
+import Image from "next/image";
 
 export default function Services() {
   return (
     <Container as="main" aria-labelledby="services-heading">
       <div className="flex flex-col gap-2.5 lg:flex-row">
-        <div className="flex w-1/2 flex-col">
+        <div className="flex w-full flex-col lg:w-1/2">
           <div className="mb-2.5 rounded-3xl bg-white px-6 py-6 sm:px-12">
             <h1
               className="text-2xl font-medium sm:text-4xl xl:text-5xl"
@@ -35,8 +36,9 @@ export default function Services() {
             </ul>
             <div className="rounded-4xl bg-white px-6 py-6 sm:px-12">
               <p className="text-lg">
-                If your answer to any of these questions is YES, then consider
-                one of the services below or contact us for more information.
+                If your answer to any of these questions is{" "}
+                <span className="text-blue-muted">YES</span>, then consider one
+                of the services below or contact us for more information.
               </p>
               <div className="mt-8 flex gap-2">
                 <CustomButton href="/contact" variant="tertiary">
@@ -49,8 +51,17 @@ export default function Services() {
             </div>
           </div>
         </div>
-        <div className="relative w-1/2 overflow-hidden rounded-4xl">
-          <ParallaxImg src={ServicesImage} alt="Services Image" />
+        <div className="relative min-h-[500px] w-full overflow-hidden rounded-4xl lg:w-1/2">
+          <ParallaxImg>
+            <Image
+              src={ServicesImage}
+              alt="Services Image"
+              fill
+              className="rounded-4xl object-cover"
+              sizes="(max-width: 1023px) 100vw, 50vw"
+              priority
+            />
+          </ParallaxImg>
         </div>
       </div>
       <div className="my-2.5 rounded-4xl bg-white p-6">

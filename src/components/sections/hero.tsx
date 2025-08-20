@@ -5,6 +5,7 @@ import HeroImage from "@/assets/images/hero.jpg";
 import { Container } from "@/components/layout/container";
 import KeyMetrics from "@/components/ui/key-metrics";
 import { statsData } from "@/data/stats-data";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -41,10 +42,16 @@ export default function Hero() {
 
         {/* Hero image with parallax effect */}
         <div className="bg-background relative h-full min-h-[500px] w-full overflow-hidden rounded-4xl lg:w-1/3">
-          <ParallaxImg
-            src={HeroImage}
-            alt="People attending educational training session"
-          />
+          <ParallaxImg>
+            <Image
+              src={HeroImage}
+              alt="People attending educational training session"
+              fill
+              className="rounded-4xl object-cover"
+              sizes="(max-width: 1023px) 100vw, 33vw"
+              priority
+            />
+          </ParallaxImg>
         </div>
       </div>
       <div
