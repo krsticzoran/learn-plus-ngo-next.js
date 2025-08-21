@@ -21,7 +21,7 @@ export default function Services() {
           </div>
 
           <div className="w-full">
-            <ul className="flex flex-col text-lg">
+            <ul className="flex flex-col sm:text-lg">
               {questions.map((el) => (
                 <li
                   className="mb-2.5 rounded-3xl bg-white px-6 py-6 sm:px-12"
@@ -34,8 +34,8 @@ export default function Services() {
                 </li>
               ))}
             </ul>
-            <div className="rounded-4xl bg-white px-6 py-6 sm:px-12">
-              <p className="text-lg">
+            <div className="rounded-3xl bg-white px-6 py-6 sm:px-12">
+              <p className="sm:text-lg">
                 If your answer to any of these questions is{" "}
                 <span className="text-blue-muted">YES</span>, then consider one
                 of the services below or contact us for more information.
@@ -55,7 +55,7 @@ export default function Services() {
           <ParallaxImg>
             <Image
               src={ServicesImage}
-              alt="Services Image"
+              alt="Student exploring potential program options on a board"
               fill
               className="rounded-4xl object-cover"
               sizes="(max-width: 1023px) 100vw, 50vw"
