@@ -13,7 +13,7 @@ export default function ErasmusPage() {
     return (
         <Container className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-2.5 mb-2.5">
         <h1 className="sr-only">Erasmus Projects</h1>
-            <section className="flex justify-center items-center bg-green-muted rounded-4xl p-6 lg:p-12 text-3xl sm:text-4xl xxl:text-5xl text-black-muted font-ibm-plex-sans font-medium h-80 lg:h-96">
+            <section className="flex justify-center items-center bg-green-muted rounded-4xl p-6 lg:p-12 text-3xl sm:text-4xl xxl:text-5xl font-medium h-80 lg:h-96">
                 <h2>Ongoing Projects</h2>
                 </section>
 
@@ -45,7 +45,7 @@ export default function ErasmusPage() {
         </article>
       ))}
        
-           <section className="flex justify-center items-center text-white bg-blue-muted font-ibm-plex-sans rounded-4xl p-6 lg:p-12 text-3xl sm:text-4xl xxl:text-5xl h-80 lg:h-96 font-medium"><h2>Previous Projects</h2></section>
+           <section className="flex justify-center items-center text-white bg-blue-muted rounded-4xl p-6 lg:p-12 text-3xl sm:text-4xl xxl:text-5xl h-80 lg:h-96 font-medium"><h2>Previous Projects</h2></section>
            {projects.slice(1).map((proj, id) => (
      <article
      key={id}
