@@ -11,12 +11,14 @@ import Erasmus3 from "@/assets/images/erasmus3.jpg";
 export default function ErasmusPage() {
 
     return (
-        <>
         <Container className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-2.5 mb-2.5">
-            <div className="flex justify-center items-center bg-green-muted rounded-4xl p-6 lg:p-12 text-3xl sm:text-4xl xxl:text-5xl text-white font-ibm-plex-sans h-80 lg:h-96"><h1>Ongoing Projects</h1></div>
+        <h1 className="sr-only">Erasmus Projects</h1>
+            <section className="flex justify-center items-center bg-green-muted rounded-4xl p-6 lg:p-12 text-3xl sm:text-4xl xxl:text-5xl text-black-muted font-ibm-plex-sans font-medium h-80 lg:h-96">
+                <h2>Ongoing Projects</h2>
+                </section>
 
             {projects.map((proj, id) => (
-        <div
+        <article
           key={id}
           className="bg-white rounded-4xl p-6 lg:p-12 h-80 lg:h-96"
         >
@@ -40,13 +42,12 @@ export default function ErasmusPage() {
             </ul>
           </div>
           </div>
-        </div>
+        </article>
       ))}
-     
        
-           <div className="flex justify-center items-center text-white bg-blue-muted font-ibm-plex-sans rounded-4xl p-6 lg:p-12 text-3xl sm:text-4xl xxl:text-5xl h-80 lg:h-96"><h1>Previous Projects</h1></div>
+           <section className="flex justify-center items-center text-white bg-blue-muted font-ibm-plex-sans rounded-4xl p-6 lg:p-12 text-3xl sm:text-4xl xxl:text-5xl h-80 lg:h-96 font-medium"><h2>Previous Projects</h2></section>
            {projects.slice(1).map((proj, id) => (
-     <div
+     <article
      key={id}
      className="bg-white rounded-4xl overflow-hidden relative group cursor-pointer"
    >
@@ -56,7 +57,8 @@ export default function ErasmusPage() {
          src={id % 3 === 0 ? Erasmus1 : id % 3 === 1 ? Erasmus2 : Erasmus3}
          alt={`Erasmus Project ${id + 1}`}
          fill
-         className="object-cover w-full h-full"
+         className="object-cover"
+         sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
        />
        
        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
@@ -82,10 +84,8 @@ export default function ErasmusPage() {
           </div>
         </div>
         </div>
-       </div>
-      ))}
-      
+       </article>
+      ))}     
         </Container>
-        </>
     )
 }
