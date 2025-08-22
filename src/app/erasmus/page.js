@@ -14,8 +14,8 @@ export default function ErasmusPage() {
         <>
         <Container className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-2.5 mb-2.5">
             <div className="flex justify-center items-center bg-green-muted rounded-4xl p-6 lg:p-12 text-3xl sm:text-4xl xxl:text-5xl text-white font-ibm-plex-sans h-80 lg:h-96"><h1>Ongoing Projects</h1></div>
-            
-            {projects.slice(1).map((proj, id) => (
+
+            {projects.map((proj, id) => (
         <div
           key={id}
           className="bg-white rounded-4xl p-6 lg:p-12 h-80 lg:h-96"
