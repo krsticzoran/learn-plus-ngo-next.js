@@ -62,10 +62,10 @@ export default function About() {
             className="rounded-3xl object-cover"
           />
           <div className="absolute inset-0 z-10 rounded-3xl bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
-          <div className="absolute top-4 left-4 z-20 w-fit rounded-4xl border border-white px-6 py-1 text-sm">
+          <div className="absolute top-4 left-4 z-20 w-fit rounded-4xl border border-white px-6 py-1 text-sm sm:top-6 sm:left-6">
             <p className="text-white">location</p>
           </div>
-          <p className="absolute bottom-4 left-4 z-20 w-[90%] font-medium text-white sm:left-6 sm:w-[95%]">
+          <p className="absolute bottom-4 left-4 z-20 w-[90%] font-medium text-white sm:bottom-6 sm:left-6 sm:w-[95%]">
             Our main office is located in Osijek, the center of Osijek-Baranya
             county, in the easternmost part of Croatia, very near three
             countries - Serbia, Bosnia and Herzegovina and Hungary.
