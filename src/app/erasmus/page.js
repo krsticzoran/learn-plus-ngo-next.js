@@ -20,7 +20,7 @@ export default function ErasmusPage() {
           key={id}
           className="bg-white rounded-4xl p-6 lg:p-12 h-80 lg:h-96"
         >
-            <div className="overflow-auto h-full">
+            <div className="overflow-auto h-full scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-transparent">
           <h3 className="text-xl font-semibold mb-2">{proj.title}</h3>
           {proj.projectCode && (
             <p className="text-sm text-gray-500 mb-2">{proj.projectCode}</p>
