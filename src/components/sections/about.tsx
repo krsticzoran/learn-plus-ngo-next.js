@@ -1,5 +1,5 @@
 import { Container } from "@/components/layout/container";
-import Osijek from "@/assets/images/osijek.jpg";
+import Osijek from "@/assets/images/osijek.webp";
 import Image from "next/image";
 
 export default function About() {
@@ -61,7 +61,7 @@ export default function About() {
             sizes="(max-width: 1023px) 100vw, 50vw"
             className="rounded-3xl object-cover"
           />
-          <div className="absolute inset-0 z-10 rounded-3xl bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
+          <div className="absolute inset-0 z-10 rounded-3xl bg-gradient-to-t from-black/50 via-black/10 to-transparent" />
           <div className="absolute top-4 left-4 z-20 w-fit rounded-4xl border border-white px-6 py-1 text-sm">
             <p className="text-white">location</p>
           </div>
