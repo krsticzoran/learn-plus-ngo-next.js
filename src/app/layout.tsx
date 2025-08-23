@@ -28,6 +28,13 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
     apple: "/favicon-32x32.png",
   },
+  openGraph: {
+    title: "Learn Plus",
+    description:
+      "Learn Plus promotes knowledge exchange and cultural diversity through Erasmus+ projects, offering meaningful lifelong learning for all.",
+    url: "https://learn-plus-ngo-next-js.vercel.app/",
+    images: ["/social-image.jpg"],
+  },
 };
 
 export default function RootLayout({
