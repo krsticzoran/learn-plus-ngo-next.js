@@ -7,6 +7,16 @@ import Erasmus1 from "@/assets/images/erasmus1.jpeg";
 import Erasmus2 from "@/assets/images/erasmus2.jpg"; 
 import Erasmus3 from "@/assets/images/erasmus3.jpg"; 
 
+export const metadata = {
+    description: "Overview of past and current Erasmus+ projects by Learn Plus organization",
+    openGraph: {
+        title: "Learn Plus - Erasmus+ Projects Overview",
+        description: "Discover all past and ongoing Erasmus+ projects by Learn Plus and learn how to get involved.",
+        url: "https://learn-plus-ngo-next-js.vercel.app/erasmus",
+        images: ["/erasmus-social.jpg"],
+      },
+
+}
 
 export default function ErasmusPage() {
 
