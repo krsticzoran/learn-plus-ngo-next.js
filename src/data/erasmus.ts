@@ -1,4 +1,13 @@
-export const ongoingErasmusProjects = [
+type ActiveErasmus = {
+  title: string;
+  projectCode?: string;
+  start: string;
+  end: string;
+  coordinator: string;
+  partners: string[];
+};
+
+export const ongoingErasmusProjects: ActiveErasmus[] = [
   {
     title: "KA152: Sport can help you",
     projectCode: "2025-3-IT03-KA152-YOU-000289206",
