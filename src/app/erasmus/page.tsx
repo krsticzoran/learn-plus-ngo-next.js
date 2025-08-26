@@ -6,8 +6,6 @@ import { previousErasmusProjects as previous } from "@/data/erasmus";
 import Link from "next/link";
 
 import Erasmus1 from "@/assets/images/erasmus1.jpeg";
-import Erasmus2 from "@/assets/images/erasmus2.jpg";
-import Erasmus3 from "@/assets/images/erasmus3.jpg";
 
 export const metadata = {
   description:

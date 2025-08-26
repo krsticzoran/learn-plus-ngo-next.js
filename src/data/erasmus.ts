@@ -1,5 +1,5 @@
 import Erasmus1 from "@/assets/images/erasmus1.jpeg";
-import { image } from "framer-motion/client";
+import { StaticImageData } from "next/image";
 
 type ActiveErasmus = {
   title: string;
@@ -64,7 +64,17 @@ export const ongoingErasmusProjects: ActiveErasmus[] = [
   },
 ];
 
-export const previousErasmusProjects = [
+type PastErasmus = {
+  id: string;
+  title: string;
+  start: string;
+  projectCode?: string;
+  end: string;
+  image: StaticImageData;
+  text: string[];
+};
+
+export const previousErasmusProjects: PastErasmus[] = [
   {
     id: "traditions-of-ancient-slavs-in-theater",
     title: "Traditions of Ancient Slavs in Theater",
