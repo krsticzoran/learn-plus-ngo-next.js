@@ -2,6 +2,7 @@ import { Container } from "@/components/layout/container";
 import Image from "next/image";
 import { previousErasmusProjects as project } from "@/data/erasmus";
 import { notFound } from "next/navigation";
+import ReactMarkdown from "react-markdown";
 
 export default async function ErasmusProjectPage({
   params,
@@ -16,9 +17,42 @@ export default async function ErasmusProjectPage({
   }
 
   return (
-    <Container>
-      <h1>{id}</h1>
-      <Image src={projectData.image} alt={projectData.title} />
+    <Container className="mb-2.5 flex flex-col gap-2.5" as="article">
+      <div className="relative h-[500px] w-full overflow-hidden rounded-4xl">
+        <Image
+          src={projectData.image}
+          alt={projectData.title}
+          priority
+          fill
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+        <div className="absolute bottom-6 left-6 text-white sm:bottom-12 sm:left-12">
+          <h1 className="mr-6 mb-4 text-3xl font-medium sm:mr-12 lg:text-5xl">
+            {projectData.title}
+          </h1>
+          <p className="text-sm sm:text-base">{`Duration: ${projectData.start} - ${projectData.end}`}</p>
+        </div>
+      </div>
+      <div className="flex flex-col gap-2 rounded-4xl bg-white p-6 sm:p-12 sm:text-lg">
+        {projectData.text.map((block, i) => (
+          <ReactMarkdown
+            key={i}
+            components={{
+              a: ({ ...props }) => (
+                <a
+                  {...props}
+                  className="underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                />
+              ),
+            }}
+          >
+            {block}
+          </ReactMarkdown>
+        ))}
+      </div>
     </Container>
   );
 }
