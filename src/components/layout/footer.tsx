@@ -53,7 +53,7 @@ export default function Footer() {
             <Link href="/" className="mb-2 text-sm sm:text-base">
               Terms and Conditions
             </Link>
-            <Link href="/" className="mb-2 text-sm sm:text-base">
+            <Link href="/privacy" className="mb-2 text-sm sm:text-base">
               Privacy Policy
             </Link>
             <p className="text-sm sm:text-base">
