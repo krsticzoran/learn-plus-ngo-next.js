@@ -14,7 +14,7 @@ export default function PrivacyPage() {
           <h1 className="text-3xl font-semibold tracking-tight md:text-4xl">
             Privacy Policy
           </h1>
-          <p className="mt-2 text-sm">
+          <p className="text-black-muted/60 mt-2 text-sm">
             Last updated: <time dateTime="2025-08-27">August 27, 2025</time>
           </p>
         </header>
@@ -108,7 +108,7 @@ export default function PrivacyPage() {
                 <span className="font-medium">Email:</span>{" "}
                 <a
                   href="mailto:krunoslav.vukelic@gmail.com"
-                  className="underline decoration-gray-300 underline-offset-4 hover:decoration-gray-500"
+                  className="decoration-black-muted/20 hover:decoration-black-muted/50 underline underline-offset-4"
                 >
                   krunoslav.vukelic@gmail.com
                 </a>
@@ -117,7 +117,7 @@ export default function PrivacyPage() {
                 <span className="font-medium">Phone:</span>{" "}
                 <a
                   href="tel:+385992476644"
-                  className="underline decoration-gray-300 underline-offset-4 hover:decoration-gray-500"
+                  className="decoration-black-muted/20 hover:decoration-black-muted/50 underline underline-offset-4"
                 >
                   +385 99 247 66 44
                 </a>

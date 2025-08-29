@@ -50,7 +50,7 @@ export default function Footer() {
           </div>
           <div className="mb-6 flex flex-col sm:mb-0">
             <h3 className="mb-4 text-lg font-medium sm:text-xl">Site Info</h3>
-            <Link href="/" className="mb-2 text-sm sm:text-base">
+            <Link href="/terms" className="mb-2 text-sm sm:text-base">
               Terms and Conditions
             </Link>
             <Link href="/privacy" className="mb-2 text-sm sm:text-base">
