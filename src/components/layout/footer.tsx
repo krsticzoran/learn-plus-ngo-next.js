@@ -3,13 +3,7 @@ import { links } from "@/data/links";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/assets/logo/logo.png";
-
-import {
-  IconBrandFacebook,
-  IconBrandInstagram,
-  IconBrandYoutube,
-  IconMail,
-} from "@tabler/icons-react";
+import { socialLinks } from "@/data/links";
 
 export default function Footer() {
   return (
@@ -19,12 +13,12 @@ export default function Footer() {
         <div className="flex flex-col sm:max-w-[80%] lg:max-w-[350px] xl:max-w-[440px] 2xl:max-w-[480px]">
           <div className="flex min-h-fit items-center justify-start">
             <div className="relative flex h-8 w-24 items-center sm:h-12 sm:w-36">
-              <Link href="/">
+              <Link href="/" aria-label="Home">
                 <Image
                   src={Logo}
                   fill
-                  alt="learn plus logo"
-                  style={{ objectFit: "contain" }}
+                  alt="Learn Plus organization logo"
+                  className="object-contain"
                 />
               </Link>
             </div>
@@ -41,11 +35,15 @@ export default function Footer() {
           <div className="mb-6 flex flex-col sm:mb-0">
             <h3 className="mb-4 text-lg font-medium sm:text-xl">Quick Links</h3>
             <ul className="flex flex-col">
-              {links.slice(1).map((link) => (
-                <li key={link.label} className="mb-2 text-sm sm:text-base">
-                  <Link href={link.href}>{link.label}</Link>
-                </li>
-              ))}
+              {links.slice(1).map(
+                (
+                  link, // Skip homepage link
+                ) => (
+                  <li key={link.label} className="mb-2 text-sm sm:text-base">
+                    <Link href={link.href}>{link.label}</Link>
+                  </li>
+                ),
+              )}
             </ul>
           </div>
           <div className="mb-6 flex flex-col sm:mb-0">
@@ -68,25 +66,27 @@ export default function Footer() {
               Connect With Us
             </h3>
             <div className="mb-4 flex gap-4">
-              <Link href="https://facebook.com" aria-label="Facebook">
-                <IconBrandFacebook size={24} stroke={2} />
-              </Link>
-              <Link href="https://instagram.com" aria-label="Instagram">
-                <IconBrandInstagram size={24} stroke={2} />
-              </Link>
-              <Link href="https://youtube.com" aria-label="YouTube">
-                <IconBrandYoutube size={24} stroke={2} />
-              </Link>
-              <a href="mailto:info@example.com" aria-label="Email us">
-                {" "}
-                <IconMail size={24} stroke={2} />
-              </a>
+              {socialLinks.map(({ id, href, label, icon: Icon }) => (
+                <a
+                  key={id}
+                  href={href}
+                  aria-label={label}
+                  target={href.startsWith("http") ? "_blank" : undefined}
+                  rel={
+                    href.startsWith("http") ? "noopener noreferrer" : undefined
+                  }
+                >
+                  <Icon size={24} stroke={2} />
+                </a>
+              ))}
             </div>
           </div>
         </div>
       </div>
       <div className="border-black-muted/20 mt-8 border-t pt-4 text-center">
-        <p className="text-sm">© 2025 Learn Plus - All rights reserved.</p>
+        <p className="text-sm">
+          © {new Date().getFullYear()} Learn Plus - All rights reserved.
+        </p>
       </div>
     </Container>
   );
