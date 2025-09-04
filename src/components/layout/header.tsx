@@ -21,6 +21,7 @@ export default function Header() {
             alt="learn plus logo"
             sizes="(min-width: 1024px) 120px, 96px"
             className="object-contain"
+            priority
           />
         </Link>
       </div>
@@ -44,7 +45,8 @@ export default function Header() {
       <div className="hidden lg:block">
         <a
           href="tel:+385992476644"
-          className="bg-blue-muted hover:bg-blue-muted/70 cursor-pointer rounded-full px-6 py-3 text-white! capitalize duration-300"
+          aria-label="Call us to ask about Erasmus+"
+          className="bg-blue-muted hover:bg-blue-muted/70 cursor-pointer rounded-full px-6 py-3 !text-white capitalize duration-300"
         >
           Ask About Erasmus+
         </a>

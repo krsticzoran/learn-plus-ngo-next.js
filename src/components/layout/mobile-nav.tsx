@@ -39,7 +39,7 @@ export default function MobileNav() {
                   fill
                   alt="learn plus logo"
                   sizes="(min-width: 1024px) 120px, 96px"
-                  style={{ objectFit: "contain" }}
+                  className="object-contain"
                 />
               </div>
             </SheetTitle>
