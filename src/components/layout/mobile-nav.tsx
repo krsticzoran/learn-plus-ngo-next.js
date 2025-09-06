@@ -1,8 +1,7 @@
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import Logo from "@/assets/logo/logo.png";
+import NavLogo from "../ui/nav-logo";
 import {
   Sheet,
   SheetContent,
@@ -33,15 +32,7 @@ export default function MobileNav() {
         >
           <div className="mb-6 flex items-center justify-between">
             <SheetTitle>
-              <div className="relative flex h-8 w-24 items-center lg:h-10 lg:w-[120px]">
-                <Image
-                  src={Logo}
-                  fill
-                  alt="learn plus logo"
-                  sizes="(min-width: 1024px) 120px, 96px"
-                  className="object-contain"
-                />
-              </div>
+              <NavLogo isDesktop={false} />
             </SheetTitle>
             <SheetClose asChild>
               <Button
