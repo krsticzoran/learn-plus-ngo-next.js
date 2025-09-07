@@ -1,8 +1,30 @@
+import type { Metadata } from "next";
 import { Container } from "@/components/layout/container";
 import Image from "next/image";
 import { previousErasmusProjects as project } from "@/data/erasmus";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}): Promise<Metadata> {
+  const { id } = await params;
+  const projectData = project.find((p) => p.id === id);
+
+  if (!projectData) {
+    return {
+      title: "Project not found",
+      description: "Details about this project are currently unavailable.",
+    };
+  }
+
+  return {
+    title: projectData.title,
+    description: projectData.description,
+  };
+}
 
 export default async function ErasmusProjectPage({
   params,

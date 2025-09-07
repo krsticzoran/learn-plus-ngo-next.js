@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Container } from "@/components/layout/container";
 
 import { ongoingErasmusProjects as projects } from "@/data/erasmus";
@@ -7,7 +8,7 @@ import Link from "next/link";
 
 import Erasmus1 from "@/assets/images/erasmus1.jpeg";
 
-export const metadata = {
+export const metadata: Metadata = {
   description:
     "Overview of past and current Erasmus+ projects by Learn Plus organization",
   openGraph: {

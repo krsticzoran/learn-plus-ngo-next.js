@@ -67,6 +67,7 @@ export const ongoingErasmusProjects: ActiveErasmus[] = [
 type PastErasmus = {
   id: string;
   title: string;
+  description: string;
   start: string;
   projectCode?: string;
   end: string;
@@ -78,6 +79,8 @@ export const previousErasmusProjects: PastErasmus[] = [
   {
     id: "traditions-of-ancient-slavs-in-theater",
     title: "Traditions of Ancient Slavs in Theater",
+    description:
+      "Youth exchange with Stowarzyszenie Skaut on Ancient Slavs traditions through shadow theatre, held in Osijek with Erasmus+ support",
     start: "25/11/2024",
     image: Erasmus1,
     end: "01/12/2024",
