@@ -2,7 +2,7 @@ import { Container } from "@/components/layout/container";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Terms & Conditions | Learn Plus",
+  title: "Learn Plus - Terms & Conditions",
   description:
     "Terms & Conditions for Learn Plus – the rules that govern the use of our website and services.",
 };

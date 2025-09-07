@@ -1,7 +1,7 @@
 import { Container } from "@/components/layout/container";
 
 export const metadata = {
-  title: "Privacy Policy | Learn Plus",
+  title: "Learn Plus - Privacy Policy",
   description:
     "Privacy Policy for Learn Plus – how we collect, use, and protect your data.",
 };

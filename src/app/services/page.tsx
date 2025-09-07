@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Container } from "@/components/layout/container";
 import AccordionServices from "@/components/ui/accordion-services";
 import { questions } from "@/data/services-data";
@@ -5,6 +6,12 @@ import ServicesImage from "@/assets/images/services.jpg";
 import ParallaxImg from "@/components/ui/parallax-img";
 import CustomButton from "@/components/ui/custom-button";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Learn Plus - Our Services",
+  description:
+    " Explore the range of services offered by Learn Plus to support your educational and professional journey.",
+};
 
 export default function Services() {
   return (

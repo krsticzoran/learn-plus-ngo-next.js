@@ -4,6 +4,13 @@ import Image from "next/image";
 import ContactImage from "@/assets/images/contact.jpg";
 import { aboutOsijekData, contactData } from "@/data/contact-data";
 import { cn } from "@/lib/utils";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Learn Plus - Contact Us",
+  description:
+    "Get in touch with Learn Plus for inquiries, support, or collaboration opportunities.",
+};
 
 export default function ContactPage() {
   return (
