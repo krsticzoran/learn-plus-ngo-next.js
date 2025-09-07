@@ -9,6 +9,7 @@ import Link from "next/link";
 import Erasmus1 from "@/assets/images/erasmus1.jpeg";
 
 export const metadata: Metadata = {
+  title: "Learn Plus - Erasmus+ Projects Overview",
   description:
     "Overview of past and current Erasmus+ projects by Learn Plus organization",
   openGraph: {

@@ -21,7 +21,7 @@ export async function generateMetadata({
   }
 
   return {
-    title: projectData.title,
+    title: `Learn Plus - ${projectData.title}`,
     description: projectData.description,
   };
 }
