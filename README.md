@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Erasmus+ Educational Platform
 
-## Getting Started
+[Live Demo](https://learn-plus-ngo-next-js.vercel.app/)
 
-First, run the development server:
+**Tech Stack:** Next.js, TypeScript, Strapi (planned), Cloudinary (planned)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+**Timeline:** Aug 2025 – Present  
+**Role:** Freelance Frontend Developer
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+This is a comprehensive website for **Learn Plus**, a Croatian NGO organizing Erasmus+ educational programs for participants across Europe. The platform features both representational content and a blog section.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The project is being developed in **phases**:
 
-## Learn More
+1. **Phase 1 (Almost Done):**
+   - Static content and blog data are stored in Next.js.
+   - Markdown is used for rendering blog content.
+   - Fully responsive design with accessibility considerations.
 
-To learn more about Next.js, take a look at the following resources:
+2. **Phase 2 (Planned):**
+   - Integration with **Strapi** as a headless CMS for dynamic content management.
+   - **Cloudinary** for media asset management.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Features
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Multi-section pages for NGO information and programs.
+- Dynamic blog section (currently static, will move to Strapi).
+- Fully responsive design.
+- SEO-friendly metadata for pages.
+- Optimized for performance, accessibility (a11y), and security best practices.
 
-## Deploy on Vercel
+## Development Notes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Frontend is built with **Next.js**, **TypeScript**, and **Tailwind CSS**.
+- Markdown content is sanitized for security using `DOMPurify` and `rehype-sanitize`.
+- Transition to Strapi will allow non-technical users to manage content easily.
+- Cloudinary will handle all media assets in the second phase.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Future Enhancements
+
+- Admin authentication via Strapi.
+- Integration of additional Erasmus+ project pages dynamically from Strapi.
