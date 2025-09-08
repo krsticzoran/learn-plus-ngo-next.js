@@ -3,7 +3,7 @@ import { Container } from "@/components/layout/container";
 import Image from "next/image";
 import { previousErasmusProjects as project } from "@/data/erasmus";
 import { notFound } from "next/navigation";
-import ReactMarkdown from "react-markdown";
+import { SanitizedMarkdown } from "@/components/sanitized-markdown";
 
 export async function generateMetadata({
   params,
@@ -58,21 +58,7 @@ export default async function ErasmusProjectPage({
       </div>
       <div className="flex flex-col gap-2 rounded-4xl bg-white p-6 sm:p-12 sm:text-lg">
         {projectData.text.map((block, i) => (
-          <ReactMarkdown
-            key={i}
-            components={{
-              a: ({ ...props }) => (
-                <a
-                  {...props}
-                  className="underline"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                />
-              ),
-            }}
-          >
-            {block}
-          </ReactMarkdown>
+          <SanitizedMarkdown key={i} content={block} />
         ))}
       </div>
     </Container>
