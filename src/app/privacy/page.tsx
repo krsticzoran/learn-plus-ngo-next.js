@@ -1,4 +1,5 @@
 import { Container } from "@/components/layout/container";
+import { privacySections } from "@/data/privacy";
 
 export const metadata = {
   title: "Learn Plus - Privacy Policy",
@@ -27,79 +28,12 @@ export default function PrivacyPage() {
             with applicable laws of the European Union and the Republic of
             Croatia (including GDPR).
           </p>
-
-          <div>
-            <h2 className="mb-2 text-xl font-semibold">
-              Information We Collect
-            </h2>
-            <p>
-              At this moment, our website does{" "}
-              <span className="font-semibold">not</span> collect any personal
-              information automatically (e.g., via cookies or analytics). The
-              only information you may provide is when you choose to contact us
-              directly (for example, by email or phone).
-            </p>
-          </div>
-
-          <div>
-            <h2 className="mb-2 text-xl font-semibold">
-              How We Use Information
-            </h2>
-            <p>
-              Any information you voluntarily share (such as by sending an email
-              or calling us) will be used solely to respond to your inquiry and
-              provide the requested information or services.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="mb-2 text-xl font-semibold">Data Sharing</h2>
-            <p>
-              We do not sell, trade, or otherwise share your personal
-              information with third parties, unless required by law or with
-              your explicit consent.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="mb-2 text-xl font-semibold">Cookies</h2>
-            <p>
-              Our website currently does{" "}
-              <span className="font-semibold">not</span> use cookies or tracking
-              technologies. If this changes in the future, we will update this
-              Policy and provide you with appropriate options and disclosures.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="mb-2 text-xl font-semibold">Data Security</h2>
-            <p>
-              We take reasonable measures to protect the information you share
-              with us. However, please note that no method of transmission over
-              the Internet or method of electronic storage is completely secure.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="mb-2 text-xl font-semibold">Your Rights</h2>
-            <p>
-              Subject to applicable law, you may request access to, correction
-              of, or deletion of the personal information you have shared with
-              us, as well as object to or restrict processing. You also have the
-              right to lodge a complaint with the competent data protection
-              authority.
-            </p>
-          </div>
-
-          <div>
-            <h2 className="mb-2 text-xl font-semibold">
-              Changes to This Policy
-            </h2>
-            <p>
-              We may update this Privacy Policy from time to time. Any changes
-              will be posted on this page with an updated “Last updated” date.
-            </p>
-          </div>
+          {privacySections.map((section) => (
+            <div key={section.title}>
+              <h2 className="mb-2 text-xl font-semibold">{section.title}</h2>
+              <p>{section.text}</p>
+            </div>
+          ))}
 
           <div>
             <h2 className="mb-3 text-xl font-semibold">Contact Us</h2>
