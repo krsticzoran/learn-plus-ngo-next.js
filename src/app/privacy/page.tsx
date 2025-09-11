@@ -1,7 +1,8 @@
+import type { Metadata } from "next";
 import { Container } from "@/components/layout/container";
 import { privacySections } from "@/data/privacy";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Learn Plus - Privacy Policy",
   description:
     "Privacy Policy for Learn Plus – how we collect, use, and protect your data.",
