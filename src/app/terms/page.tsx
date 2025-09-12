@@ -1,8 +1,10 @@
+import type { Metadata } from "next";
 import { Container } from "@/components/layout/container";
 import Link from "next/link";
 import { terms } from "@/data/terms";
+import { ContactDetails } from "@/components/sections/contact-details";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Learn Plus - Terms & Conditions",
   description:
     "Terms & Conditions for Learn Plus – the rules that govern the use of our website and services.",
@@ -46,39 +48,7 @@ export default function TermsPage() {
             </div>
           ))}
 
-          <div>
-            <h2 className="mb-3 text-xl font-semibold">13. Contact Us</h2>
-            <ul className="space-y-1">
-              <li>
-                <span className="font-medium">Email:</span>{" "}
-                <a
-                  href="mailto:krunoslav.vukelic@gmail.com"
-                  className="decoration-black-muted/20 hover:decoration-black-muted/50 underline underline-offset-4"
-                >
-                  krunoslav.vukelic@gmail.com
-                </a>
-              </li>
-              <li>
-                <span className="font-medium">Phone:</span>{" "}
-                <a
-                  href="tel:+385992476644"
-                  className="decoration-black-muted/20 hover:decoration-black-muted/50 underline underline-offset-4"
-                >
-                  +385 99 247 66 44
-                </a>
-              </li>
-            </ul>
-            <p className="text-black-muted/60 mt-3 text-sm">
-              For privacy-related information, please see our{" "}
-              <Link
-                href="/privacy"
-                className="decoration-black-muted/20 hover:decoration-black-muted/50 underline underline-offset-4"
-              >
-                Privacy Policy
-              </Link>
-              .
-            </p>
-          </div>
+          <ContactDetails />
         </section>
       </div>
     </Container>
