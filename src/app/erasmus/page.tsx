@@ -101,12 +101,6 @@ export default async function ErasmusPage() {
           </div>
         </article>
       ))}
-      {[1, 2].map((i) => (
-        <div
-          key={i}
-          className="hidden h-96 rounded-4xl bg-white xl:block"
-        ></div>
-      ))}
     </Container>
   );
 }

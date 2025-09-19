@@ -104,32 +104,6 @@ type PastErasmus = {
 
 export const previousErasmusProjects: PastErasmus[] = [
   {
-    id: "traditions-of-ancient-slavs-in-theater",
-    title: "Traditions of Ancient Slavs in Theater",
-    description:
-      "Youth exchange with Stowarzyszenie Skaut on Ancient Slavs traditions through shadow theatre, held in Osijek with Erasmus+ support",
-    start: "25/11/2024",
-    image: ancient1,
-    end: "01/12/2024",
-    text: [
-      `From 25/11 to 01/12/2024 our organization hosted our partner [Stowarzyszenie Skaut](https://www.skaut.lublin.pl/), a youth organization from Lublin, Poland. It was a youth exchange with topic **Traditions of Ancient Slavs in Theater** in which educators Elzbieta Nowak and Lidia Skubisz trained a group of 18 youngsters from Poland and Croatia a shadow theatre technique where participants used different tools such as lights, figures and other tools to a thin sheet from both sides.`,
-      `This was one of their activities done under the scope of their Erasmus+ KA151-YOU project funded by Polish National Agency. All activities were realized in collaboration with [Osnovna škola Franje Krežme](https://os-fkrezme-os.skole.hr/) to which we donated all the equipment for some future shadow play performances.`,
-    ],
-    images: [
-      ancient2,
-      ancient3,
-      ancient4,
-      ancient5,
-      ancient6,
-      ancient7,
-      ancient8,
-      ancient9,
-      ancient10,
-      ancient11,
-      ancient12,
-    ],
-  },
-  {
     id: "aforpa-preparatory-visit",
     title: "Preparatory Visit – AFORPA",
     description:
@@ -156,6 +130,32 @@ export const previousErasmusProjects: PastErasmus[] = [
       aforpa12,
       aforpa13,
       aforpa14,
+    ],
+  },
+  {
+    id: "traditions-of-ancient-slavs-in-theater",
+    title: "Traditions of Ancient Slavs in Theater",
+    description:
+      "Youth exchange with Stowarzyszenie Skaut on Ancient Slavs traditions through shadow theatre, held in Osijek with Erasmus+ support",
+    start: "25/11/2024",
+    image: ancient1,
+    end: "01/12/2024",
+    text: [
+      `From 25/11 to 01/12/2024 our organization hosted our partner [Stowarzyszenie Skaut](https://www.skaut.lublin.pl/), a youth organization from Lublin, Poland. It was a youth exchange with topic **Traditions of Ancient Slavs in Theater** in which educators Elzbieta Nowak and Lidia Skubisz trained a group of 18 youngsters from Poland and Croatia a shadow theatre technique where participants used different tools such as lights, figures and other tools to a thin sheet from both sides.`,
+      `This was one of their activities done under the scope of their Erasmus+ KA151-YOU project funded by Polish National Agency. All activities were realized in collaboration with [Osnovna škola Franje Krežme](https://os-fkrezme-os.skole.hr/) to which we donated all the equipment for some future shadow play performances.`,
+    ],
+    images: [
+      ancient2,
+      ancient3,
+      ancient4,
+      ancient5,
+      ancient6,
+      ancient7,
+      ancient8,
+      ancient9,
+      ancient10,
+      ancient11,
+      ancient12,
     ],
   },
 ];
