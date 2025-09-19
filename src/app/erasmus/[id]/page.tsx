@@ -66,7 +66,7 @@ export default async function ErasmusProjectPage({
             {projectData.images.map((image, i) => (
               <Image
                 src={image}
-                alt=""
+                alt={`${projectData.title} - photo ${i + 1}`}
                 key={i}
                 className="h-[520px] w-full rounded-4xl object-cover"
               />
