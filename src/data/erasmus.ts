@@ -10,6 +10,20 @@ import ancient9 from "@/assets/images/ancient-slavs/ancient9.webp";
 import ancient10 from "@/assets/images/ancient-slavs/ancient10.webp";
 import ancient11 from "@/assets/images/ancient-slavs/ancient11.webp";
 import ancient12 from "@/assets/images/ancient-slavs/ancient12.webp";
+import aforpa1 from "@/assets/images/aforpa/aforpa1.webp";
+import aforpa2 from "@/assets/images/aforpa/aforpa2.webp";
+import aforpa3 from "@/assets/images/aforpa/aforpa3.webp";
+import aforpa4 from "@/assets/images/aforpa/aforpa4.webp";
+import aforpa5 from "@/assets/images/aforpa/aforpa5.webp";
+import aforpa6 from "@/assets/images/aforpa/aforpa6.webp";
+import aforpa7 from "@/assets/images/aforpa/aforpa7.webp";
+import aforpa8 from "@/assets/images/aforpa/aforpa8.webp";
+import aforpa9 from "@/assets/images/aforpa/aforpa9.webp";
+import aforpa10 from "@/assets/images/aforpa/aforpa10.webp";
+import aforpa11 from "@/assets/images/aforpa/aforpa11.webp";
+import aforpa12 from "@/assets/images/aforpa/aforpa12.webp";
+import aforpa13 from "@/assets/images/aforpa/aforpa13.webp";
+import aforpa14 from "@/assets/images/aforpa/aforpa14.webp";
 
 import { StaticImageData } from "next/image";
 
@@ -113,6 +127,35 @@ export const previousErasmusProjects: PastErasmus[] = [
       ancient10,
       ancient11,
       ancient12,
+    ],
+  },
+  {
+    id: "aforpa-preparatory-visit",
+    title: "Preparatory Visit – AFORPA",
+    description:
+      "Preparatory visit of AFORPA staff to Osijek vocational schools and companies to plan future Erasmus+ mobilities for students and teachers",
+    start: "19/08/2025",
+    end: "22/08/2025",
+    image: aforpa1,
+    text: [
+      `Magali Menage (Erasmus+ coordinator) and Lydie Gosselin (a school pedagogue) from [AFORPA](https://www.aforpa.fr/) (a French vocational association of schools specialized in automotive industries) from Saint-Maurice, near Paris arrived in August 2025 at **preparatory visit** for future possible mobilities of their students and staff.`,
+      `In three days they visited two vocational schools (Strojarska tehnička škola Osijek and Elektrotehnička i prometna škola Osijek) and several companies such as AutoZubak Osijek and Autocentar Buljubašić where their students will have internships and theoretical education. In these places they met mentors in both companies and schools and talked about exact activities and learning outcomes of this mobility planned in the beginning of next year as well as job shadowing of Croatian teachers in AFORPA schools.`,
+      `Moreover, they visited accommodation options, restaurants, landscape places and other places in Osijek and Baranja which will also be part of their students' experience. We believe that we were good hosts and that our French friends felt well and welcomed – so thus see you again soon!`,
+    ],
+    images: [
+      aforpa2,
+      aforpa3,
+      aforpa4,
+      aforpa5,
+      aforpa6,
+      aforpa7,
+      aforpa8,
+      aforpa9,
+      aforpa10,
+      aforpa11,
+      aforpa12,
+      aforpa13,
+      aforpa14,
     ],
   },
 ];
