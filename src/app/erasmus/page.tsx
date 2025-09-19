@@ -6,8 +6,6 @@ import Image from "next/image";
 import { previousErasmusProjects as previous } from "@/data/erasmus";
 import Link from "next/link";
 
-import Erasmus1 from "@/assets/images/erasmus1.jpeg";
-
 export const metadata: Metadata = {
   title: "Learn Plus - Erasmus+ Projects Overview",
   description:
@@ -21,7 +19,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ErasmusPage() {
+export default async function ErasmusPage() {
   return (
     <Container className="mb-2.5 grid grid-cols-1 gap-2.5 sm:grid-cols-2 xl:grid-cols-3">
       <h1 className="sr-only">Erasmus Projects</h1>
@@ -70,7 +68,7 @@ export default function ErasmusPage() {
           <div className="relative h-80 lg:h-96">
             <Link href={`/erasmus/${proj.id}`}>
               <Image
-                src={Erasmus1}
+                src={proj.image}
                 alt={`Erasmus Project `}
                 fill
                 className="object-cover"

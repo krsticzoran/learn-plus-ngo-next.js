@@ -60,6 +60,19 @@ export default async function ErasmusProjectPage({
         {projectData.text.map((block, i) => (
           <SanitizedMarkdown key={i} content={block} />
         ))}
+
+        {projectData.images && (
+          <div className="mx-auto mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {projectData.images.map((image, i) => (
+              <Image
+                src={image}
+                alt=""
+                key={i}
+                className="h-[520px] w-full rounded-4xl object-cover"
+              />
+            ))}
+          </div>
+        )}
       </div>
     </Container>
   );
