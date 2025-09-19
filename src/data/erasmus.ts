@@ -53,7 +53,7 @@ export const ongoingErasmusProjects: ActiveErasmus[] = [
     title: "KA210: Building Bridges With Holistic Well-Being",
     projectCode: "2024-2-PL01-KA210-SCH-000287851",
     start: "24/08/2025",
-    end: "23/08/2025",
+    end: "23/8/2026",
     coordinator:
       "II Liceum Ogólnokształcące im. J. Śniadeckiego, Kielce, Poland",
     partners: [
