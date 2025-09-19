@@ -19,7 +19,11 @@ export function SanitizedMarkdown({
         rehypePlugins={[rehypeSanitize]}
         components={{
           a: ({ href, children, ...props }) => (
-            <a {...props} {...getLinkProps(href || "")}>
+            <a
+              {...props}
+              {...getLinkProps(href || "")}
+              className="!text-blue-muted underline underline-offset-2"
+            >
               {children}
             </a>
           ),
