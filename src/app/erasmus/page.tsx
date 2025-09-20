@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/layout/container";
-
-import { ongoingErasmusProjects as projects } from "@/data/erasmus";
 import Image from "next/image";
 import { previousErasmusProjects as previous } from "@/data/erasmus";
 import Link from "next/link";
+import { getOngoingProjects } from "@/lib/queries";
 
 export const metadata: Metadata = {
   title: "Learn Plus - Erasmus+ Projects Overview",
@@ -20,6 +19,7 @@ export const metadata: Metadata = {
 };
 
 export default async function ErasmusPage() {
+  const ongoingProjects = await getOngoingProjects();
   return (
     <Container className="mb-2.5 grid grid-cols-1 gap-2.5 sm:grid-cols-2 xl:grid-cols-3">
       <h1 className="sr-only">Erasmus Projects</h1>
@@ -27,9 +27,9 @@ export default async function ErasmusPage() {
         <h2>Ongoing Projects</h2>
       </section>
 
-      {projects.map((proj, id) => (
+      {ongoingProjects.map((proj) => (
         <article
-          key={id}
+          key={proj.id}
           className="h-80 rounded-4xl bg-white p-6 lg:h-96 lg:p-12"
         >
           <div className="no-scrollbar h-full overflow-auto">
@@ -38,8 +38,8 @@ export default async function ErasmusPage() {
               <p className="mb-2 text-sm text-gray-500">{proj.projectCode}</p>
             )}
             <p className="mb-2 text-sm">
-              <span className="font-medium">Duration:</span> {proj.start} -{" "}
-              {proj.end}
+              <span className="font-medium">Duration:</span> {proj.startDate} -{" "}
+              {proj.endDate}
             </p>
             <p className="mb-2 text-sm">
               <span className="font-medium">Coordinator:</span>{" "}
@@ -48,8 +48,8 @@ export default async function ErasmusPage() {
             <div className="text-sm">
               <span className="font-medium">Partners:</span>
               <ul className="mt-1 ml-5 list-disc">
-                {proj.partners.map((partner, i) => (
-                  <li key={i}>{partner}</li>
+                {proj.partners.map((partner) => (
+                  <li key={partner.id}>{partner.content}</li>
                 ))}
               </ul>
             </div>
