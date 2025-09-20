@@ -1,10 +1,9 @@
 import { NextResponse } from "next/server";
 
-// Tipizacija payload-a iz Strapi-ja
 interface WebhookEntry {
   id: number;
   name: string;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 interface WebhookPayload {
