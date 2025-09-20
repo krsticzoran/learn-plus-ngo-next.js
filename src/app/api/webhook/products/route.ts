@@ -1,13 +1,15 @@
 import { NextResponse } from "next/server";
+import { revalidatePath } from "next/cache";
 
 interface WebhookEntry {
   id: number;
   name: string;
+  slug?: string;
   [key: string]: unknown;
 }
 
 interface WebhookPayload {
-  model: "ongoing-product" | "past-product";
+  model: string;
   action: "create" | "update" | "delete";
   entry: WebhookEntry;
 }
@@ -15,22 +17,22 @@ interface WebhookPayload {
 export async function POST(req: Request) {
   try {
     const payload: WebhookPayload = await req.json();
-
-    const { model, action, entry } = payload;
+    const { entry } = payload;
 
     console.log("--- Webhook received ---");
-    console.log("Collection:", model);
-    console.log("Action:", action);
     console.log("Entry:", entry);
     console.log("-----------------------");
 
-    if (model === "ongoing-product") {
-      console.log("Processing ongoing product...");
-    } else if (model === "past-product") {
-      console.log("Processing past product...");
+    revalidatePath("/erasmus");
+
+    if (entry.slug) {
+      revalidatePath(`/erasmus/${entry.slug}`);
+      console.log(`Revalidated single page: /erasmus/${entry.slug}`);
     }
 
-    return NextResponse.json({ message: "Webhook received successfully" });
+    return NextResponse.json({
+      message: "Webhook received and revalidated successfully",
+    });
   } catch (error) {
     console.error("Webhook error:", error);
     return NextResponse.json(
