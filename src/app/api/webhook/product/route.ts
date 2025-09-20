@@ -24,12 +24,9 @@ export async function POST(req: Request) {
     console.log("Entry:", entry);
     console.log("-----------------------");
 
-    // Obrada po kolekciji
     if (model === "ongoing-product") {
-      // TODO: dodaj logiku za ongoing products
       console.log("Processing ongoing product...");
     } else if (model === "past-product") {
-      // TODO: dodaj logiku za past products
       console.log("Processing past product...");
     }
 
