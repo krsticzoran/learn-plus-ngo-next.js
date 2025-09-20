@@ -20,8 +20,6 @@ export async function POST(req: Request) {
     const { entry } = payload;
 
     console.log("--- Webhook received ---");
-    console.log("Entry:", entry);
-    console.log("-----------------------");
 
     revalidatePath("/erasmus");
 
