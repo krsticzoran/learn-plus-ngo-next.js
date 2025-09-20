@@ -21,10 +21,10 @@ export async function POST(req: Request) {
 
     console.log("--- Webhook received ---");
 
-    revalidatePath("/erasmus");
+    await revalidatePath("/erasmus");
 
     if (entry.slug) {
-      revalidatePath(`/erasmus/${entry.slug}`);
+      await revalidatePath(`/erasmus/${entry.slug}`);
       console.log(`Revalidated single page: /erasmus/${entry.slug}`);
     }
 
