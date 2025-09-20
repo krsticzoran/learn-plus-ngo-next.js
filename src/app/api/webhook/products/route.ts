@@ -11,7 +11,7 @@ interface WebhookEntry {
 interface WebhookPayload {
   model: string;
   action: "create" | "update" | "delete";
-  entry: WebhookEntry;
+  entry?: WebhookEntry;
 }
 
 export async function POST(req: Request) {
