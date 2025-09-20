@@ -16,7 +16,7 @@ export async function fetchFromStrapi<T>(path: string): Promise<T[]> {
       "Content-Type": "application/json",
       Authorization: `Bearer ${STRAPI_TOKEN}`,
     },
-    next: { revalidate: 86400 },
+    cache: "force-cache",
   });
 
   if (!res.ok) {
