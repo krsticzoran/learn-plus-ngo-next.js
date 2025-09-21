@@ -23,7 +23,7 @@ export async function generateMetadata({
 
   return {
     title: `Learn Plus - ${projectData.title}`,
-    //description: projectData.description,
+    description: projectData.description,
   };
 }
 

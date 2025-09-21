@@ -54,6 +54,7 @@ export type PastProject = {
   projectCode: string;
   title: string;
   slug: string;
+  description: string;
   startDate: string;
   endDate: string;
   content?: string;
