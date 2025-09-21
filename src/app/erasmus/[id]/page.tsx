@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/layout/container";
 import Image from "next/image";
-import { previousErasmusProjects as project } from "@/data/erasmus";
 import { notFound } from "next/navigation";
 import { SanitizedMarkdown } from "@/components/sanitized-markdown";
+import { getPastProjectBySlug } from "@/lib/queries";
 
 export async function generateMetadata({
   params,
@@ -11,7 +11,8 @@ export async function generateMetadata({
   params: Promise<{ id: string }>;
 }): Promise<Metadata> {
   const { id } = await params;
-  const projectData = project.find((p) => p.id === id);
+
+  const projectData = await getPastProjectBySlug(id);
 
   if (!projectData) {
     return {
@@ -22,7 +23,7 @@ export async function generateMetadata({
 
   return {
     title: `Learn Plus - ${projectData.title}`,
-    description: projectData.description,
+    //description: projectData.description,
   };
 }
 
@@ -32,7 +33,7 @@ export default async function ErasmusProjectPage({
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-  const projectData = project.find((p) => p.id === id);
+  const projectData = await getPastProjectBySlug(id);
 
   if (!projectData) {
     notFound();
@@ -42,7 +43,7 @@ export default async function ErasmusProjectPage({
     <Container className="mb-2.5 flex flex-col gap-2.5" as="article">
       <div className="relative h-[500px] w-full overflow-hidden rounded-4xl">
         <Image
-          src={projectData.image}
+          src={projectData.cover.url}
           alt={projectData.title}
           priority
           fill
@@ -53,23 +54,28 @@ export default async function ErasmusProjectPage({
           <h1 className="mr-6 mb-4 text-3xl font-medium sm:mr-12 lg:text-5xl">
             {projectData.title}
           </h1>
-          <p className="text-sm sm:text-base">{`Duration: ${projectData.start} - ${projectData.end}`}</p>
+          <p className="text-sm sm:text-base">{`Duration: ${projectData.startDate} - ${projectData.endDate}`}</p>
         </div>
       </div>
       <div className="flex flex-col gap-2 rounded-4xl bg-white p-6 sm:p-12 sm:text-lg">
-        {projectData.text.map((block, i) => (
-          <SanitizedMarkdown key={i} content={block} />
-        ))}
+        {projectData.content && (
+          <SanitizedMarkdown content={projectData.content} />
+        )}
 
-        {projectData.images && (
-          <div className="mx-auto mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {projectData.images.map((image, i) => (
-              <Image
-                src={image}
-                alt={`${projectData.title} - photo ${i + 1}`}
+        {projectData.gallery && (
+          <div className="mx-auto mt-5 grid w-full grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {projectData.gallery.map((image, i) => (
+              <div
                 key={i}
-                className="h-[520px] w-full rounded-4xl object-cover"
-              />
+                className="relative h-[520px] w-full overflow-hidden rounded-4xl"
+              >
+                <Image
+                  fill
+                  src={image.url}
+                  alt={`${projectData.title} - photo ${i + 1}`}
+                  className="object-cover"
+                />
+              </div>
             ))}
           </div>
         )}

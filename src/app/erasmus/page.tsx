@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/layout/container";
 import Image from "next/image";
-import { previousErasmusProjects as previous } from "@/data/erasmus";
 import Link from "next/link";
-import { getOngoingProjects } from "@/lib/queries";
+import { getOngoingProjects, getPastProjects } from "@/lib/queries";
 
 export const metadata: Metadata = {
   title: "Learn Plus - Erasmus+ Projects Overview",
@@ -20,6 +19,7 @@ export const metadata: Metadata = {
 
 export default async function ErasmusPage() {
   const ongoingProjects = await getOngoingProjects();
+  const pastProjects = await getPastProjects();
   return (
     <Container className="mb-2.5 grid grid-cols-1 gap-2.5 sm:grid-cols-2 xl:grid-cols-3">
       <h1 className="sr-only">Erasmus Projects</h1>
@@ -60,15 +60,15 @@ export default async function ErasmusPage() {
       <section className="bg-blue-muted xxl:text-5xl flex h-80 items-center justify-center rounded-4xl p-6 text-3xl font-medium text-white sm:text-4xl lg:h-96 lg:p-12">
         <h2>Previous Projects</h2>
       </section>
-      {previous.map((proj) => (
+      {pastProjects.map((proj) => (
         <article
           key={proj.id}
           className="group relative cursor-pointer overflow-hidden rounded-4xl bg-white"
         >
           <div className="relative h-80 lg:h-96">
-            <Link href={`/erasmus/${proj.id}`}>
+            <Link href={`/erasmus/${proj.slug}`}>
               <Image
-                src={proj.image}
+                src={proj.cover.url}
                 alt={`Erasmus Project `}
                 fill
                 className="object-cover"
@@ -92,8 +92,8 @@ export default async function ErasmusPage() {
                   </h3>
 
                   <p className="mb-6 text-white/90 drop-shadow-md">
-                    <span className="font-medium">Duration:</span> {proj.start}{" "}
-                    - {proj.end}
+                    <span className="font-medium">Duration:</span>{" "}
+                    {proj.startDate} - {proj.endDate}
                   </p>
                 </div>
               </div>

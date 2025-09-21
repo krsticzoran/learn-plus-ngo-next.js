@@ -7,7 +7,7 @@ import KeyMetrics from "@/components/ui/key-metrics";
 import { statsData } from "@/data/stats-data";
 import Image from "next/image";
 
-export default function Hero() {
+export default async function Hero() {
   return (
     <Container
       as="main"

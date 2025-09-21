@@ -1,8 +1,17 @@
 "use client";
+import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ongoingErasmusProjects as projects } from "@/data/erasmus";
+import { OngoingProject } from "@/lib/types";
 
 export default function ScrollingText() {
+  const [projects, setProjects] = useState<OngoingProject[]>([]);
+
+  useEffect(() => {
+    fetch("/api/projects")
+      .then((res) => res.json())
+      .then(setProjects);
+  }, []);
+
   return (
     <div className="group overflow-hidden bg-transparent py-4 whitespace-nowrap text-black lg:py-6">
       <ul className="animate-scroll inline-block min-w-full">
