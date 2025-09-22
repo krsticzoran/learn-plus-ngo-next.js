@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     title: "Learn Plus",
     description:
       "Learn Plus promotes knowledge exchange and cultural diversity through Erasmus+ projects, offering meaningful lifelong learning for all.",
-    url: "https://learn-plus-ngo-next-js.vercel.app/",
+    url: "https://learn-plus.org/",
     images: ["/social-image.jpg"],
   },
 };

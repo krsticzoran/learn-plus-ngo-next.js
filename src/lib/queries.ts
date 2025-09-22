@@ -25,7 +25,5 @@ export async function getPastProjectBySlug(
     `/past-projects?populate=*&filters[slug][$eq]=${encodedSlug}`,
   );
 
-  console.log("Fetched projects for slug:", slug, projects);
-
   return projects.length > 0 ? projects[0] : null;
 }

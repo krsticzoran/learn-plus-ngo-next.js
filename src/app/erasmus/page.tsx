@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     title: "Learn Plus - Erasmus+ Projects Overview",
     description:
       "Discover all past and ongoing Erasmus+ projects by Learn Plus and learn how to get involved.",
-    url: "https://learn-plus-ngo-next-js.vercel.app/erasmus",
+    url: "https://learn-plus.org/erasmus",
     images: ["/erasmus-social.jpg"],
   },
 };

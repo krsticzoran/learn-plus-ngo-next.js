@@ -24,6 +24,12 @@ export async function generateMetadata({
   return {
     title: `Learn Plus - ${projectData.title}`,
     description: projectData.description,
+    openGraph: {
+      title: `Learn Plus - ${projectData.title}`,
+      description: projectData.description,
+      url: `https://learn-plus.org/${projectData.slug}`,
+      images: projectData.cover,
+    },
   };
 }
 

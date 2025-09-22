@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/layout/container";
-import Link from "next/link";
 import { terms } from "@/data/terms";
 import { ContactDetails } from "@/components/sections/contact-details";
 
