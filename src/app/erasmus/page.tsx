@@ -3,6 +3,7 @@ import { Container } from "@/components/layout/container";
 import Image from "next/image";
 import Link from "next/link";
 import { getOngoingProjects, getPastProjects } from "@/lib/queries";
+import { formatDate } from "@/lib/date";
 
 export const metadata: Metadata = {
   title: "Learn Plus - Erasmus+ Projects Overview",
@@ -38,8 +39,8 @@ export default async function ErasmusPage() {
               <p className="mb-2 text-sm text-gray-500">{proj.projectCode}</p>
             )}
             <p className="mb-2 text-sm">
-              <span className="font-medium">Duration:</span> {proj.startDate} -{" "}
-              {proj.endDate}
+              <span className="font-medium">Duration: </span>
+              {formatDate(proj.startDate)} - {formatDate(proj.endDate)}
             </p>
             <p className="mb-2 text-sm">
               <span className="font-medium">Coordinator:</span>{" "}
@@ -92,8 +93,8 @@ export default async function ErasmusPage() {
                   </h3>
 
                   <p className="mb-6 text-white/90 drop-shadow-md">
-                    <span className="font-medium">Duration:</span>{" "}
-                    {proj.startDate} - {proj.endDate}
+                    <span className="font-medium">Duration: </span>
+                    {formatDate(proj.startDate)} - {formatDate(proj.endDate)}
                   </p>
                 </div>
               </div>

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { notFound } from "next/navigation";
 import { SanitizedMarkdown } from "@/components/sanitized-markdown";
 import { getPastProjectBySlug } from "@/lib/queries";
+import { formatDate } from "@/lib/date";
 
 export async function generateMetadata({
   params,
@@ -60,7 +61,10 @@ export default async function ErasmusProjectPage({
           <h1 className="mr-6 mb-4 text-3xl font-medium sm:mr-12 lg:text-5xl">
             {projectData.title}
           </h1>
-          <p className="text-sm sm:text-base">{`Duration: ${projectData.startDate} - ${projectData.endDate}`}</p>
+          <p className="text-sm sm:text-base">
+            Duration: {formatDate(projectData.startDate)} -{" "}
+            {formatDate(projectData.endDate)}
+          </p>
         </div>
       </div>
       <div className="flex flex-col gap-2 rounded-4xl bg-white p-6 sm:p-12 sm:text-lg">
