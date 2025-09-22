@@ -52,6 +52,12 @@ They are appointed exclusively by the Assembly and they are not obliged to pay m
   {
     name: "Membership Fee",
     id: "membership-fee",
-    value: `For the year 2025 the membership fee is 10 EUR.`,
+    value: `
+    For the year 2025 the membership fee is 10 EUR.
+
+    HR97 2402006 1101245199
+
+    For membership just type "Članarina za - ime člana - za 2025. godinu" or "Membership for - a member's name - for 2025"
+    `,
   },
 ];
