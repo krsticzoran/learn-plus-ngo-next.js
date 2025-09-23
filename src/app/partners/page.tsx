@@ -13,7 +13,7 @@ export default function Partners() {
       {partnersData.map((partner, index) => (
         <article
           key={index}
-          className="flex h-[480px] flex-col rounded-4xl bg-white p-6 md:h-[520px] lg:h-[480px] lg:p-12"
+          className="flex h-[440px] flex-col rounded-4xl bg-white p-6 md:h-[480px] lg:p-12"
         >
           <div className="flex justify-between gap-4">
             <p className="mt-2 max-w-3/5">{partner.name}</p>
@@ -53,7 +53,7 @@ export default function Partners() {
       {[1, 2, 3, 4].map((num) => (
         <div
           key={num}
-          className="hidden h-100 rounded-4xl bg-white md:block md:h-[520px] lg:h-[480px]"
+          className="hidden h-[480px] rounded-4xl bg-white md:block"
         ></div>
       ))}
     </Container>
