@@ -1,7 +1,18 @@
 import partner1 from "@/assets/images/partners/partner1.jpg";
 import partner2 from "@/assets/images/partners/partner2.png";
+import { StaticImageData } from "next/image";
 
-export const partnersData = [
+type partner = {
+  name: string;
+  description: string;
+  email: string;
+  phone: string;
+  image: StaticImageData;
+  link: string;
+  alt: string;
+};
+
+export const partnersData: partner[] = [
   {
     name: "BEE THE FUTURE, Cyprus",
     description:
