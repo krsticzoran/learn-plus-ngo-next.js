@@ -34,7 +34,6 @@ export default function Partners() {
           </div>
 
           <p className="my-4">{partner.description}</p>
-          {/* don't forget to refactor links*/}
           <div className="mt-auto flex gap-2">
             <a
               href={`mailto:${partner.email}`}
