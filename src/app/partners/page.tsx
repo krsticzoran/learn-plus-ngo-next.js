@@ -36,17 +36,17 @@ export default function Partners() {
           <p className="my-4">{partner.description}</p>
           <div className="mt-auto flex gap-2">
             <a
-              href={`mailto:${partner.email}`}
-              className="xs:text-sm bg-background-muted hover:bg-background-muted/50 text-foreground cursor-pointer rounded-full px-4 py-2 text-xs capitalize duration-300 sm:px-6 sm:py-3"
-            >
-              email us
-            </a>
-
-            <a
               href={`tel:${partner.phone}`}
               className="xs:text-sm bg-green-muted hover:bg-green-muted/70 text-foreground cursor-pointer rounded-full px-4 py-2 text-xs capitalize duration-300 sm:px-6 sm:py-3"
             >
               Reach Us
+            </a>
+
+            <a
+              href={`mailto:${partner.email}`}
+              className="xs:text-sm bg-background-muted hover:bg-background-muted/50 text-foreground cursor-pointer rounded-full px-4 py-2 text-xs capitalize duration-300 sm:px-6 sm:py-3"
+            >
+              email us
             </a>
           </div>
         </article>
