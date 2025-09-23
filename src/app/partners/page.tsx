@@ -15,8 +15,8 @@ export default function Partners() {
           key={index}
           className="flex h-[440px] flex-col rounded-4xl bg-white p-6 md:h-[480px] lg:p-12"
         >
-          <div className="flex justify-between gap-4">
-            <p className="mt-2 max-w-3/5">{partner.name}</p>
+          <div className="flex h-32 max-h-40 justify-between gap-4 md:h-40">
+            <h2 className="mt-2 max-w-3/5 font-semibold">{partner.name}</h2>
             <a
               href={partner.link}
               target="_blank"
@@ -33,21 +33,23 @@ export default function Partners() {
             </a>
           </div>
 
-          <p className="mt-auto mb-4">{partner.description}</p>
+          <p className="my-4">{partner.description}</p>
 
-          <a
-            href={`mailto:${partner.email}`}
-            className="hover:!text-blue-muted mb-2 inline-block transition-colors duration-200"
-          >
-            email: {partner.email}
-          </a>
+          <div className="mt-auto flex gap-2">
+            <a
+              href={`mailto:${partner.email}`}
+              className="xs:text-sm bg-background-muted hover:bg-background-muted/50 text-foreground cursor-pointer rounded-full px-4 py-2 text-xs capitalize duration-300 sm:px-6 sm:py-3"
+            >
+              email us
+            </a>
 
-          <a
-            href={`tel:${partner.phone}`}
-            className="hover:!text-blue-muted transition-colors duration-200"
-          >
-            tel: {partner.phone}
-          </a>
+            <a
+              href={`tel:${partner.phone}`}
+              className="xs:text-sm bg-green-muted hover:bg-green-muted/70 text-foreground cursor-pointer rounded-full px-4 py-2 text-xs capitalize duration-300 sm:px-6 sm:py-3"
+            >
+              Reach Us
+            </a>
+          </div>
         </article>
       ))}
       {[1, 2, 3, 4].map((num) => (
