@@ -18,7 +18,7 @@ export default async function Hero() {
         <div className="bg-background z-30 flex h-full w-full flex-1 flex-col rounded-4xl p-6 sm:p-12 lg:w-2/3">
           <h1
             id="hero-heading"
-            className="mb-4 text-2xl leading-tight font-medium sm:mb-12 sm:text-5xl xl:text-6xl"
+            className="mb-4 text-2xl leading-tight font-medium sm:mb-6 sm:text-5xl xl:text-6xl"
           >
             Empowering Growth Through Lifelong Learning
           </h1>
