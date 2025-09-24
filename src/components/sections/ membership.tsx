@@ -66,7 +66,14 @@ export default function Membership() {
         defaultValue={tabs[0].id}
         className="flex w-full items-start justify-center gap-2.5 md:flex-row"
       >
-        <TabsList className="bg-background-muted/50 grid h-auto w-full shrink-0 grid-cols-1 gap-1 rounded-3xl p-4 md:w-fit lg:w-1/3">
+        <TabsList
+          className="bg-background-muted/50 grid h-auto w-full shrink-0 grid-cols-1 gap-1 rounded-3xl p-4 md:w-fit lg:w-1/3"
+          style={{
+            height: isDesktop ? `${height}px` : "auto",
+            overflow: "hidden",
+            transition: "height 0.3s ease",
+          }}
+        >
           {tabs.map((tab) => (
             <TabsTrigger
               key={tab.id}
