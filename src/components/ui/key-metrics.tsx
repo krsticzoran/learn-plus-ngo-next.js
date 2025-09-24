@@ -9,7 +9,7 @@ interface MetricsProps {
 
 export default function KeyMetrics({ data }: MetricsProps) {
   return (
-    <dl className="mt-auto flex flex-col gap-8 pt-20 sm:flex-row lg:pt-0">
+    <dl className="mt-auto flex flex-col gap-8 pt-20 sm:flex-row">
       {data.map(({ number, label }, index) => (
         <div key={index}>
           <dt className="sr-only">{label}</dt>
