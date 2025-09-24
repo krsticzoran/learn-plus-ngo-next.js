@@ -20,7 +20,7 @@ export default async function Hero() {
             id="hero-heading"
             className="mb-4 text-2xl leading-tight font-medium sm:mb-12 sm:text-5xl xl:text-6xl"
           >
-            Learning, Growing, and Exploring Together
+            Empowering Growth Through Lifelong Learning
           </h1>
 
           <p className="mb-6 sm:mb-8 sm:text-lg xl:w-[75%]">
