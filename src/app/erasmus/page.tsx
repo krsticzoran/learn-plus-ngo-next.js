@@ -59,7 +59,7 @@ export default async function ErasmusPage() {
       ))}
 
       <section className="bg-blue-muted xxl:text-5xl flex h-80 items-center justify-center rounded-4xl p-6 text-3xl font-medium text-white sm:text-4xl lg:h-96 lg:p-12">
-        <h2>Previous Projects</h2>
+        <h2>Previous Activities</h2>
       </section>
       {pastProjects.map((proj) => (
         <article
