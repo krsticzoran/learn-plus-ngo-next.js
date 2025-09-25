@@ -36,10 +36,11 @@ export default function Partners() {
           <p className="my-4">{partner.description}</p>
           <div className="mt-auto flex gap-2">
             <a
-              href={`tel:${partner.phone}`}
+              href={`https://wa.me/${partner.phone}?text=Hello%2C%20I%20am%20reaching%20out%20regarding%20potential%20Erasmus%2B%20partnership%20opportunities.%20Let%E2%80%99s%20connect%20and%20explore%20possibilities%20for%20collaboration.`}
+              target="_blank"
               className="xs:text-sm bg-green-muted hover:bg-green-muted/70 text-foreground cursor-pointer rounded-full px-4 py-2 text-xs capitalize duration-300 sm:px-6 sm:py-3"
             >
-              Reach Us
+              WhatsApp
             </a>
 
             <a
