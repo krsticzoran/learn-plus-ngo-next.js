@@ -15,7 +15,7 @@ export default function KeyMetrics({ data }: MetricsProps) {
           <dt className="sr-only">{label}</dt>
           <dd className="flex flex-row items-center gap-4 sm:flex-col sm:items-start sm:gap-0">
             <p
-              className="min-w-16 text-right text-2xl sm:mb-2 sm:text-left sm:text-4xl"
+              className="min-w-16 text-right text-2xl sm:mb-2 sm:text-left sm:text-[40px]"
               aria-label={`${number} ${label}`}
             >
               {number}
