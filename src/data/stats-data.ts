@@ -1,6 +1,10 @@
-export const statsData = [
-  { number: "200+", label: "Students successfully trained" },
-  { number: "6+", label: "Years of experience" },
-  { number: "10+", label: "Countries we reached" },
-  { number: "50+", label: "Trainings delivered worldwide" },
+type StatItem = {
+  number: string;
+  label: string;
+};
+
+export const statsData: StatItem[] = [
+  { number: "200+", label: "Participants involved" },
+  { number: "7+", label: "Years of experience" },
+  { number: "10+", label: "Countries reached" },
 ];
