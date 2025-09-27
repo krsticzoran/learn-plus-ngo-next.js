@@ -8,8 +8,18 @@ export default function Partners() {
       as="main"
       className="mb-2.5 grid grid-cols-1 gap-2.5 md:grid-cols-2 xl:grid-cols-3"
     >
-      <h1 className="sr-only">Our partners</h1>
-
+      <article className="bg-blue-muted h-[440px] rounded-4xl p-6 text-white md:h-[480px] lg:p-12">
+        <div className="flex h-36 items-center justify-center md:h-44">
+          <h1 className="text-center text-2xl font-medium sm:text-3xl">
+            Global Network of Trusted Partners
+          </h1>
+        </div>
+        <p>
+          All our services and activities can be also organized in different
+          countries with our reliable partners. That means that we can provide
+          you the same or sometimes even higher standard of our services.
+        </p>
+      </article>
       {partnersData.map((partner, index) => (
         <article
           key={index}
