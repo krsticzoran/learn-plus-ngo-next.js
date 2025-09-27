@@ -62,7 +62,7 @@ export default function Partners() {
           </div>
         </article>
       ))}
-      {[1, 2, 3, 4].map((num) => (
+      {[1, 2, 3].map((num) => (
         <div
           key={num}
           className="hidden h-[480px] rounded-4xl bg-white md:block"
