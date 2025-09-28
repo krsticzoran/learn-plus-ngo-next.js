@@ -20,7 +20,7 @@ export default function ScrollingText() {
             key={index}
             className="pointer-events-auto mx-6 inline-block font-medium hover:underline sm:text-lg lg:text-xl"
           >
-            <Link href="/erasmus" className="text-blue-muted!">
+            <Link href={`erasmus/${project.slug}`} className="text-blue-muted!">
               {project.title}
             </Link>
           </li>
