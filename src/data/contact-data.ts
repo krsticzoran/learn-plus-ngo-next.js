@@ -18,8 +18,8 @@ export const contactData: ContactItem[] = [
   },
   {
     type: "email",
-    value: "krunoslav.vukelic@gmail.com",
-    href: "mailto:krunoslav.vukelic@gmail.com",
+    value: "info@learn-plus.org",
+    href: "mailto:info@learn-plus.org",
     Icon: IconMail,
   },
   {

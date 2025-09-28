@@ -47,7 +47,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     id: "email",
-    href: "mailto:info@example.com",
+    href: "mailto:info@learn-plus.org",
     label: "Email us",
     icon: IconMail,
   },
