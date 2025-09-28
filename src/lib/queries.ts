@@ -22,12 +22,16 @@ export async function getPastProjects(): Promise<PastProject[]> {
 
 export async function getPastProjectBySlug(
   slug: string,
-): Promise<PastProject | null> {
+): Promise<PastProject | OngoingProject | null> {
   const encodedSlug = encodeURIComponent(slug);
+  const [pastProjects, ongoingProjects] = await Promise.all([
+    fetchFromStrapi<PastProject>(
+      `/past-projects?populate=*&filters[slug][$eq]=${encodedSlug}`,
+    ),
+    fetchFromStrapi<OngoingProject>(
+      `/ongoing-projects?populate=*&filters[slug][$eq]=${encodedSlug}`,
+    ),
+  ]);
 
-  const projects = await fetchFromStrapi<PastProject>(
-    `/past-projects?populate=*&filters[slug][$eq]=${encodedSlug}`,
-  );
-
-  return projects.length > 0 ? projects[0] : null;
+  return pastProjects[0] || ongoingProjects[0] || null;
 }

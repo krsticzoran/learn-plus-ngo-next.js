@@ -1,17 +1,3 @@
-export type OngoingProject = {
-  id: number;
-  documentId: string;
-  title: string;
-  projectCode: string;
-  startDate: string;
-  endDate: string;
-  coordinator: string;
-  createdAt: string;
-  updatedAt: string;
-  publishedAt: string;
-  partners: { id: number; content: string }[];
-};
-
 export type MediaFormat = {
   ext: string;
   url: string;
@@ -46,6 +32,25 @@ type Media = {
   createdAt: string;
   updatedAt: string;
   publishedAt: string;
+};
+
+export type OngoingProject = {
+  id: number;
+  documentId: string;
+  title: string;
+  projectCode: string;
+  startDate: string;
+  endDate: string;
+  coordinator: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  partners: { id: number; content: string }[];
+  cover: Media;
+  gallery?: Media[];
+  slug: string;
+  description: string;
+  content?: string;
 };
 
 export type PastProject = {
