@@ -6,14 +6,18 @@ export async function getOngoingProjects(): Promise<OngoingProject[]> {
     "/ongoing-projects?populate=*",
   );
 
-  return projects.sort((a, b) => b.id - a.id);
+  return projects.sort(
+    (a, b) => Date.parse(b.startDate) - Date.parse(a.startDate),
+  );
 }
 
 export async function getPastProjects(): Promise<PastProject[]> {
   const projects = await fetchFromStrapi<PastProject>(
     "/past-projects?populate=*",
   );
-  return projects.sort((a, b) => b.id - a.id);
+  return projects.sort(
+    (a, b) => Date.parse(b.startDate) - Date.parse(a.startDate),
+  );
 }
 
 export async function getPastProjectBySlug(
