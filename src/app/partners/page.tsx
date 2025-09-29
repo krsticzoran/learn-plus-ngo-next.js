@@ -11,13 +11,13 @@ export default function Partners() {
       <article className="bg-blue-muted h-[440px] rounded-4xl p-6 text-white md:h-[480px] lg:p-12">
         <div className="flex h-36 items-center justify-center md:h-44">
           <h1 className="text-center text-2xl font-medium sm:text-3xl">
-            Global Network of Trusted Partners
+            Our Network of Trusted Partners
           </h1>
         </div>
         <p>
           All our services and activities can be also organized in different
-          countries with our reliable partners. That means that we can provide
-          you the same or sometimes even higher standard of our services.
+          countries with our reliable partners. They are ready to provide you
+          the same or sometimes even higher standard of mentioned services.
         </p>
       </article>
       {partnersData.map((partner, index) => (
@@ -62,7 +62,7 @@ export default function Partners() {
           </div>
         </article>
       ))}
-      {[1, 2, 3].map((num) => (
+      {[1, 2].map((num) => (
         <div
           key={num}
           className="hidden h-[480px] rounded-4xl bg-white md:block"

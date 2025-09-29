@@ -1,5 +1,6 @@
-import partner1 from "@/assets/images/partners/partner1.jpg";
+import partner1 from "@/assets/images/partners/partner1.png";
 import partner2 from "@/assets/images/partners/partner2.png";
+import partner3 from "@/assets/images/partners/partner3.png";
 import { StaticImageData } from "next/image";
 
 type partner = {
@@ -32,5 +33,15 @@ export const partnersData: partner[] = [
     image: partner2,
     link: "https://epoproject.net/",
     alt: "European Project Organization logo - Erasmus projects",
+  },
+  {
+    name: "BİLİM DİL KÜLTÜR DERNEĞİ, Dalaman-Türkiye",
+    description:
+      "Through implementing EU projects, they are cultivating international cooperation and inspiring young people for their engagement in fields of science, language and culture, just as their name of this NGO means in Turkish language.",
+    phone: "+90 507 769 7055",
+    email: "tecsmart@gmail.com",
+    link: "https://www.facebook.com/groups/1981708168507047/?ref=share_group_link&mibextid=K35XfP&rdid=qQpHEYjIoKnAjLDw&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fg%2F1B12qgiwcq%2F%3Fmibextid%3DK35XfP#",
+    image: partner3,
+    alt: "BİLİM DİL KÜLTÜR DERNEĞİ - Erasmus projects",
   },
 ];
