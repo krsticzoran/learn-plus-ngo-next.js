@@ -24,7 +24,7 @@ export const contactData: ContactItem[] = [
   },
   {
     type: "address",
-    value: "Josipa Jurja Strossmayera 65a Osijek",
+    value: "Josipa Jurja Strossmayera 65a, Osijek, Croatia",
     href: "https://www.google.com/maps/search/?api=1&query=Josipa+Jurja+Strossmayera+65a,+31000+Osijek",
     Icon: IconMapPin,
   },
