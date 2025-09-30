@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Container } from "@/components/layout/container";
 import { partnersData } from "@/data/partner-data";
 
@@ -17,7 +18,11 @@ export default function Partners() {
         <p>
           All our services and activities can be also organized in different
           countries with our reliable partners. They are ready to provide you
-          the same or sometimes even higher standard of mentioned services.
+          the same or sometimes even higher standard of mentioned{" "}
+          <Link href="/services" className="!text-white underline">
+            services
+          </Link>
+          .
         </p>
       </article>
       {partnersData.map((partner, index) => (

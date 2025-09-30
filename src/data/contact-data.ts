@@ -13,7 +13,7 @@ export const contactData: ContactItem[] = [
   {
     type: "phone",
     value: "+385 99 247 66 44",
-    href: "tel:+385992476644",
+    href: "https://wa.me/+385992476644?text=Hello%2C%20I%20am%20reaching%20out%20regarding%20potential%20Erasmus%2B%20partnership%20opportunities.%20Let%E2%80%99s%20connect%20and%20explore%20possibilities%20for%20collaboration.",
     Icon: IconPhone,
   },
   {
