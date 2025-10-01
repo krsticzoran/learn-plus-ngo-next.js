@@ -15,7 +15,7 @@ export function SanitizedMarkdown({
   const sanitizedContent = sanitizeHtml(content);
 
   return (
-    <div className={`prose sm:prose-lg whitespace-pre-line ${className}`}>
+    <div className={`prose sm:prose-lg ${className}`}>
       <ReactMarkdown
         rehypePlugins={[rehypeSanitize]}
         remarkPlugins={[remarkBreaks]}
