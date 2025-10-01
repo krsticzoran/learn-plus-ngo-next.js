@@ -33,5 +33,7 @@ export async function getPastProjectBySlug(
     ),
   ]);
 
+  console.log(ongoingProjects);
+
   return pastProjects[0] || ongoingProjects[0] || null;
 }

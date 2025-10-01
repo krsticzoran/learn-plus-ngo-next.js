@@ -1,5 +1,6 @@
 import ReactMarkdown from "react-markdown";
 import rehypeSanitize from "rehype-sanitize";
+import remarkBreaks from "remark-breaks";
 import { sanitizeHtml, getLinkProps } from "@/lib/sanitize";
 
 interface SanitizedMarkdownProps {
@@ -14,9 +15,10 @@ export function SanitizedMarkdown({
   const sanitizedContent = sanitizeHtml(content);
 
   return (
-    <div className={`prose sm:prose-lg ${className}`}>
+    <div className={`prose sm:prose-lg whitespace-pre-line ${className}`}>
       <ReactMarkdown
         rehypePlugins={[rehypeSanitize]}
+        remarkPlugins={[remarkBreaks]}
         components={{
           a: ({ href, children, ...props }) => (
             <a
