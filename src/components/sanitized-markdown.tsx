@@ -15,7 +15,7 @@ export function SanitizedMarkdown({
   const sanitizedContent = sanitizeHtml(content);
 
   return (
-    <div className={`prose sm:prose-lg ${className}`}>
+    <div className={`prose sm:prose-lg list-inside list-disc ${className}`}>
       <ReactMarkdown
         rehypePlugins={[rehypeSanitize]}
         remarkPlugins={[remarkBreaks]}
@@ -29,6 +29,10 @@ export function SanitizedMarkdown({
               {children}
             </a>
           ),
+          ul: ({ children }) => (
+            <ul className="list-inside list-disc">{children}</ul>
+          ),
+          li: ({ children }) => <li className="mb-1">{children}</li>,
         }}
       >
         {sanitizedContent}
