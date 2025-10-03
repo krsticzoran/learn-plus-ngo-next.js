@@ -22,98 +22,101 @@ export default async function ErasmusPage() {
   const ongoingProjects = await getOngoingProjects();
   const pastProjects = await getPastProjects();
   return (
-    <Container className="mb-2.5 grid grid-cols-1 gap-2.5 sm:grid-cols-2 xl:grid-cols-3">
-      <h1 className="sr-only">Erasmus Projects</h1>
-      <section className="bg-green-muted xxl:text-5xl flex h-80 items-center justify-center rounded-4xl p-6 text-3xl font-medium sm:text-4xl lg:h-96 lg:p-12">
-        <h2>Ongoing Projects</h2>
-      </section>
+    <>
+      <Container className="mb-2.5 grid grid-cols-1 gap-2.5 sm:grid-cols-2 xl:grid-cols-3">
+        <h1 className="sr-only">Erasmus Projects</h1>
+        <section className="bg-green-muted xxl:text-5xl flex h-80 items-center justify-center rounded-4xl p-6 text-3xl font-medium sm:text-4xl lg:h-96 lg:p-12">
+          <h2>Ongoing Projects</h2>
+        </section>
 
-      {ongoingProjects.map((proj) => (
-        <article
-          key={proj.id}
-          className="group relative cursor-pointer overflow-hidden rounded-4xl bg-white"
-        >
-          <div className="relative h-80 lg:h-96">
-            <Link href={`/erasmus/${proj.slug}`}>
-              <Image
-                src={proj.cover.url}
-                alt={`Erasmus Project `}
-                fill
-                className="object-cover"
-                sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
-              />
+        {ongoingProjects.map((proj) => (
+          <article
+            key={proj.id}
+            className="group relative cursor-pointer overflow-hidden rounded-4xl bg-white"
+          >
+            <div className="relative h-80 lg:h-96">
+              <Link href={`/erasmus/${proj.slug}`}>
+                <Image
+                  src={proj.cover.url}
+                  alt={`Erasmus Project `}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                />
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
 
-              <div className="absolute inset-0 flex flex-col justify-end p-6 lg:p-8">
-                {proj.projectCode && (
-                  <div className="absolute top-6 right-6">
-                    <span className="rounded-full bg-white/20 px-3 py-1 font-mono text-xs text-white/80 backdrop-blur-sm">
-                      {proj.projectCode}
-                    </span>
+                <div className="absolute inset-0 flex flex-col justify-end p-6 lg:p-8">
+                  {proj.projectCode && (
+                    <div className="absolute top-6 right-6">
+                      <span className="rounded-full bg-white/20 px-3 py-1 font-mono text-xs text-white/80 backdrop-blur-sm">
+                        {proj.projectCode}
+                      </span>
+                    </div>
+                  )}
+
+                  <div className="text-white">
+                    <h3 className="mb-3 text-2xl font-bold text-white drop-shadow-lg lg:text-3xl">
+                      {proj.title}
+                    </h3>
+
+                    <p className="mb-6 text-white/90 drop-shadow-md">
+                      <span className="font-medium">Duration: </span>
+                      {formatDate(proj.startDate)} - {formatDate(proj.endDate)}
+                    </p>
                   </div>
-                )}
-
-                <div className="text-white">
-                  <h3 className="mb-3 text-2xl font-bold text-white drop-shadow-lg lg:text-3xl">
-                    {proj.title}
-                  </h3>
-
-                  <p className="mb-6 text-white/90 drop-shadow-md">
-                    <span className="font-medium">Duration: </span>
-                    {formatDate(proj.startDate)} - {formatDate(proj.endDate)}
-                  </p>
                 </div>
-              </div>
-            </Link>
-          </div>
-        </article>
-      ))}
+              </Link>
+            </div>
+          </article>
+        ))}
+      </Container>
+      <Container className="mb-2.5 grid grid-cols-1 gap-2.5 sm:grid-cols-2 xl:grid-cols-3">
+        <section className="bg-blue-muted xxl:text-5xl flex h-80 items-center justify-center rounded-4xl p-6 text-3xl font-medium text-white sm:text-4xl lg:h-96 lg:p-12">
+          <h2>Previous Activities</h2>
+        </section>
+        {pastProjects.map((proj) => (
+          <article
+            key={proj.id}
+            className="group relative cursor-pointer overflow-hidden rounded-4xl bg-white"
+          >
+            <div className="relative h-80 lg:h-96">
+              <Link href={`/erasmus/${proj.slug}`}>
+                <Image
+                  src={proj.cover.url}
+                  alt={`Erasmus Project `}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                />
 
-      <section className="bg-blue-muted xxl:text-5xl flex h-80 items-center justify-center rounded-4xl p-6 text-3xl font-medium text-white sm:text-4xl lg:h-96 lg:p-12">
-        <h2>Previous Activities</h2>
-      </section>
-      {pastProjects.map((proj) => (
-        <article
-          key={proj.id}
-          className="group relative cursor-pointer overflow-hidden rounded-4xl bg-white"
-        >
-          <div className="relative h-80 lg:h-96">
-            <Link href={`/erasmus/${proj.slug}`}>
-              <Image
-                src={proj.cover.url}
-                alt={`Erasmus Project `}
-                fill
-                className="object-cover"
-                sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
-              />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
 
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                <div className="absolute inset-0 flex flex-col justify-end p-6 lg:p-8">
+                  {proj.projectCode && (
+                    <div className="absolute top-6 right-6">
+                      <span className="rounded-full bg-white/20 px-3 py-1 font-mono text-xs text-white/80 backdrop-blur-sm">
+                        {proj.projectCode}
+                      </span>
+                    </div>
+                  )}
 
-              <div className="absolute inset-0 flex flex-col justify-end p-6 lg:p-8">
-                {proj.projectCode && (
-                  <div className="absolute top-6 right-6">
-                    <span className="rounded-full bg-white/20 px-3 py-1 font-mono text-xs text-white/80 backdrop-blur-sm">
-                      {proj.projectCode}
-                    </span>
+                  <div className="text-white">
+                    <h3 className="mb-3 text-2xl font-bold text-white drop-shadow-lg lg:text-3xl">
+                      {proj.title}
+                    </h3>
+
+                    <p className="mb-6 text-white/90 drop-shadow-md">
+                      <span className="font-medium">Duration: </span>
+                      {formatDate(proj.startDate)} - {formatDate(proj.endDate)}
+                    </p>
                   </div>
-                )}
-
-                <div className="text-white">
-                  <h3 className="mb-3 text-2xl font-bold text-white drop-shadow-lg lg:text-3xl">
-                    {proj.title}
-                  </h3>
-
-                  <p className="mb-6 text-white/90 drop-shadow-md">
-                    <span className="font-medium">Duration: </span>
-                    {formatDate(proj.startDate)} - {formatDate(proj.endDate)}
-                  </p>
                 </div>
-              </div>
-            </Link>
-          </div>
-        </article>
-      ))}
-    </Container>
+              </Link>
+            </div>
+          </article>
+        ))}
+      </Container>
+    </>
   );
 }
