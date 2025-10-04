@@ -1,9 +1,7 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/layout/container";
-import Image from "next/image";
-import Link from "next/link";
 import { getOngoingProjects, getPastProjects } from "@/lib/queries";
-import { formatDate } from "@/lib/date";
+import { ErasmusProjectCard } from "@/components/ui/erasmus-project-card";
 
 export const metadata: Metadata = {
   title: "Learn Plus - Erasmus+ Projects Overview",
@@ -30,45 +28,16 @@ export default async function ErasmusPage() {
         </section>
 
         {ongoingProjects.map((proj) => (
-          <article
+          <ErasmusProjectCard
             key={proj.id}
-            className="group relative cursor-pointer overflow-hidden rounded-4xl bg-white"
-          >
-            <div className="relative h-80 lg:h-96">
-              <Link href={`/erasmus/${proj.slug}`}>
-                <Image
-                  src={proj.cover.url}
-                  alt={`Erasmus Project `}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                />
-
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-
-                <div className="absolute inset-0 flex flex-col justify-end p-6 lg:p-8">
-                  {proj.projectCode && (
-                    <div className="absolute top-6 right-6">
-                      <span className="rounded-full bg-white/20 px-3 py-1 font-mono text-xs text-white/80 backdrop-blur-sm">
-                        {proj.projectCode}
-                      </span>
-                    </div>
-                  )}
-
-                  <div className="text-white">
-                    <h3 className="mb-3 text-2xl font-bold text-white drop-shadow-lg lg:text-3xl">
-                      {proj.title}
-                    </h3>
-
-                    <p className="mb-6 text-white/90 drop-shadow-md">
-                      <span className="font-medium">Duration: </span>
-                      {formatDate(proj.startDate)} - {formatDate(proj.endDate)}
-                    </p>
-                  </div>
-                </div>
-              </Link>
-            </div>
-          </article>
+            id={proj.id}
+            slug={proj.slug}
+            title={proj.title}
+            coverUrl={proj.cover.url}
+            projectCode={proj.projectCode}
+            startDate={proj.startDate}
+            endDate={proj.endDate}
+          />
         ))}
       </Container>
       <Container className="mb-2.5 grid grid-cols-1 gap-2.5 sm:grid-cols-2 xl:grid-cols-3">
@@ -76,45 +45,16 @@ export default async function ErasmusPage() {
           <h2>Previous Activities</h2>
         </section>
         {pastProjects.map((proj) => (
-          <article
+          <ErasmusProjectCard
             key={proj.id}
-            className="group relative cursor-pointer overflow-hidden rounded-4xl bg-white"
-          >
-            <div className="relative h-80 lg:h-96">
-              <Link href={`/erasmus/${proj.slug}`}>
-                <Image
-                  src={proj.cover.url}
-                  alt={`Erasmus Project `}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
-                />
-
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-
-                <div className="absolute inset-0 flex flex-col justify-end p-6 lg:p-8">
-                  {proj.projectCode && (
-                    <div className="absolute top-6 right-6">
-                      <span className="rounded-full bg-white/20 px-3 py-1 font-mono text-xs text-white/80 backdrop-blur-sm">
-                        {proj.projectCode}
-                      </span>
-                    </div>
-                  )}
-
-                  <div className="text-white">
-                    <h3 className="mb-3 text-2xl font-bold text-white drop-shadow-lg lg:text-3xl">
-                      {proj.title}
-                    </h3>
-
-                    <p className="mb-6 text-white/90 drop-shadow-md">
-                      <span className="font-medium">Duration: </span>
-                      {formatDate(proj.startDate)} - {formatDate(proj.endDate)}
-                    </p>
-                  </div>
-                </div>
-              </Link>
-            </div>
-          </article>
+            id={proj.id}
+            slug={proj.slug}
+            title={proj.title}
+            coverUrl={proj.cover.url}
+            projectCode={proj.projectCode}
+            startDate={proj.startDate}
+            endDate={proj.endDate}
+          />
         ))}
       </Container>
     </>
