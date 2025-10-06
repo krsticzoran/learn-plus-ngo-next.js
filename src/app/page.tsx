@@ -16,7 +16,7 @@ export default async function Home() {
         className="mb-2.5 rounded-4xl bg-white px-6 py-12"
       >
         <Container className="mb-2.5 grid grid-cols-1 gap-2.5 sm:grid-cols-2 xl:grid-cols-3">
-          {pastProjects.slice(1, 4).map((proj, index) => (
+          {pastProjects?.slice(1, 4).map((proj, index) => (
             <div
               key={proj.id}
               className={index === 2 ? "sm:hidden xl:block" : ""}
