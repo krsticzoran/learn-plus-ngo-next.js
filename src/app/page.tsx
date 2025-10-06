@@ -16,9 +16,22 @@ export default async function Home() {
         className="mb-2.5 rounded-4xl bg-white px-6 py-12"
       >
         <Container className="mb-2.5 grid grid-cols-1 gap-2.5 sm:grid-cols-2 xl:grid-cols-3">
-          {pastProjects.slice(1, 4).map((proj, index) => (
-            <div key={proj.id}>
+          {pastProjects.slice(1, 3).map((proj) => (
+            <ErasmusProjectCard
+              key={proj.id}
+              id={proj.id}
+              slug={proj.slug}
+              title={proj.title}
+              coverUrl={proj.cover.url}
+              projectCode={proj.projectCode}
+              startDate={proj.startDate}
+              endDate={proj.endDate}
+            />
+          ))}
+          <div className="xl: sm:hidden">
+            {pastProjects.slice(3, 4).map((proj) => (
               <ErasmusProjectCard
+                key={proj.id}
                 id={proj.id}
                 slug={proj.slug}
                 title={proj.title}
@@ -27,8 +40,8 @@ export default async function Home() {
                 startDate={proj.startDate}
                 endDate={proj.endDate}
               />
-            </div>
-          ))}
+            ))}
+          </div>
         </Container>
       </Container>
       <About />
