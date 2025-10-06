@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Container } from "@/components/layout/container";
 import { getOngoingProjects, getPastProjects } from "@/lib/queries";
 import { ErasmusProjectCard } from "@/components/ui/erasmus-project-card";
-import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Learn Plus - Erasmus+ Projects Overview",
@@ -21,13 +20,6 @@ export default async function ErasmusPage() {
   const ongoingProjects = await getOngoingProjects();
   const pastProjects = await getPastProjects();
 
-  if (!ongoingProjects) {
-    notFound();
-  }
-
-  if (!pastProjects) {
-    notFound();
-  }
   return (
     <>
       <Container className="mb-2.5 grid grid-cols-1 gap-2.5 sm:grid-cols-2 xl:grid-cols-3">
