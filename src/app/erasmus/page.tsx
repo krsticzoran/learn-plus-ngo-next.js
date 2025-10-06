@@ -19,6 +19,19 @@ export const metadata: Metadata = {
 export default async function ErasmusPage() {
   const ongoingProjects = await getOngoingProjects();
   const pastProjects = await getPastProjects();
+
+  if (!ongoingProjects) {
+    return {
+      notFound: true,
+    };
+  }
+
+  if (!pastProjects) {
+    return {
+      notFound: true,
+    };
+  }
+
   return (
     <>
       <Container className="mb-2.5 grid grid-cols-1 gap-2.5 sm:grid-cols-2 xl:grid-cols-3">

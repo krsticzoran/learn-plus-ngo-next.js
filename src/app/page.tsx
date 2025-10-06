@@ -7,6 +7,12 @@ import { ErasmusProjectCard } from "@/components/ui/erasmus-project-card";
 
 export default async function Home() {
   const pastProjects = await getPastProjects();
+
+  if (!pastProjects) {
+    return {
+      notFound: true,
+    };
+  }
   return (
     <>
       <Hero />
