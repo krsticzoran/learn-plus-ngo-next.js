@@ -17,6 +17,7 @@ export default async function Home() {
       >
         <Container className="mb-2.5 grid grid-cols-1 gap-2.5 sm:grid-cols-2 xl:grid-cols-3">
           {pastProjects &&
+            pastProjects.length > 0 &&
             pastProjects.slice(1, 4).map((proj, index) => (
               <div
                 key={proj.id}
