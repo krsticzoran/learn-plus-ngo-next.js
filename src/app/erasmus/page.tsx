@@ -27,35 +27,39 @@ export default async function ErasmusPage() {
           <h2>Ongoing Projects</h2>
         </section>
 
-        {ongoingProjects.map((proj) => (
-          <ErasmusProjectCard
-            key={proj.id}
-            id={proj.id}
-            slug={proj.slug}
-            title={proj.title}
-            coverUrl={proj.cover.url}
-            projectCode={proj.projectCode}
-            startDate={proj.startDate}
-            endDate={proj.endDate}
-          />
-        ))}
+        {ongoingProjects &&
+          ongoingProjects.length > 0 &&
+          ongoingProjects.map((proj) => (
+            <ErasmusProjectCard
+              key={proj.id}
+              id={proj.id}
+              slug={proj.slug}
+              title={proj.title}
+              coverUrl={proj.cover.url}
+              projectCode={proj.projectCode}
+              startDate={proj.startDate}
+              endDate={proj.endDate}
+            />
+          ))}
       </Container>
       <Container className="mb-2.5 grid grid-cols-1 gap-2.5 sm:grid-cols-2 xl:grid-cols-3">
         <section className="bg-blue-muted xxl:text-5xl flex h-80 items-center justify-center rounded-4xl p-6 text-3xl font-medium text-white sm:text-4xl lg:h-96 lg:p-12">
           <h2>Previous Activities</h2>
         </section>
-        {pastProjects.map((proj) => (
-          <ErasmusProjectCard
-            key={proj.id}
-            id={proj.id}
-            slug={proj.slug}
-            title={proj.title}
-            coverUrl={proj.cover.url}
-            projectCode={proj.projectCode}
-            startDate={proj.startDate}
-            endDate={proj.endDate}
-          />
-        ))}
+        {pastProjects &&
+          pastProjects.length > 0 &&
+          pastProjects.map((proj) => (
+            <ErasmusProjectCard
+              key={proj.id}
+              id={proj.id}
+              slug={proj.slug}
+              title={proj.title}
+              coverUrl={proj.cover.url}
+              projectCode={proj.projectCode}
+              startDate={proj.startDate}
+              endDate={proj.endDate}
+            />
+          ))}
       </Container>
     </>
   );
