@@ -4,14 +4,12 @@ import Membership from "@/components/sections/ membership";
 import { Container } from "@/components/layout/container";
 import { getPastProjects } from "@/lib/queries";
 import { ErasmusProjectCard } from "@/components/ui/erasmus-project-card";
+import { notFound } from "next/navigation";
 
 export default async function Home() {
   const pastProjects = await getPastProjects();
-
   if (!pastProjects) {
-    return {
-      notFound: true,
-    };
+    notFound();
   }
   return (
     <>
