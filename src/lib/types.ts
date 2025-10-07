@@ -41,11 +41,9 @@ export type OngoingProject = {
   projectCode: string;
   startDate: string;
   endDate: string;
-  coordinator: string;
   createdAt: string;
   updatedAt: string;
   publishedAt: string;
-  partners: { id: number; content: string }[];
   cover: Media;
   gallery?: Media[];
   slug: string;
