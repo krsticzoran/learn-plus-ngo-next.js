@@ -64,6 +64,7 @@ export type PastProject = {
   createdAt: string;
   updatedAt: string;
   publishedAt: string;
+  type: string;
   cover: Media;
   gallery?: Media[];
 };

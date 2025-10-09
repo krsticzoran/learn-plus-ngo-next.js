@@ -15,7 +15,11 @@ export async function getPastProjects(): Promise<PastProject[]> {
   const projects = await fetchFromStrapi<PastProject>(
     "/past-projects?populate=*",
   );
-  return projects.sort(
+
+  console.log(projects);
+  const pastOnly = projects.filter((p) => p.type === "p");
+
+  return pastOnly.sort(
     (a, b) => Date.parse(b.startDate) - Date.parse(a.startDate),
   );
 }
@@ -32,8 +36,6 @@ export async function getPastProjectBySlug(
       `/ongoing-projects?populate=*&filters[slug][$eq]=${encodedSlug}`,
     ),
   ]);
-
-  console.log(ongoingProjects);
 
   return pastProjects[0] || ongoingProjects[0] || null;
 }
