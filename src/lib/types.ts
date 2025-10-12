@@ -47,6 +47,7 @@ export type OngoingProject = {
   cover: Media;
   gallery?: Media[];
   slug: string;
+  type: string;
   description: string;
   content?: string;
 };
