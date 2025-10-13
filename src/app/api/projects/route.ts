@@ -1,8 +1,7 @@
-// app/api/projects/route.ts
 import { NextResponse } from "next/server";
-import { getOngoingProjects } from "@/lib/queries";
+import { getOngoingProjectsForHomepage } from "@/lib/queries";
 
 export async function GET() {
-  const projects = await getOngoingProjects();
+  const projects = await getOngoingProjectsForHomepage();
   return NextResponse.json(projects);
 }

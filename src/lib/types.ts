@@ -34,6 +34,34 @@ type Media = {
   publishedAt: string;
 };
 
+export type Project = {
+  id: number;
+  documentId: string;
+  projectCode: string;
+  title: string;
+  slug: string;
+  description: string;
+  startDate: string;
+  endDate: string;
+  content?: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
+  type: string;
+  cover: Media;
+  gallery?: Media[];
+};
+
+export type OngoingProjectPreview = Pick<
+  Project,
+  "title" | "slug" | "type" | "startDate"
+>;
+
+export type PastProjectPreview = Pick<
+  Project,
+  "title" | "slug" | "startDate" | "endDate" | "type"
+>;
+
 export type OngoingProject = {
   id: number;
   documentId: string;
