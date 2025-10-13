@@ -59,7 +59,14 @@ export type OngoingProjectPreview = Pick<
 
 export type PastProjectPreview = Pick<
   Project,
-  "title" | "slug" | "startDate" | "endDate" | "type"
+  | "id"
+  | "title"
+  | "slug"
+  | "startDate"
+  | "endDate"
+  | "type"
+  | "cover"
+  | "projectCode"
 >;
 
 export type OngoingProject = {

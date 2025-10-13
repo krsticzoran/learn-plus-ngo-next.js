@@ -2,11 +2,11 @@ import Hero from "@/components/sections/hero";
 import About from "@/components/sections/about";
 import Membership from "@/components/sections/ membership";
 import { Container } from "@/components/layout/container";
-import { getPastProjects } from "@/lib/queries";
+import { getPastProjectsForHomepage } from "@/lib/queries";
 import { ErasmusProjectCard } from "@/components/ui/erasmus-project-card";
 
 export default async function Home() {
-  const pastProjects = await getPastProjects();
+  const pastProjects = await getPastProjectsForHomepage();
 
   return (
     <>

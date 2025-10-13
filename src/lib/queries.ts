@@ -21,13 +21,11 @@ export async function getOngoingProjectsForHomepage(): Promise<
 export async function getPastProjectsForHomepage(): Promise<
   PastProjectPreview[]
 > {
-  const projects = await fetchFromStrapi<PastProject>(
-    "/past-projects?fields[0]=title&fields[1]=slug&fields[2]=startDate&fields[3]=endDate&fields[4]=type&filters[type][$eq]=p",
+  const projects = await fetchFromStrapi<PastProjectPreview>(
+    "/past-projects?fields[0]=id&fields[1]=title&fields[2]=slug&fields[3]=startDate&fields[4]=endDate&fields[5]=type&fields[6]=projectCode&filters[type][$eq]=p&sort[0]=startDate:desc&populate[cover][fields][0]=url",
   );
 
-  return projects.sort(
-    (a, b) => Date.parse(b.startDate) - Date.parse(a.startDate),
-  );
+  return projects;
 }
 
 export async function getOngoingProjects(): Promise<OngoingProject[]> {
