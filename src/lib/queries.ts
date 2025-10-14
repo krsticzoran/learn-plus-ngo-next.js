@@ -3,7 +3,8 @@ import {
   OngoingProject,
   PastProject,
   OngoingProjectPreview,
-  PastProjectPreview,
+  CardProjectPreview,
+  ProjectsGroupedByType,
 } from "./types";
 
 export async function getOngoingProjectsForHomepage(): Promise<
@@ -19,13 +20,24 @@ export async function getOngoingProjectsForHomepage(): Promise<
 }
 
 export async function getPastProjectsForHomepage(): Promise<
-  PastProjectPreview[]
+  CardProjectPreview[]
 > {
-  const projects = await fetchFromStrapi<PastProjectPreview>(
+  const projects = await fetchFromStrapi<CardProjectPreview>(
     "/past-projects?fields[0]=id&fields[1]=title&fields[2]=slug&fields[3]=startDate&fields[4]=endDate&fields[5]=type&fields[6]=projectCode&filters[type][$eq]=p&sort[0]=startDate:desc&populate[cover][fields][0]=url",
   );
 
   return projects;
+}
+
+export async function getAllProjectsGrouped(): Promise<ProjectsGroupedByType> {
+  const projects = await fetchFromStrapi<CardProjectPreview>(
+    "/past-projects?fields[0]=id&fields[1]=title&fields[2]=slug&fields[3]=startDate&fields[4]=endDate&fields[5]=type&fields[6]=projectCode&sort[0]=startDate:desc&populate[cover][fields][0]=url",
+  );
+
+  return {
+    ongoing: projects.filter((p) => p.type === "o"),
+    past: projects.filter((p) => p.type === "p"),
+  };
 }
 
 export async function getOngoingProjects(): Promise<OngoingProject[]> {

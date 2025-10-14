@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/layout/container";
-import { getOngoingProjects, getPastProjects } from "@/lib/queries";
+import { getAllProjectsGrouped } from "@/lib/queries";
 import { ErasmusProjectCard } from "@/components/ui/erasmus-project-card";
 
 export const metadata: Metadata = {
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
 };
 
 export default async function ErasmusPage() {
-  const ongoingProjects = await getOngoingProjects();
-  const pastProjects = await getPastProjects();
+  const { ongoing: ongoingProjects, past: pastProjects } =
+    await getAllProjectsGrouped();
 
   return (
     <>

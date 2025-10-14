@@ -57,7 +57,7 @@ export type OngoingProjectPreview = Pick<
   "title" | "slug" | "type" | "startDate"
 >;
 
-export type PastProjectPreview = Pick<
+export type CardProjectPreview = Pick<
   Project,
   | "id"
   | "title"
@@ -68,6 +68,11 @@ export type PastProjectPreview = Pick<
   | "cover"
   | "projectCode"
 >;
+
+export type ProjectsGroupedByType = {
+  ongoing: CardProjectPreview[];
+  past: CardProjectPreview[];
+};
 
 export type OngoingProject = {
   id: number;
