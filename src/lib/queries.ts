@@ -1,7 +1,6 @@
 import { fetchFromStrapi } from "./strapi";
 import {
-  OngoingProject,
-  PastProject,
+  Project,
   OngoingProjectPreview,
   CardProjectPreview,
   ProjectsGroupedByType,
@@ -10,7 +9,7 @@ import {
 export async function getOngoingProjectsForHomepage(): Promise<
   OngoingProjectPreview[]
 > {
-  const projects = await fetchFromStrapi<OngoingProject>(
+  const projects = await fetchFromStrapi<OngoingProjectPreview>(
     "/past-projects?fields[0]=title&fields[1]=slug&fields[2]=type&fields[3]=startDate&filters[type][$eq]=o",
   );
 
@@ -40,35 +39,11 @@ export async function getAllProjectsGrouped(): Promise<ProjectsGroupedByType> {
   };
 }
 
-export async function getOngoingProjects(): Promise<OngoingProject[]> {
-  const projects = await fetchFromStrapi<OngoingProject>(
-    "/past-projects?populate=*",
-  );
-
-  const ongoingOnly = projects.filter((p) => p.type === "o");
-
-  return ongoingOnly.sort(
-    (a, b) => Date.parse(b.startDate) - Date.parse(a.startDate),
-  );
-}
-
-export async function getPastProjects(): Promise<PastProject[]> {
-  const projects = await fetchFromStrapi<PastProject>(
-    "/past-projects?populate=*",
-  );
-
-  const pastOnly = projects.filter((p) => p.type === "p");
-
-  return pastOnly.sort(
-    (a, b) => Date.parse(b.startDate) - Date.parse(a.startDate),
-  );
-}
-
 export async function getPastProjectBySlug(
   slug: string,
-): Promise<PastProject | null> {
+): Promise<Project | null> {
   const encodedSlug = encodeURIComponent(slug);
-  const pastProjects = await fetchFromStrapi<PastProject>(
+  const pastProjects = await fetchFromStrapi<Project>(
     `/past-projects?populate=*&filters[slug][$eq]=${encodedSlug}`,
   );
 

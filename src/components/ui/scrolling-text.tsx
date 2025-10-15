@@ -1,10 +1,10 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { OngoingProject } from "@/lib/types";
+import { OngoingProjectPreview } from "@/lib/types";
 
 export default function ScrollingText() {
-  const [projects, setProjects] = useState<OngoingProject[]>([]);
+  const [projects, setProjects] = useState<OngoingProjectPreview[]>([]);
 
   useEffect(() => {
     fetch("/api/projects")

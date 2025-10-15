@@ -73,39 +73,3 @@ export type ProjectsGroupedByType = {
   ongoing: CardProjectPreview[];
   past: CardProjectPreview[];
 };
-
-export type OngoingProject = {
-  id: number;
-  documentId: string;
-  title: string;
-  projectCode: string;
-  startDate: string;
-  endDate: string;
-  createdAt: string;
-  updatedAt: string;
-  publishedAt: string;
-  cover: Media;
-  gallery?: Media[];
-  slug: string;
-  type: string;
-  description: string;
-  content?: string;
-};
-
-export type PastProject = {
-  id: number;
-  documentId: string;
-  projectCode: string;
-  title: string;
-  slug: string;
-  description: string;
-  startDate: string;
-  endDate: string;
-  content?: string;
-  createdAt: string;
-  updatedAt: string;
-  publishedAt: string;
-  type: string;
-  cover: Media;
-  gallery?: Media[];
-};
