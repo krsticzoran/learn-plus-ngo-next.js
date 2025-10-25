@@ -21,6 +21,7 @@ export async function POST(req: Request) {
 
     console.log("--- Webhook received ---");
 
+    revalidatePath("/");
     revalidatePath("/erasmus");
 
     if (entry?.slug) {

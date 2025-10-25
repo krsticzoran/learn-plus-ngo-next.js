@@ -11,30 +11,26 @@ export default async function Home() {
   return (
     <>
       <Hero />
-      <Container
-        as="section"
-        aria-labelledby="about-heading"
-        className="mb-2.5 rounded-4xl bg-white px-6 py-12"
-      >
-        <Container className="mb-2.5 grid grid-cols-1 gap-2.5 sm:grid-cols-2 xl:grid-cols-3">
-          {pastProjects.slice(1, 5).map((proj, index) => (
-            <div
-              key={proj.id}
-              className={index === 3 ? "hidden sm:block xl:hidden" : ""}
-            >
-              <ErasmusProjectCard
-                id={proj.id}
-                slug={proj.slug}
-                title={proj.title}
-                coverUrl={proj.cover.url}
-                projectCode={proj.projectCode}
-                startDate={proj.startDate}
-                endDate={proj.endDate}
-              />
-            </div>
-          ))}
-        </Container>
+
+      <Container className="mb-2.5 grid grid-cols-1 gap-2.5 sm:grid-cols-2 xl:grid-cols-3">
+        {pastProjects.slice(0, 4).map((proj, index) => (
+          <div
+            key={proj.id}
+            className={index === 3 ? "hidden sm:block xl:hidden" : ""}
+          >
+            <ErasmusProjectCard
+              id={proj.id}
+              slug={proj.slug}
+              title={proj.title}
+              coverUrl={proj.cover.url}
+              projectCode={proj.projectCode}
+              startDate={proj.startDate}
+              endDate={proj.endDate}
+            />
+          </div>
+        ))}
       </Container>
+
       <About />
       <Membership />
     </>
