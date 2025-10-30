@@ -16,7 +16,7 @@ export default function About() {
           <div
             key={section.id}
             className={cn(
-              "flex h-80 w-full flex-col rounded-3xl p-4 sm:p-6 lg:w-1/2",
+              "flex h-[360px] sm:h-80 w-full flex-col rounded-3xl p-4 sm:p-6 lg:w-1/2",
               section.bgClass,
             )}
           >
@@ -40,12 +40,12 @@ export default function About() {
         ))}
       </div>
       <div className="flex flex-col gap-2.5 sm:text-lg lg:flex-row">
-        <div className="bg-black-muted flex h-80 w-full flex-col rounded-3xl p-4 text-white sm:p-6 lg:w-1/2">
+        <div className="bg-black-muted flex h-[360px] sm:h-80 w-full flex-col rounded-3xl p-4 text-white sm:p-6 lg:w-1/2">
           <h3 className="text-2xl sm:text-3xl">{data[2].title}</h3>
 
           <p className="mt-auto">{data[2].text}</p>
         </div>
-        <div className="bg-background relative h-80 w-full overflow-hidden rounded-3xl lg:w-1/2">
+        <div className="bg-background relative h-[360px] sm:h-80 w-full overflow-hidden rounded-3xl lg:w-1/2">
           <Image
             fill
             src={Osijek}

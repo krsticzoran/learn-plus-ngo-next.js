@@ -15,7 +15,7 @@ export default async function Hero() {
       className="relative mb-2.5 flex flex-col gap-[10px] lg:min-h-[calc(100vh-110px)]"
     >
       <div className="flex h-full w-full flex-1 flex-col items-center justify-start gap-[10px] lg:flex-row">
-        <div className="bg-background z-30 flex h-full w-full flex-2 flex-col rounded-4xl p-6 sm:p-12 lg:min-h-[calc(100vh-210px)] lg:w-2/3">
+        <div className="bg-background z-30 flex h-full w-full flex-2 flex-col rounded-4xl p-6 sm:p-12 lg:min-h-[calc(100vh-210px)] lg:w-3/5">
           <h1
             id="hero-heading"
             className="mb-4 text-2xl leading-tight font-medium sm:mb-6 sm:text-5xl xl:text-6xl"
@@ -41,7 +41,7 @@ export default async function Hero() {
         </div>
 
         {/* Hero image with parallax effect */}
-        <div className="bg-background relative h-full min-h-[500px] w-full overflow-hidden rounded-4xl lg:h-[580px] lg:min-h-[calc(100vh-210px)] lg:w-1/3">
+        <div className="bg-background relative h-full min-h-[500px] w-full overflow-hidden rounded-4xl lg:h-[580px] lg:min-h-[calc(100vh-210px)] lg:w-2/5">
           <ParallaxImg>
             <Image
               src={HeroImage}
