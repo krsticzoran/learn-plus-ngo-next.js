@@ -19,37 +19,6 @@ As our member you can have many opportunities – mobilities, free seminars, stu
     `,
   },
   {
-    name: "Regular Membership",
-    id: "regular-membership",
-    value: `
-Regular members are those members who actively participate in the activities and programs of our association.
-
-Regular members can be adults, persons who participated in the founding of the Association, their family members and friends.
-
-Regular members are making the Assembly of the Association and actively participate in the activities of the Association, while complying with the Statute and all the rules and guidelines of the Association and regularly paying the membership fee.
-    `,
-  },
-  {
-    name: "Associate Membership",
-    id: "associate-membership",
-    value: `
-Associate members are those members who occasionally participate in the Association's activities or help the Association achieve its goals with financial or other support.
-
-Associate members are natural and legal persons of legal age and minors. Associate members also pay regular membership fee.
-
-
-    `,
-  },
-  {
-    name: "Honorary Membership",
-    id: "honorary-membership",
-    value: `
-Honorary members are persons among the members of the Association, other organizations, academic communities in Croatia and abroad who significantly contributed to the work and reputation of the Association and promote the activity and value of the Association through their activities.
-
-They are appointed exclusively by the Assembly and they are not obliged to pay membership fees.
-    `,
-  },
-  {
     name: "Membership Fee",
     id: "membership-fee",
     value: `
