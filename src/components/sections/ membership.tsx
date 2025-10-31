@@ -70,7 +70,7 @@ export default function Membership() {
           className="bg-background-muted/50 grid w-full grid-cols-1 gap-1 rounded-3xl p-4 md:!w-[400px] lg:!w-1/3 content-start"
           style={{
             height: isDesktop ? `${height}px` : "auto",
-            overflow: "hidden",
+           
             transition: "height 0.3s ease",
           }}
         >
@@ -78,7 +78,7 @@ export default function Membership() {
             <TabsTrigger
               key={tab.id}
               value={tab.id}
-              className="data-[state=active]:bg-background-muted data-[state=active]:text-blue-muted hover:bg-blue-muted/20 cursor-pointer justify-start py-1.5 text-left text-base data-[state=active]:shadow-none lg:text-lg  h-[42px]"
+              className="data-[state=active]:bg-background-muted data-[state=active]:text-blue-muted hover:bg-blue-muted/20 cursor-pointer justify-start py-1.5 text-left text-base data-[state=active]:shadow-none lg:text-lg  !h-[42px]"
             >
               {tab.name}
             </TabsTrigger>
