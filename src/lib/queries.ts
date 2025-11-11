@@ -45,17 +45,23 @@ export async function getPastProjectBySlug(
   const encodedSlug = encodeURIComponent(slug);
 
   const pastProjects = await fetchFromStrapi<Project>(
-    `/past-projects?filters[slug][$eq]=${encodedSlug}
-    &fields[0]=title
-    &fields[1]=slug
-    &fields[2]=description
-    &fields[3]=content
-    &fields[4]=startDate
-    &fields[5]=endDate
-    &populate[cover][fields][0]=url
-    &populate[cover][fields][1]=alternativeText
-    &populate[gallery][fields][0]=url
-    &populate[gallery][fields][1]=alternativeText`,
+    `/past-projects?filters[slug][$eq]=${encodedSlug}` +
+      `&fields[0]=title` +
+      `&fields[1]=slug` +
+      `&fields[2]=description` +
+      `&fields[3]=content` +
+      `&fields[4]=startDate` +
+      `&fields[5]=endDate` +
+      `&fields[6]=type` +
+      `&fields[7]=projectCode` +
+      `&populate[cover][fields][0]=url` +
+      `&populate[cover][fields][1]=alternativeText` +
+      `&populate[cover][fields][2]=width` +
+      `&populate[cover][fields][3]=height` +
+      `&populate[gallery][fields][0]=url` +
+      `&populate[gallery][fields][1]=alternativeText` +
+      `&populate[gallery][fields][2]=width` +
+      `&populate[gallery][fields][3]=height`,
   );
 
   return pastProjects[0] || null;
