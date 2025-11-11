@@ -5,6 +5,21 @@ import { notFound } from "next/navigation";
 import { SanitizedMarkdown } from "@/components/sanitized-markdown";
 import { getPastProjectBySlug } from "@/lib/queries";
 import { formatDate } from "@/lib/date";
+import { fetchFromStrapi } from "@/lib/strapi";
+
+export async function generateStaticParams() {
+  const projects = await fetchFromStrapi<{ slug: string }>(
+    "/past-projects?fields[0]=slug",
+  );
+
+  return projects.map((project) => ({
+    id: project.slug,
+  }));
+}
+
+export const revalidate = false;
+
+export const dynamicParams = true;
 
 export async function generateMetadata({
   params,
