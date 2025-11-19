@@ -17,7 +17,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export const revalidate = false;
+f;
 
 export const dynamicParams = true;
 
@@ -52,11 +52,11 @@ export async function generateMetadata({
     title: `Learn Plus - ${projectData.title}`,
     description: projectData.description,
     openGraph: {
-      type: "website",
+      type: "article",
       siteName: "Learn Plus",
       title: `Learn Plus - ${projectData.title}`,
       description: projectData.description,
-      url: `https://learn-plus.org/${projectData.slug}`,
+      url: `https://learn-plus.org/erasmus/${projectData.slug}`,
       images: ogImage,
     },
     twitter: {
