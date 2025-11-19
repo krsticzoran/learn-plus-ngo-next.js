@@ -37,14 +37,33 @@ export async function generateMetadata({
     };
   }
 
+  const ogImage = projectData.cover?.url
+    ? [
+        {
+          url: projectData.cover.url,
+          width: 1200,
+          height: 630,
+          alt: projectData.title,
+        },
+      ]
+    : [];
+
   return {
     title: `Learn Plus - ${projectData.title}`,
     description: projectData.description,
     openGraph: {
+      type: "website",
+      siteName: "Learn Plus",
       title: `Learn Plus - ${projectData.title}`,
       description: projectData.description,
       url: `https://learn-plus.org/${projectData.slug}`,
-      images: projectData.cover,
+      images: ogImage,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `Learn Plus - ${projectData.title}`,
+      description: projectData.description,
+      images: ogImage,
     },
   };
 }
