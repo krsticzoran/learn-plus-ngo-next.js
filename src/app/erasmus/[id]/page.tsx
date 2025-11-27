@@ -6,6 +6,7 @@ import { SanitizedMarkdown } from "@/components/sanitized-markdown";
 import { getPastProjectBySlug } from "@/lib/queries";
 import { formatDate } from "@/lib/date";
 import { fetchFromStrapi } from "@/lib/strapi";
+import FacebookShare from "@/components/ui/facebook-share";
 
 export async function generateStaticParams() {
   const projects = await fetchFromStrapi<{ slug: string }>(
@@ -121,6 +122,9 @@ export default async function ErasmusProjectPage({
             ))}
           </div>
         )}
+        <div className="mt-6 flex justify-end">
+          <FacebookShare />
+        </div>
       </div>
     </Container>
   );
