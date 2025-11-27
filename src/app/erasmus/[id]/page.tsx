@@ -123,7 +123,9 @@ export default async function ErasmusProjectPage({
           </div>
         )}
         <div className="mt-6 flex justify-end">
-          <FacebookShare />
+          <FacebookShare
+            url={`https://learn-plus.org/erasmus/${projectData.slug}`}
+          />
         </div>
       </div>
     </Container>
