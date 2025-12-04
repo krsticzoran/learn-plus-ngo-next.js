@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Container } from "@/components/layout/container";
 import { getAllProjectsGrouped } from "@/lib/queries";
 import { ErasmusProjectCard } from "@/components/ui/erasmus-project-card";
+import { Reveal } from "@/components/animations/reveal";
 
 export const metadata: Metadata = {
   title: "Learn Plus - Erasmus+ Projects Overview",
@@ -24,38 +25,44 @@ export default async function ErasmusPage() {
     <>
       <Container className="mb-2.5 grid grid-cols-1 gap-2.5 sm:grid-cols-2 xl:grid-cols-3">
         <h1 className="sr-only">Erasmus Projects</h1>
-        <section className="bg-green-muted xxl:text-5xl flex h-80 items-center justify-center rounded-4xl p-6 text-3xl font-medium sm:text-4xl lg:h-96 lg:p-12">
-          <h2>Ongoing Projects</h2>
-        </section>
+        <Reveal>
+          <section className="bg-green-muted xxl:text-5xl flex h-80 items-center justify-center rounded-4xl p-6 text-3xl font-medium sm:text-4xl lg:h-96 lg:p-12">
+            <h2>Ongoing Projects</h2>
+          </section>
+        </Reveal>
 
         {ongoingProjects.map((proj) => (
-          <ErasmusProjectCard
-            key={proj.id}
-            id={proj.id}
-            slug={proj.slug}
-            title={proj.title}
-            coverUrl={proj.cover.url}
-            projectCode={proj.projectCode}
-            startDate={proj.startDate}
-            endDate={proj.endDate}
-          />
+          <Reveal key={proj.id}>
+            <ErasmusProjectCard
+              id={proj.id}
+              slug={proj.slug}
+              title={proj.title}
+              coverUrl={proj.cover.url}
+              projectCode={proj.projectCode}
+              startDate={proj.startDate}
+              endDate={proj.endDate}
+            />
+          </Reveal>
         ))}
       </Container>
       <Container className="mb-2.5 grid grid-cols-1 gap-2.5 sm:grid-cols-2 xl:grid-cols-3">
-        <section className="bg-blue-muted xxl:text-5xl flex h-80 items-center justify-center rounded-4xl p-6 text-3xl font-medium text-white sm:text-4xl lg:h-96 lg:p-12">
-          <h2>Previous Activities</h2>
-        </section>
+        <Reveal>
+          <section className="bg-blue-muted xxl:text-5xl flex h-80 items-center justify-center rounded-4xl p-6 text-3xl font-medium text-white sm:text-4xl lg:h-96 lg:p-12">
+            <h2>Previous Activities</h2>
+          </section>
+        </Reveal>
         {pastProjects.map((proj) => (
-          <ErasmusProjectCard
-            key={proj.id}
-            id={proj.id}
-            slug={proj.slug}
-            title={proj.title}
-            coverUrl={proj.cover.url}
-            projectCode={proj.projectCode}
-            startDate={proj.startDate}
-            endDate={proj.endDate}
-          />
+          <Reveal key={proj.id}>
+            <ErasmusProjectCard
+              id={proj.id}
+              slug={proj.slug}
+              title={proj.title}
+              coverUrl={proj.cover.url}
+              projectCode={proj.projectCode}
+              startDate={proj.startDate}
+              endDate={proj.endDate}
+            />
+          </Reveal>
         ))}
       </Container>
     </>
