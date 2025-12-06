@@ -2,6 +2,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/layout/container";
 import { partnersData } from "@/data/partner-data";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Learn Plus - Our Partners",
+  description:
+    "Discover our trusted network of partners who share our commitment to excellence in education and collaboration.",
+};
 
 export default function Partners() {
   return (
