@@ -39,7 +39,7 @@ export const partnersData: partner[] = [
     name: "BİLİM DİL KÜLTÜR DERNEĞİ, Dalaman-Türkiye",
     description:
       "Through implementing EU projects, they are cultivating international cooperation and inspiring young people for their engagement in fields of science, language and culture, just as their name of this NGO means in Turkish language.",
-    phone: "+90 507 769 7055",
+    phone: "+905077697055",
     email: "tecsmart@gmail.com",
     link: "https://www.facebook.com/groups/1981708168507047/?ref=share_group_link&mibextid=K35XfP&rdid=qQpHEYjIoKnAjLDw&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fg%2F1B12qgiwcq%2F%3Fmibextid%3DK35XfP#",
     image: partner3,
@@ -49,7 +49,7 @@ export const partnersData: partner[] = [
     name: "Intertravel",
     description:
       "Intertravel provides specialized support to students and institutions for booking and managing flights within Erasmus+ and other mobility programs. They focus on flexible fares, date changes, group bookings, and fast customer support to ensure stress-free travel for students and staff.",
-    phone: "+385 91 347 5555",
+    phone: "+385913475555",
     email: "Info@the-intertravel.com",
     link: "https://www.the-intertravel.com/",
     image: partner4,
